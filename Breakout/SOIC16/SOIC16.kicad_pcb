@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 18)
+    (drawings 19)
     (tracks 92)
     (zones 0)
     (modules 8)
@@ -134,7 +134,7 @@
   )
 
   (module logo:SirBoard60x21 (layer B.Cu) (tedit 0) (tstamp 5D1E16D8)
-    (at 194.31 71.882)
+    (at 194.31 70.866)
     (fp_text reference G*** (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)) (justify mirror))
     )
@@ -1324,6 +1324,9 @@
     )
   )
 
+  (gr_text www.SirBoard.com (at 194.31 73.152 180) (layer B.SilkS)
+    (effects (font (size 0.8 0.7) (thickness 0.15)) (justify mirror))
+  )
   (gr_line (start 202.184 71.12) (end 202.184 88.9) (layer Edge.Cuts) (width 0.05) (tstamp 5D1E17A9))
   (gr_line (start 187.96 69.596) (end 200.66 69.596) (layer Edge.Cuts) (width 0.05) (tstamp 5D1E17A8))
   (gr_line (start 186.436 88.9) (end 186.436 71.12) (layer Edge.Cuts) (width 0.05) (tstamp 5D1E17A7))
@@ -1338,10 +1341,10 @@
   (gr_text "SOIC(1.27mm)\nDIP (2.54mm)" (at 194.31 86.614) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
-  (gr_text 9 (at 198.12 71.12 180) (layer B.SilkS)
+  (gr_text 9 (at 198.755 70.993 180) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
-  (gr_text 8 (at 189.992 70.866 180) (layer B.SilkS)
+  (gr_text 8 (at 189.738 70.866 180) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_text 16 (at 198.12 88.9 180) (layer B.SilkS)
@@ -1359,7 +1362,7 @@
   (gr_text "16\n" (at 198.12 71.12) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text 1 (at 189.992 70.866) (layer F.SilkS)
+  (gr_text 1 (at 189.865 70.866) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
 
