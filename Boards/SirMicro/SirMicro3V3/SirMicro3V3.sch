@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:SirMicro5V-cache
+LIBS:SirMicro3V3-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -512,8 +512,6 @@ Wire Wire Line
 	2000 2900 2000 3000
 Wire Wire Line
 	2000 3250 1950 3250
-Wire Wire Line
-	2000 2600 2000 1450
 Connection ~ 2750 1450
 Wire Wire Line
 	2750 1450 3350 1450
@@ -522,11 +520,8 @@ Wire Wire Line
 	2750 2300 2800 2300
 Wire Wire Line
 	2550 2300 2750 2300
-Connection ~ 2550 1450
 Wire Wire Line
 	2550 1450 2750 1450
-Wire Wire Line
-	2000 1450 2550 1450
 $Comp
 L Device:CP C8
 U 1 1 5D548FA2
@@ -701,7 +696,7 @@ Wire Wire Line
 	3100 2750 2550 2750
 Wire Wire Line
 	2550 2300 2550 2750
-Text GLabel 2000 1450 0    50   Input ~ 0
+Text GLabel 2000 2500 0    50   Input ~ 0
 5V
 Text GLabel 8750 1600 2    50   Input ~ 0
 3V3
@@ -767,8 +762,6 @@ Text GLabel 8400 4550 2    50   Input ~ 0
 GND
 Wire Wire Line
 	8400 4550 8300 4550
-Text GLabel 8400 4650 2    50   Input ~ 0
-5V
 Wire Wire Line
 	8400 4650 8300 4650
 Text GLabel 7200 4650 0    50   Input ~ 0
@@ -948,8 +941,6 @@ Text GLabel 5850 1800 0    50   Input ~ 0
 RST
 Wire Wire Line
 	5850 1800 6000 1800
-Text GLabel 6600 1600 2    50   Input ~ 0
-5V
 Text GLabel 6600 1800 2    50   Input ~ 0
 GND
 Wire Wire Line
@@ -976,7 +967,7 @@ Wire Wire Line
 Text GLabel 7250 3000 0    50   Input ~ 0
 D13
 Text GLabel 7250 3100 0    50   Input ~ 0
-5V
+3V3
 Wire Wire Line
 	8050 2000 8450 2000
 Wire Wire Line
@@ -1017,7 +1008,15 @@ Wire Wire Line
 	3150 3050 3550 3050
 Connection ~ 3550 3050
 Text GLabel 2650 3050 0    50   Input ~ 0
-5V
+3V3
 Wire Wire Line
 	2650 3050 2850 3050
+Wire Wire Line
+	2000 2600 2000 2500
+Text GLabel 5100 1450 2    50   Input ~ 0
+3V3
+Text GLabel 6600 1600 2    50   Input ~ 0
+3V3
+Text GLabel 8400 4650 2    50   Input ~ 0
+3V3
 $EndSCHEMATC
