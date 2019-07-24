@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.127)
     (user_trace_width 0.2)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
@@ -1006,7 +1006,7 @@
     (tags "QFN DFN_QFN")
     (path /5D36789F)
     (attr smd)
-    (fp_text reference U2 (at 0 -3.299999 135) (layer F.SilkS) hide
+    (fp_text reference U2 (at 0.071842 0 135) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value ATtiny3217-M (at 0 3.3 135) (layer F.Fab)
