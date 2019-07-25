@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 31)
+    (drawings 35)
     (tracks 150)
     (zones 0)
     (modules 21)
@@ -17,7 +17,7 @@
     (33 F.Adhes user)
     (34 B.Paste user hide)
     (35 F.Paste user hide)
-    (36 B.SilkS user hide)
+    (36 B.SilkS user)
     (37 F.SilkS user)
     (38 B.Mask user hide)
     (39 F.Mask user hide)
@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.127)
     (user_trace_width 0.15)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
@@ -1490,6 +1490,10 @@
     )
   )
 
+  (gr_line (start 192.2018 64.8716) (end 192.4812 65.1002) (layer F.SilkS) (width 0.12))
+  (gr_line (start 193.9036 64.8716) (end 192.2018 64.8716) (layer F.SilkS) (width 0.12))
+  (gr_line (start 193.9036 64.6176) (end 193.6496 64.389) (layer F.SilkS) (width 0.12))
+  (gr_line (start 192.2018 64.6176) (end 193.9036 64.6176) (layer F.SilkS) (width 0.12))
   (gr_text RTS (at 201.422 62.738 90) (layer F.SilkS) (tstamp 5D2B80A0)
     (effects (font (size 0.7 0.7) (thickness 0.15)))
   )

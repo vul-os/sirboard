@@ -363,8 +363,8 @@ Text Label 6000 3050 0    50   ~ 0
 RX
 Text Label 6000 2950 0    50   ~ 0
 TX
-Text Label 5800 2850 0    50   ~ 0
-5V
+Text Label 2050 2450 0    50   ~ 0
+VUSB
 Wire Wire Line
 	6450 3150 6450 4200
 $Comp
@@ -426,4 +426,8 @@ Wire Wire Line
 	3950 1700 3950 2900
 Wire Wire Line
 	4700 2450 5650 2450
+Text Label 4500 1700 0    50   ~ 0
+3.3V
+Text Label 3700 2450 0    50   ~ 0
+VCC
 $EndSCHEMATC
