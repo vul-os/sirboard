@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:SOT6-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -58,4 +59,21 @@ Wire Wire Line
 	5000 3500 4850 3500
 Wire Wire Line
 	4850 3600 5000 3600
+$Comp
+L Connector_Generic:Conn_02x03_Counter_Clockwise J4
+U 1 1 5D3AAC75
+P 4650 3500
+F 0 "J4" H 4700 3817 50  0000 C CNN
+F 1 "Conn_02x03_Counter_Clockwise" H 4700 3726 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 4650 3500 50  0001 C CNN
+F 3 "~" H 4650 3500 50  0001 C CNN
+	1    4650 3500
+	-1   0    0    -1  
+$EndComp
+Connection ~ 4350 3400
+Connection ~ 4350 3500
+Connection ~ 4350 3600
+Connection ~ 4850 3400
+Connection ~ 4850 3500
+Connection ~ 4850 3600
 $EndSCHEMATC

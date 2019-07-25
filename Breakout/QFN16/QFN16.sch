@@ -74,4 +74,20 @@ Connection ~ 5800 3750
 Connection ~ 5800 3850
 Connection ~ 5800 3950
 Connection ~ 5800 4050
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 5D3B084D
+P 6800 3300
+F 0 "J5" H 6879 3342 50  0000 L CNN
+F 1 "Conn_01x03" H 6879 3252 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6800 3300 50  0001 C CNN
+F 3 "~" H 6800 3300 50  0001 C CNN
+	1    6800 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3200 6600 3300
+Connection ~ 6600 3300
+Wire Wire Line
+	6600 3300 6600 3400
 $EndSCHEMATC

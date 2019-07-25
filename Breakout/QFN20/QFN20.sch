@@ -78,4 +78,20 @@ Connection ~ 5600 4500
 Connection ~ 5600 4600
 Connection ~ 5600 4700
 Connection ~ 5600 4800
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 5D3B65EC
+P 7600 4300
+F 0 "J5" H 7679 4342 50  0000 L CNN
+F 1 "Conn_01x03" H 7679 4252 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7600 4300 50  0001 C CNN
+F 3 "~" H 7600 4300 50  0001 C CNN
+	1    7600 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 4200 7400 4300
+Connection ~ 7400 4300
+Wire Wire Line
+	7400 4300 7400 4400
 $EndSCHEMATC

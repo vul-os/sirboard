@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:SOIC20-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -56,17 +57,6 @@ F 2 "Package_SO:SSOP-20_4.4x6.5mm_P0.65mm" H 4600 3800 50  0001 C CNN
 F 3 "~" H 4600 3800 50  0001 C CNN
 	1    4600 3800
 	1    0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x10_Counter_Clockwise J3
-U 1 1 5D28B720
-P 4600 3700
-F 0 "J3" H 4650 4315 50  0000 C CNN
-F 1 "Conn_02x10_Counter_Clockwise" H 4650 4225 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-20-1EP_5x5mm_P0.65mm_EP3.35x3.35mm" H 4600 3700 50  0001 C CNN
-F 3 "~" H 4600 3700 50  0001 C CNN
-	1    4600 3700
-	1    0    0    -1  
 $EndComp
 Connection ~ 4400 3300
 Connection ~ 4400 3400
