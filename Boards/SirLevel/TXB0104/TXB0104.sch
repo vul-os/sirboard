@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:TXB0104-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,17 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Logic_LevelTranslator:TXB0104D U1
-U 1 1 5D2E48EB
-P 5500 3700
-F 0 "U1" H 5500 2912 50  0000 C CNN
-F 1 "TXB0104D" H 5500 2822 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5500 2950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 5610 3795 50  0001 C CNN
-	1    5500 3700
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C2
 U 1 1 5D2E53A3
@@ -56,8 +46,6 @@ Wire Wire Line
 	5400 2350 5600 2350
 Wire Wire Line
 	5600 2350 5600 2450
-Wire Wire Line
-	5500 4400 6150 4400
 Wire Wire Line
 	6150 4400 6150 2350
 Wire Wire Line
@@ -116,11 +104,6 @@ Wire Wire Line
 	4700 3750 4700 4000
 Wire Wire Line
 	4700 4000 5100 4000
-Wire Wire Line
-	4550 3850 4550 4400
-Wire Wire Line
-	4550 4400 5500 4400
-Connection ~ 5500 4400
 Wire Wire Line
 	5100 3200 4950 3200
 Wire Wire Line
@@ -209,4 +192,22 @@ Wire Wire Line
 Connection ~ 5400 2800
 Wire Wire Line
 	5400 2800 5400 2750
+$Comp
+L Logic_LevelTranslator:TXB0104PW U1
+U 1 1 5D8F47CC
+P 5500 3700
+F 0 "U1" H 5500 2912 50  0000 C CNN
+F 1 "TXB0104PW" H 5500 2822 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 5500 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 5610 3795 50  0001 C CNN
+	1    5500 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4400 5500 4400
+Connection ~ 5500 4400
+Wire Wire Line
+	5500 4400 6150 4400
+Wire Wire Line
+	4550 3850 4550 4400
 $EndSCHEMATC
