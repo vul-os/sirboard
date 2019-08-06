@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.25)
+    (last_trace_width 0.127)
     (user_trace_width 0.127)
     (user_trace_width 0.15)
     (user_trace_width 0.2)
@@ -3057,8 +3057,6 @@
   (segment (start 79.2898 62.9933) (end 79.3393 63.0428) (width 0.4) (layer F.Cu) (net 13))
   (segment (start 79.2898 60.4012) (end 79.2898 62.9933) (width 0.4) (layer F.Cu) (net 13))
   (segment (start 95.950777 62.584394) (end 95.950776 62.584394) (width 0.25) (layer F.Cu) (net 13))
-  (segment (start 94.116 63.2878) (end 95.385091 62.018709) (width 0.25) (layer F.Cu) (net 46))
-  (segment (start 94.116 63.6016) (end 94.116 63.2878) (width 0.25) (layer F.Cu) (net 46))
   (segment (start 107.237032 53.34) (end 106.641016 53.936016) (width 0.25) (layer F.Cu) (net 13))
   (segment (start 107.7468 53.34) (end 107.237032 53.34) (width 0.25) (layer F.Cu) (net 13))
   (segment (start 108.242984 52.843816) (end 107.7468 53.34) (width 0.25) (layer F.Cu) (net 13))
@@ -3080,7 +3078,6 @@
   (segment (start 91.8718 50.7746) (end 98.3488 50.7746) (width 0.25) (layer B.Cu) (net 13))
   (segment (start 98.3488 50.993982) (end 98.213518 51.129264) (width 0.25) (layer F.Cu) (net 13))
   (segment (start 98.3488 50.7746) (end 98.3488 50.993982) (width 0.25) (layer F.Cu) (net 13))
-  (via (at 94.116 63.6016) (size 0.6) (drill 0.3) (layers F.Cu B.Cu) (net 46))
   (segment (start 89.2152 63.4238) (end 90.0026 64.2112) (width 0.25) (layer B.Cu) (net 13))
   (segment (start 116.7384 51.435) (end 121.0056 55.7022) (width 0.25) (layer F.Cu) (net 13))
   (segment (start 108.242984 52.794784) (end 109.602768 51.435) (width 0.25) (layer F.Cu) (net 13))
@@ -3359,6 +3356,9 @@
   (segment (start 107.15363 55.053708) (end 108.130738 54.0766) (width 0.25) (layer F.Cu) (net 45))
   (segment (start 105.143165 55.654748) (end 105.744205 55.053708) (width 0.25) (layer F.Cu) (net 45))
   (segment (start 105.744205 55.053708) (end 107.15363 55.053708) (width 0.25) (layer F.Cu) (net 45))
+  (segment (start 94.116 63.2878) (end 95.385091 62.018709) (width 0.25) (layer F.Cu) (net 46))
+  (segment (start 94.116 63.6016) (end 94.116 63.2878) (width 0.25) (layer F.Cu) (net 46))
+  (via (at 94.116 63.6016) (size 0.6) (drill 0.3) (layers F.Cu B.Cu) (net 46))
 
   (zone (net 1) (net_name GND) (layer F.Cu) (tstamp 0) (hatch none 0.508)
     (connect_pads (clearance 0.15))
