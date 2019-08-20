@@ -39,12 +39,12 @@ $EndComp
 $Comp
 L Device:R_US R4
 U 1 1 5D279F68
-P 6250 2150
-F 0 "R4" H 6318 2195 50  0000 L CNN
-F 1 "R_US" H 6318 2105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6290 2140 50  0001 C CNN
-F 3 "~" H 6250 2150 50  0001 C CNN
-	1    6250 2150
+P 7350 3700
+F 0 "R4" H 7418 3745 50  0000 L CNN
+F 1 "R_US" H 7418 3655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7390 3690 50  0001 C CNN
+F 3 "~" H 7350 3700 50  0001 C CNN
+	1    7350 3700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -68,12 +68,12 @@ Wire Wire Line
 $Comp
 L Device:LED LED2
 U 1 1 5D27B0C2
-P 6250 2600
-F 0 "LED2" V 6288 2483 50  0000 R CNN
-F 1 "TX" V 6198 2483 50  0000 R CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 6250 2600 50  0001 C CNN
-F 3 "~" H 6250 2600 50  0001 C CNN
-	1    6250 2600
+P 7350 4150
+F 0 "LED2" V 7388 4033 50  0000 R CNN
+F 1 "TX" V 7298 4033 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 7350 4150 50  0001 C CNN
+F 3 "~" H 7350 4150 50  0001 C CNN
+	1    7350 4150
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -88,10 +88,10 @@ F 3 "~" H 5900 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED LED1
+L Device:LED T/RX1
 U 1 1 5D282FEC
 P 5900 2600
-F 0 "LED1" V 5938 2483 50  0000 R CNN
+F 0 "T/RX1" V 5938 2483 50  0000 R CNN
 F 1 "RX" V 5848 2483 50  0000 R CNN
 F 2 "LED_SMD:LED_0805_2012Metric_Castellated" H 5900 2600 50  0001 C CNN
 F 3 "~" H 5900 2600 50  0001 C CNN
@@ -103,20 +103,13 @@ Wire Wire Line
 Wire Wire Line
 	5900 3900 5500 3900
 Wire Wire Line
-	6250 2300 6250 2450
-Wire Wire Line
-	6250 4000 5500 4000
+	7350 3850 7350 4000
 Wire Wire Line
 	4900 2600 4900 1700
 Wire Wire Line
 	4900 1700 5900 1700
 Wire Wire Line
-	6250 1700 6250 2000
-Wire Wire Line
 	5900 2000 5900 1700
-Connection ~ 5900 1700
-Wire Wire Line
-	5900 1700 6250 1700
 Wire Wire Line
 	4100 3500 3950 3500
 Wire Wire Line
@@ -130,17 +123,6 @@ Connection ~ 4700 4900
 Wire Wire Line
 	3950 3800 3950 3500
 Connection ~ 3950 3500
-$Comp
-L Connector:USB_B_Micro J1
-U 1 1 5D28C6B2
-P 1750 3200
-F 0 "J1" H 1806 3665 50  0000 C CNN
-F 1 "USB_B_Micro" H 1806 3575 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 1900 3150 50  0001 C CNN
-F 3 "~" H 1900 3150 50  0001 C CNN
-	1    1750 3200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_US R1
 U 1 1 5D293047
@@ -186,10 +168,6 @@ F 3 "~" H 2500 3700 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 3000 2050 2450
-Wire Wire Line
-	2050 2450 2200 2450
-Wire Wire Line
 	4700 2450 4700 2600
 $Comp
 L Device:C C4
@@ -224,13 +202,9 @@ Wire Wire Line
 Wire Wire Line
 	4050 3300 4100 3300
 Wire Wire Line
-	2050 3300 2700 3300
-Wire Wire Line
 	2750 3300 2750 3350
 Wire Wire Line
 	2750 3350 2850 3350
-Wire Wire Line
-	2050 3200 2500 3200
 Wire Wire Line
 	2500 3550 2500 3200
 Connection ~ 2500 3200
@@ -247,12 +221,7 @@ Connection ~ 3350 4900
 Wire Wire Line
 	2500 4900 2700 4900
 Connection ~ 2700 4900
-Wire Wire Line
-	1750 4900 2200 4900
 Connection ~ 2500 4900
-Wire Wire Line
-	1650 4900 1750 4900
-Connection ~ 1750 4900
 $Comp
 L Device:C C1
 U 1 1 5D2AAFCC
@@ -346,10 +315,6 @@ Wire Wire Line
 Wire Wire Line
 	2200 3850 2200 4900
 Wire Wire Line
-	1750 3600 1750 4900
-Wire Wire Line
-	1650 3600 1650 4900
-Wire Wire Line
 	4700 4400 4700 4900
 Wire Wire Line
 	4800 4400 4800 4900
@@ -358,12 +323,12 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x06 J4
 U 1 1 5D2E3C24
-P 7250 3050
-F 0 "J4" H 7329 3042 50  0000 L CNN
-F 1 "Conn_01x06" H 7329 2952 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 7250 3050 50  0001 C CNN
-F 3 "~" H 7250 3050 50  0001 C CNN
-	1    7250 3050
+P 7850 3050
+F 0 "J4" H 7929 3042 50  0000 L CNN
+F 1 "Conn_01x06" H 7929 2952 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 7850 3050 50  0001 C CNN
+F 3 "~" H 7850 3050 50  0001 C CNN
+	1    7850 3050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -385,25 +350,23 @@ Wire Wire Line
 Wire Wire Line
 	5500 3200 6750 3200
 Wire Wire Line
-	6750 2950 7050 2950
+	6750 2950 7650 2950
 Wire Wire Line
-	6900 3050 7050 3050
+	6900 3050 7350 3050
 Wire Wire Line
-	6850 3150 7050 3150
+	6850 3150 7650 3150
 Wire Wire Line
-	6800 3250 7050 3250
+	6800 3250 7650 3250
 Wire Wire Line
-	6800 3350 7050 3350
+	6800 3350 7650 3350
 Wire Wire Line
-	7050 2850 6950 2850
+	7650 2850 6950 2850
 Wire Wire Line
 	6950 2850 6950 4900
 Wire Wire Line
 	4900 4900 6950 4900
 Wire Wire Line
 	5900 2750 5900 3900
-Wire Wire Line
-	6250 2750 6250 4000
 $Comp
 L Connector_Generic:Conn_01x03 J3
 U 1 1 5D31F682
@@ -487,9 +450,45 @@ RI
 Text Label 5700 3800 0    50   ~ 0
 CB0
 Text Label 5700 3900 0    50   ~ 0
-RXLED
-Text Label 5700 4000 0    50   ~ 0
-TXLED
+TRX
 Text Label 5700 4100 0    50   ~ 0
 CB3
+Connection ~ 1750 4900
+Wire Wire Line
+	1750 4900 2200 4900
+Wire Wire Line
+	1650 4900 1750 4900
+Wire Wire Line
+	2050 2450 2200 2450
+Wire Wire Line
+	1650 3600 1650 4900
+Wire Wire Line
+	1750 3600 1750 4900
+Wire Wire Line
+	2050 3200 2500 3200
+Wire Wire Line
+	2050 3300 2700 3300
+Wire Wire Line
+	2050 3000 2050 2450
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5D28C6B2
+P 1750 3200
+F 0 "J1" H 1806 3665 50  0000 C CNN
+F 1 "USB_B_Micro" H 1806 3575 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 1900 3150 50  0001 C CNN
+F 3 "~" H 1900 3150 50  0001 C CNN
+	1    1750 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3550 7350 3050
+Connection ~ 7350 3050
+Wire Wire Line
+	7350 3050 7650 3050
+Wire Wire Line
+	7350 4300 7350 4900
+Wire Wire Line
+	7350 4900 6950 4900
+Connection ~ 6950 4900
 $EndSCHEMATC
