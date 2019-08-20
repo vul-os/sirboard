@@ -220,17 +220,6 @@ Wire Wire Line
 	4000 2400 4000 3450
 Wire Wire Line
 	3900 2400 4000 2400
-$Comp
-L Jumper:SolderJumper_2_Bridged 5V1
-U 1 1 5D4D08FE
-P 4150 3200
-F 0 "5V1" V 4150 3268 50  0000 L CNN
-F 1 "SolderJumper_2_Bridged" V 4195 3268 50  0001 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 4150 3200 50  0001 C CNN
-F 3 "~" H 4150 3200 50  0001 C CNN
-	1    4150 3200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4850 2900 4850 3050
 Wire Wire Line
@@ -606,4 +595,15 @@ Wire Wire Line
 	10600 4250 10500 4250
 Wire Wire Line
 	10500 4150 10600 4150
+$Comp
+L Jumper:SolderJumper_2_Open 5V1
+U 1 1 5D5F26DA
+P 4150 3200
+F 0 "5V1" V 4150 3113 50  0000 R CNN
+F 1 "SolderJumper_2_Open" H 4150 3313 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4150 3200 50  0001 C CNN
+F 3 "~" H 4150 3200 50  0001 C CNN
+	1    4150 3200
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

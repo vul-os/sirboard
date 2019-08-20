@@ -143,7 +143,7 @@ Connection ~ 7050 6000
 Wire Wire Line
 	3550 2850 3700 2850
 Wire Wire Line
-	10600 4450 10700 4450
+	10650 5200 10650 5300
 Text GLabel 8050 4100 2    50   Input ~ 0
 PA3
 Text GLabel 8050 4500 2    50   Input ~ 0
@@ -186,7 +186,7 @@ Wire Wire Line
 	7850 3550 7850 3800
 Wire Wire Line
 	6350 3000 6350 2850
-Text GLabel 10700 4450 2    50   Input ~ 0
+Text GLabel 10650 5300 3    50   Input ~ 0
 RST
 Connection ~ 6350 2850
 Connection ~ 6350 6000
@@ -222,17 +222,6 @@ Wire Wire Line
 	4400 2950 4400 4000
 Wire Wire Line
 	4300 2950 4400 2950
-$Comp
-L Jumper:SolderJumper_2_Bridged 5V1
-U 1 1 5D4D08FE
-P 4550 3750
-F 0 "5V1" V 4550 3818 50  0000 L CNN
-F 1 "SolderJumper_2_Bridged" V 4595 3818 50  0001 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 4550 3750 50  0001 C CNN
-F 3 "~" H 4550 3750 50  0001 C CNN
-	1    4550 3750
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5250 3450 5250 3600
 Wire Wire Line
@@ -408,24 +397,24 @@ Wire Wire Line
 Wire Wire Line
 	8050 4900 7650 4900
 Wire Wire Line
-	10700 4350 10600 4350
-Text GLabel 10700 4350 2    50   Input ~ 0
+	10750 5300 10750 5200
+Text GLabel 10750 5300 3    50   Input ~ 0
 PA1
 Wire Wire Line
-	9700 4850 9800 4850
+	10250 4300 10250 4400
 Wire Wire Line
-	9800 4750 9700 4750
-Text GLabel 9700 4750 0    50   Input ~ 0
+	10350 4400 10350 4300
+Text GLabel 10350 4300 1    50   Input ~ 0
 PA4
-Text GLabel 9700 4850 0    50   Input ~ 0
+Text GLabel 10250 4300 1    50   Input ~ 0
 PA5
 Wire Wire Line
-	9800 4950 9700 4950
+	10150 4400 10150 4300
 Wire Wire Line
-	9800 5050 9700 5050
-Text GLabel 9700 4950 0    50   Input ~ 0
+	10050 4400 10050 4300
+Text GLabel 10150 4300 1    50   Input ~ 0
 PA6
-Text GLabel 9700 5050 0    50   Input ~ 0
+Text GLabel 10050 4300 1    50   Input ~ 0
 PA7
 $Comp
 L MCU_Microchip_ATtiny:ATtiny3216-M U2
@@ -484,81 +473,81 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x10 J1
 U 1 1 5D4C49C3
-P 10000 4750
-F 0 "J1" H 10079 4697 50  0000 L CNN
-F 1 "Conn_01x10" H 10079 4652 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 10000 4750 50  0001 C CNN
-F 3 "~" H 10000 4750 50  0001 C CNN
-	1    10000 4750
-	1    0    0    -1  
+P 10350 4600
+F 0 "J1" H 10429 4547 50  0000 L CNN
+F 1 "Conn_01x10" H 10429 4502 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 10350 4600 50  0001 C CNN
+F 3 "~" H 10350 4600 50  0001 C CNN
+	1    10350 4600
+	0    1    1    0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x10 J3
 U 1 1 5D4C752A
-P 10400 4750
-F 0 "J3" H 10319 5275 50  0000 C CNN
-F 1 "Conn_01x10" H 10479 4652 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 10400 4750 50  0001 C CNN
-F 3 "~" H 10400 4750 50  0001 C CNN
-	1    10400 4750
-	-1   0    0    -1  
+P 10350 5000
+F 0 "J3" H 10269 5525 50  0000 C CNN
+F 1 "Conn_01x10" H 10429 4902 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 10350 5000 50  0001 C CNN
+F 3 "~" H 10350 5000 50  0001 C CNN
+	1    10350 5000
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	9700 4350 9800 4350
-Text GLabel 9700 4350 0    50   Input ~ 0
+	10750 4300 10750 4400
+Text GLabel 10750 4300 1    50   Input ~ 0
 PA2
 Wire Wire Line
-	9700 4450 9800 4450
-Text GLabel 9700 4450 0    50   Input ~ 0
+	10650 4300 10650 4400
+Text GLabel 10650 4300 1    50   Input ~ 0
 PA3
-Text GLabel 9700 4550 0    50   Input ~ 0
+Text GLabel 10550 4300 1    50   Input ~ 0
 GND
 Wire Wire Line
-	9800 4550 9700 4550
-Text GLabel 9700 4650 0    50   Input ~ 0
+	10550 4400 10550 4300
+Text GLabel 10450 4300 1    50   Input ~ 0
 VCC
 Wire Wire Line
-	9800 4650 9700 4650
-Text GLabel 9700 5250 0    50   Input ~ 0
+	10450 4400 10450 4300
+Text GLabel 9850 4300 1    50   Input ~ 0
 PB4
-Text GLabel 9700 5150 0    50   Input ~ 0
+Text GLabel 9950 4300 1    50   Input ~ 0
 PB5
 Wire Wire Line
-	9700 5250 9800 5250
+	9850 4300 9850 4400
 Wire Wire Line
-	9800 5150 9700 5150
+	9950 4400 9950 4300
 Wire Wire Line
-	10600 5250 10700 5250
+	9850 5200 9850 5300
 Wire Wire Line
-	10700 5150 10600 5150
-Text GLabel 10700 5250 2    50   Input ~ 0
+	9950 5300 9950 5200
+Text GLabel 9850 5300 3    50   Input ~ 0
 PB3
-Text GLabel 10700 5150 2    50   Input ~ 0
+Text GLabel 9950 5300 3    50   Input ~ 0
 PB2
-Text GLabel 10700 5050 2    50   Input ~ 0
+Text GLabel 10050 5300 3    50   Input ~ 0
 PB1
-Text GLabel 10700 4950 2    50   Input ~ 0
+Text GLabel 10150 5300 3    50   Input ~ 0
 PB0
 Wire Wire Line
-	10700 4950 10600 4950
+	10150 5300 10150 5200
 Wire Wire Line
-	10600 5050 10700 5050
-Text GLabel 10700 4650 2    50   Input ~ 0
+	10050 5200 10050 5300
+Text GLabel 10450 5300 3    50   Input ~ 0
 PC2
-Text GLabel 10700 4750 2    50   Input ~ 0
+Text GLabel 10350 5300 3    50   Input ~ 0
 PC1
-Text GLabel 10700 4550 2    50   Input ~ 0
+Text GLabel 10550 5300 3    50   Input ~ 0
 PC3
-Text GLabel 10700 4850 2    50   Input ~ 0
+Text GLabel 10250 5300 3    50   Input ~ 0
 PC0
 Wire Wire Line
-	10700 4850 10600 4850
+	10250 5300 10250 5200
 Wire Wire Line
-	10700 4650 10600 4650
+	10450 5300 10450 5200
 Wire Wire Line
-	10600 4750 10700 4750
+	10350 5200 10350 5300
 Wire Wire Line
-	10600 4550 10700 4550
+	10550 5200 10550 5300
 Connection ~ 7800 4100
 Wire Wire Line
 	7800 4100 8050 4100
@@ -572,4 +561,15 @@ Wire Wire Line
 	7800 5300 7800 5000
 Wire Wire Line
 	7650 5000 8050 5000
+$Comp
+L Jumper:SolderJumper_2_Open 5V1
+U 1 1 5D5DACE6
+P 4550 3750
+F 0 "5V1" V 4550 3663 50  0000 R CNN
+F 1 "SolderJumper_2_Open" H 4550 3863 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4550 3750 50  0001 C CNN
+F 3 "~" H 4550 3750 50  0001 C CNN
+	1    4550 3750
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

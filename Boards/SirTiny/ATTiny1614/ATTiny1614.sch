@@ -89,7 +89,7 @@ F 3 "~" H 3550 3800 50  0001 C CNN
 	1    3550 3800
 	1    0    0    -1  
 $EndComp
-Text GLabel 9650 4250 0    50   Input ~ 0
+Text GLabel 9900 5300 3    50   Input ~ 0
 VCC
 Text GLabel 7950 2850 2    50   Input ~ 0
 VCC
@@ -111,10 +111,10 @@ Wire Wire Line
 	8050 3800 7850 3800
 Text GLabel 10400 3750 2    50   Input ~ 0
 VIN
-Text GLabel 10600 4250 2    50   Input ~ 0
+Text GLabel 9900 4350 1    50   Input ~ 0
 GND
 Wire Wire Line
-	10500 4250 10600 4250
+	9900 4450 9900 4350
 Wire Wire Line
 	10400 3750 10300 3750
 Text GLabel 3000 2850 0    50   Input ~ 0
@@ -153,13 +153,13 @@ Connection ~ 7050 5300
 Wire Wire Line
 	3550 2850 3700 2850
 Wire Wire Line
-	9750 4250 9650 4250
+	9900 5200 9900 5300
 Wire Wire Line
-	10600 4350 10500 4350
+	10000 4350 10000 4450
 Wire Wire Line
-	10500 4650 10600 4650
+	10300 4450 10300 4350
 Wire Wire Line
-	10600 4450 10500 4450
+	10100 4350 10100 4450
 Text GLabel 8050 4100 2    50   Input ~ 0
 PA3
 Text GLabel 8050 4500 2    50   Input ~ 0
@@ -206,11 +206,11 @@ Wire Wire Line
 	7850 3550 7850 3800
 Wire Wire Line
 	6350 3000 6350 2850
-Text GLabel 10600 4650 2    50   Input ~ 0
+Text GLabel 10300 4350 1    50   Input ~ 0
 RST
-Text GLabel 10600 4450 2    50   Input ~ 0
+Text GLabel 10100 4350 1    50   Input ~ 0
 PA2
-Text GLabel 10600 4350 2    50   Input ~ 0
+Text GLabel 10000 4350 1    50   Input ~ 0
 PA3
 Connection ~ 6350 2850
 Connection ~ 6350 5300
@@ -248,17 +248,6 @@ Wire Wire Line
 	4400 2950 4400 4000
 Wire Wire Line
 	4300 2950 4400 2950
-$Comp
-L Jumper:SolderJumper_2_Bridged 5V1
-U 1 1 5D4D08FE
-P 4550 3750
-F 0 "5V1" V 4550 3818 50  0000 L CNN
-F 1 "SolderJumper_2_Bridged" V 4595 3818 50  0001 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 4550 3750 50  0001 C CNN
-F 3 "~" H 4550 3750 50  0001 C CNN
-	1    4550 3750
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5250 3450 5250 3600
 Wire Wire Line
@@ -454,62 +443,62 @@ Wire Wire Line
 Wire Wire Line
 	6450 4100 6300 4100
 Wire Wire Line
-	10600 4550 10500 4550
-Text GLabel 10600 4550 2    50   Input ~ 0
+	10200 4350 10200 4450
+Text GLabel 10200 4350 1    50   Input ~ 0
 PA1
-Text GLabel 10600 4850 2    50   Input ~ 0
+Text GLabel 10500 4350 1    50   Input ~ 0
 PB1
-Text GLabel 10600 4750 2    50   Input ~ 0
+Text GLabel 10400 4350 1    50   Input ~ 0
 PB0
 Wire Wire Line
-	10600 4750 10500 4750
+	10400 4350 10400 4450
 Wire Wire Line
-	10500 4850 10600 4850
+	10500 4450 10500 4350
 Wire Wire Line
-	9750 4750 9650 4750
+	10400 5200 10400 5300
 Wire Wire Line
-	9650 4850 9750 4850
-Text GLabel 9650 4750 0    50   Input ~ 0
+	10500 5300 10500 5200
+Text GLabel 10400 5300 3    50   Input ~ 0
 PB3
-Text GLabel 9650 4850 0    50   Input ~ 0
+Text GLabel 10500 5300 3    50   Input ~ 0
 PB2
 Wire Wire Line
-	9650 4450 9750 4450
+	10100 5300 10100 5200
 Wire Wire Line
-	9750 4350 9650 4350
-Text GLabel 9650 4350 0    50   Input ~ 0
+	10000 5200 10000 5300
+Text GLabel 10000 5300 3    50   Input ~ 0
 PA4
-Text GLabel 9650 4450 0    50   Input ~ 0
+Text GLabel 10100 5300 3    50   Input ~ 0
 PA5
 Wire Wire Line
-	9750 4550 9650 4550
+	10200 5200 10200 5300
 Wire Wire Line
-	9750 4650 9650 4650
-Text GLabel 9650 4550 0    50   Input ~ 0
+	10300 5200 10300 5300
+Text GLabel 10200 5300 3    50   Input ~ 0
 PA6
-Text GLabel 9650 4650 0    50   Input ~ 0
+Text GLabel 10300 5300 3    50   Input ~ 0
 PA7
 $Comp
 L Connector_Generic:Conn_01x07 J1
 U 1 1 5D3FB5C9
-P 9950 4550
-F 0 "J1" H 10029 4547 50  0000 L CNN
-F 1 "Conn_01x07" H 10029 4502 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 9950 4550 50  0001 C CNN
-F 3 "~" H 9950 4550 50  0001 C CNN
-	1    9950 4550
-	1    0    0    -1  
+P 10200 5000
+F 0 "J1" H 10279 4997 50  0000 L CNN
+F 1 "Conn_01x07" H 10279 4952 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 10200 5000 50  0001 C CNN
+F 3 "~" H 10200 5000 50  0001 C CNN
+	1    10200 5000
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x07 J3
 U 1 1 5D3FEBC4
-P 10300 4550
-F 0 "J3" H 10379 4547 50  0000 L CNN
-F 1 "Conn_01x07" H 10379 4502 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 10300 4550 50  0001 C CNN
-F 3 "~" H 10300 4550 50  0001 C CNN
-	1    10300 4550
-	-1   0    0    -1  
+P 10200 4650
+F 0 "J3" H 10279 4647 50  0000 L CNN
+F 1 "Conn_01x07" H 10279 4602 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 10200 4650 50  0001 C CNN
+F 3 "~" H 10200 4650 50  0001 C CNN
+	1    10200 4650
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	8050 4400 7650 4400
@@ -518,4 +507,15 @@ Wire Wire Line
 Connection ~ 7800 4100
 Wire Wire Line
 	7800 4100 8050 4100
+$Comp
+L Jumper:SolderJumper_2_Open 5V
+U 1 1 5D608218
+P 4550 3750
+F 0 "5V" V 4550 3663 50  0000 R CNN
+F 1 "SolderJumper_2_Open" H 4550 3863 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4550 3750 50  0001 C CNN
+F 3 "~" H 4550 3750 50  0001 C CNN
+	1    4550 3750
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
