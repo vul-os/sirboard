@@ -412,7 +412,7 @@ U 1 1 5D513147
 P 2000 2750
 F 0 "F1" H 2088 2796 50  0000 L CNN
 F 1 "500mA" H 2088 2705 50  0000 L CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 2050 2550 50  0001 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 2050 2550 50  0001 L CNN
 F 3 "~" H 2000 2750 50  0001 C CNN
 	1    2000 2750
 	1    0    0    -1  
@@ -445,16 +445,16 @@ Connection ~ 8950 1550
 $Comp
 L Device:CP C10
 U 1 1 5D5B70AC
-P 9900 1850
-F 0 "C10" H 9782 1896 50  0000 R CNN
-F 1 "1uF" H 9782 1805 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9938 1700 50  0001 C CNN
-F 3 "~" H 9900 1850 50  0001 C CNN
-	1    9900 1850
+P 10400 1850
+F 0 "C10" H 10282 1896 50  0000 R CNN
+F 1 "1uF" H 10282 1805 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10438 1700 50  0001 C CNN
+F 3 "~" H 10400 1850 50  0001 C CNN
+	1    10400 1850
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	9900 1700 9900 1550
+	10400 1700 10400 1550
 $Comp
 L Device:CP C9
 U 1 1 5D5CA9F3
@@ -569,7 +569,7 @@ Wire Wire Line
 	2550 2300 2550 2750
 Text GLabel 2000 2350 0    50   Input ~ 0
 VUSB
-Text GLabel 10200 1550 2    50   Input ~ 0
+Text GLabel 10500 1550 2    50   Input ~ 0
 3V3
 Text GLabel 5150 4850 2    50   Input ~ 0
 A5
@@ -640,8 +640,8 @@ Wire Wire Line
 Text GLabel 9400 4700 0    50   Input ~ 0
 5V
 Wire Wire Line
-	10200 1550 9900 1550
-Connection ~ 9900 1550
+	10500 1550 10400 1550
+Connection ~ 10400 1550
 Text GLabel 9400 4800 0    50   Input ~ 0
 3V3
 Wire Wire Line
@@ -841,17 +841,6 @@ Wire Wire Line
 Connection ~ 3550 3050
 Text GLabel 2400 1450 0    50   Input ~ 0
 VCC
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP1
-U 1 1 5D43EA60
-P 10350 2950
-F 0 "JP1" H 10350 3153 50  0000 C CNN
-F 1 "SolderJumper_3_Bridged12" H 10350 3063 50  0001 C CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 10350 2950 50  0001 C CNN
-F 3 "~" H 10350 2950 50  0001 C CNN
-	1    10350 2950
-	1    0    0    -1  
-$EndComp
 Text GLabel 10000 2950 0    50   Input ~ 0
 5V
 Text GLabel 10700 2950 2    50   Input ~ 0
@@ -880,17 +869,6 @@ Wire Wire Line
 	10350 3300 10350 3100
 Wire Wire Line
 	10150 2950 10000 2950
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP2
-U 1 1 5D523778
-P 10350 3600
-F 0 "JP2" H 10350 3803 50  0000 C CNN
-F 1 "SolderJumper_3_Bridged12" H 10350 3713 50  0001 C CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 10350 3600 50  0001 C CNN
-F 3 "~" H 10350 3600 50  0001 C CNN
-	1    10350 3600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4500 2150 4500 1700
 Wire Wire Line
@@ -907,26 +885,13 @@ Wire Wire Line
 Wire Wire Line
 	4300 1850 4300 2150
 Wire Wire Line
-	9800 1550 9900 1550
-Wire Wire Line
 	9200 1650 8950 1650
 Wire Wire Line
 	8950 1550 9200 1550
-$Comp
-L Regulator_Linear:AP2127K-3.3 U2
-U 1 1 5D591962
-P 9500 1650
-F 0 "U2" H 9500 1992 50  0000 C CNN
-F 1 "AP2112K-3.3" H 9500 1901 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 9500 1975 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 9500 1750 50  0001 C CNN
-	1    9500 1650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	8800 2150 9900 2150
+	8800 2150 10400 2150
 Wire Wire Line
-	9900 2000 9900 2150
+	10400 2000 10400 2150
 Wire Wire Line
 	8800 2000 8800 2150
 $Comp
@@ -1133,10 +1098,10 @@ Text GLabel 5900 5950 2    50   Input ~ 0
 GND
 Wire Wire Line
 	5900 5950 5800 5950
-Text GLabel 10000 2150 2    50   Input ~ 0
+Text GLabel 10750 2150 2    50   Input ~ 0
 GND
 Wire Wire Line
-	10000 2150 9900 2150
+	10750 2150 10700 2150
 Wire Wire Line
 	7350 1700 7350 1550
 Connection ~ 7350 1550
@@ -1166,10 +1131,10 @@ F 3 "~" H 7250 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:CP C?
+L Device:CP C11
 U 1 1 5D5B301A
 P 7600 1850
-F 0 "C?" H 7482 1896 50  0000 R CNN
+F 0 "C11" H 7482 1896 50  0000 R CNN
 F 1 "22uF" H 7482 1805 50  0000 R CNN
 F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder" H 7638 1700 50  0001 C CNN
 F 3 "~" H 7600 1850 50  0001 C CNN
@@ -1193,10 +1158,90 @@ Wire Wire Line
 	8500 2150 8800 2150
 Wire Wire Line
 	8500 1550 8800 1550
-Connection ~ 9900 2150
+Connection ~ 10400 2150
 Connection ~ 8500 1550
 Connection ~ 8500 2150
 Wire Wire Line
 	2400 1450 2550 1450
 Connection ~ 2550 1450
+$Comp
+L Jumper:SolderJumper_3_Open JP1
+U 1 1 5E257EEF
+P 10350 2950
+F 0 "JP1" H 10350 3153 50  0000 C CNN
+F 1 "SolderJumper_3_Open" H 10350 3063 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10350 2950 50  0001 C CNN
+F 3 "~" H 10350 2950 50  0001 C CNN
+	1    10350 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Open JP2
+U 1 1 5E258F47
+P 10350 3600
+F 0 "JP2" H 10350 3803 50  0000 C CNN
+F 1 "SolderJumper_3_Open" H 10350 3713 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 10350 3600 50  0001 C CNN
+F 3 "~" H 10350 3600 50  0001 C CNN
+	1    10350 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AP2127K-ADJ U2
+U 1 1 5E2BA0AD
+P 9500 1650
+F 0 "U2" H 9500 1990 50  0000 C CNN
+F 1 "AP7365-W-7" H 9500 1900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 9500 1975 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 9500 1750 50  0001 C CNN
+	1    9500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R7
+U 1 1 5E34715F
+P 10050 1300
+F 0 "R7" V 10118 1346 50  0000 L CNN
+F 1 "68K" V 10118 1255 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10090 1290 50  0001 C CNN
+F 3 "~" H 10050 1300 50  0001 C CNN
+	1    10050 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R8
+U 1 1 5E35753D
+P 10500 1300
+F 0 "R8" V 10568 1346 50  0000 L CNN
+F 1 "22K" V 10568 1255 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10540 1290 50  0001 C CNN
+F 3 "~" H 10500 1300 50  0001 C CNN
+	1    10500 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10250 1650 9800 1650
+Wire Wire Line
+	10200 1300 10250 1300
+Wire Wire Line
+	10650 1300 10700 1300
+Wire Wire Line
+	10700 1300 10700 2150
+Connection ~ 10700 2150
+Wire Wire Line
+	10700 2150 10400 2150
+Wire Wire Line
+	9800 1550 9850 1550
+Wire Wire Line
+	10250 1650 10250 1300
+Connection ~ 10250 1300
+Wire Wire Line
+	10250 1300 10350 1300
+Wire Wire Line
+	9900 1300 9850 1300
+Wire Wire Line
+	9850 1300 9850 1550
+Connection ~ 9850 1550
+Wire Wire Line
+	9850 1550 10400 1550
 $EndSCHEMATC
