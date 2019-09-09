@@ -710,17 +710,6 @@ Wire Wire Line
 Wire Wire Line
 	8450 1850 8350 1850
 $Comp
-L Regulator_Linear:AP1117-50 U4
-U 1 1 5DCAAF50
-P 2850 900
-F 0 "U4" H 2850 1140 50  0000 C CNN
-F 1 "AP1117-50" H 2850 1050 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2850 1100 50  0001 C CNN
-F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 2950 650 50  0001 C CNN
-	1    2850 900 
-	1    0    0    -1  
-$EndComp
-$Comp
 L Regulator_Linear:AP2204K-ADJ U2
 U 1 1 5DE4B229
 P 4050 1000
@@ -1341,4 +1330,15 @@ Wire Wire Line
 Connection ~ 4050 1550
 Wire Wire Line
 	4050 1550 4800 1550
+$Comp
+L Regulator_Linear:AZ1117-5.0 U?
+U 1 1 5D8AFD92
+P 2850 900
+F 0 "U?" H 2850 1140 50  0000 C CNN
+F 1 "AZ1117-5.0" H 2850 1050 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2850 1150 50  0001 C CIN
+F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 2850 900 50  0001 C CNN
+	1    2850 900 
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
