@@ -807,7 +807,7 @@ U 1 1 5E109742
 P 2000 1200
 F 0 "C3" H 2118 1245 50  0000 L CNN
 F 1 "22uF" H 2118 1155 50  0000 L CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder" H 2038 1050 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T" H 2038 1050 50  0001 C CNN
 F 3 "~" H 2000 1200 50  0001 C CNN
 	1    2000 1200
 	1    0    0    -1  
@@ -1331,10 +1331,10 @@ Connection ~ 4050 1550
 Wire Wire Line
 	4050 1550 4800 1550
 $Comp
-L Regulator_Linear:AZ1117-5.0 U?
+L Regulator_Linear:AZ1117-5.0 U4
 U 1 1 5D8AFD92
 P 2850 900
-F 0 "U?" H 2850 1140 50  0000 C CNN
+F 0 "U4" H 2850 1140 50  0000 C CNN
 F 1 "AZ1117-5.0" H 2850 1050 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2850 1150 50  0001 C CIN
 F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 2850 900 50  0001 C CNN
