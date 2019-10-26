@@ -1,0 +1,309 @@
+EESchema Schematic File Version 4
+LIBS:TCA9548A-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_Expansion:TCA9548APWR U1
+U 1 1 5DB4200B
+P 3700 3250
+F 0 "U1" H 3700 4331 50  0000 C CNN
+F 1 "TCA9548APWR" H 3700 4240 50  0000 C CNN
+F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 3700 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tca9548a.pdf" H 3750 3500 50  0001 C CNN
+	1    3700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x12 J2
+U 1 1 5DB44B96
+P 5100 3450
+F 0 "J2" H 5180 3442 50  0000 L CNN
+F 1 "Conn_01x12" H 5180 3351 50  0000 L CNN
+F 2 "" H 5100 3450 50  0001 C CNN
+F 3 "~" H 5100 3450 50  0001 C CNN
+	1    5100 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x12 J1
+U 1 1 5DB46EE9
+P 1250 3750
+F 0 "J1" H 1330 3742 50  0000 L CNN
+F 1 "Conn_01x12" H 1330 3651 50  0000 L CNN
+F 2 "" H 1250 3750 50  0001 C CNN
+F 3 "~" H 1250 3750 50  0001 C CNN
+	1    1250 3750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5DB4BA71
+P 6300 3300
+F 0 "C1" H 6415 3346 50  0000 L CNN
+F 1 "C" H 6415 3255 50  0000 L CNN
+F 2 "" H 6338 3150 50  0001 C CNN
+F 3 "~" H 6300 3300 50  0001 C CNN
+	1    6300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5DB4F024
+P 1750 2900
+F 0 "R2" H 1820 2946 50  0000 L CNN
+F 1 "R" H 1820 2855 50  0000 L CNN
+F 2 "" V 1680 2900 50  0001 C CNN
+F 3 "~" H 1750 2900 50  0001 C CNN
+	1    1750 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5DB4F12A
+P 1900 2900
+F 0 "R3" H 1970 2946 50  0000 L CNN
+F 1 "R" H 1970 2855 50  0000 L CNN
+F 2 "" V 1830 2900 50  0001 C CNN
+F 3 "~" H 1900 2900 50  0001 C CNN
+	1    1900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5DB4F5CB
+P 2050 2900
+F 0 "R4" H 2120 2946 50  0000 L CNN
+F 1 "R" H 2120 2855 50  0000 L CNN
+F 2 "" V 1980 2900 50  0001 C CNN
+F 3 "~" H 2050 2900 50  0001 C CNN
+	1    2050 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5DB4F8DB
+P 2350 2900
+F 0 "R6" H 2420 2946 50  0000 L CNN
+F 1 "R" H 2420 2855 50  0000 L CNN
+F 2 "" V 2280 2900 50  0001 C CNN
+F 3 "~" H 2350 2900 50  0001 C CNN
+	1    2350 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5DB4ED35
+P 1600 2900
+F 0 "R1" H 1670 2946 50  0000 L CNN
+F 1 "R" H 1670 2855 50  0000 L CNN
+F 2 "" V 1530 2900 50  0001 C CNN
+F 3 "~" H 1600 2900 50  0001 C CNN
+	1    1600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5DB4CCCA
+P 2200 2900
+F 0 "R5" H 2270 2946 50  0000 L CNN
+F 1 "R" H 2270 2855 50  0000 L CNN
+F 2 "" V 2130 2900 50  0001 C CNN
+F 3 "~" H 2200 2900 50  0001 C CNN
+	1    2200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3450 2800 2650
+Wire Wire Line
+	2800 2650 3300 2650
+Wire Wire Line
+	2950 3550 2950 3050
+Wire Wire Line
+	2950 3050 3300 3050
+Wire Wire Line
+	3050 3650 3050 3550
+Wire Wire Line
+	3050 3550 3300 3550
+Wire Wire Line
+	1450 3750 2200 3750
+Wire Wire Line
+	3150 3750 3150 3650
+Wire Wire Line
+	3150 3650 3300 3650
+Wire Wire Line
+	1450 3850 2350 3850
+Wire Wire Line
+	3300 3850 3300 3750
+Wire Wire Line
+	2650 3350 2650 2550
+Wire Wire Line
+	2650 2550 3300 2550
+Wire Wire Line
+	2500 3250 2500 2350
+Wire Wire Line
+	2500 2350 3700 2350
+Wire Wire Line
+	1450 4350 3700 4350
+Wire Wire Line
+	3700 4350 3700 4250
+Wire Wire Line
+	4100 4050 4900 4050
+Wire Wire Line
+	4900 3950 4100 3950
+Wire Wire Line
+	4100 3850 4900 3850
+Wire Wire Line
+	4900 3750 4100 3750
+Wire Wire Line
+	4100 3650 4900 3650
+Wire Wire Line
+	4900 3550 4100 3550
+Wire Wire Line
+	4100 3450 4900 3450
+Wire Wire Line
+	4900 3350 4100 3350
+Wire Wire Line
+	4100 3250 4900 3250
+Wire Wire Line
+	4900 3150 4100 3150
+Wire Wire Line
+	4100 3050 4900 3050
+Wire Wire Line
+	4100 2950 4900 2950
+Wire Wire Line
+	4100 2850 5700 2850
+Wire Wire Line
+	5700 2850 5700 4700
+Wire Wire Line
+	5700 4700 3250 4700
+Wire Wire Line
+	3250 4700 3250 4250
+Wire Wire Line
+	3250 4250 1450 4250
+Wire Wire Line
+	4100 2750 5750 2750
+Wire Wire Line
+	5750 2750 5750 4750
+Wire Wire Line
+	5750 4750 3200 4750
+Wire Wire Line
+	3200 4750 3200 4150
+Wire Wire Line
+	3200 4150 1450 4150
+Wire Wire Line
+	4100 2650 5800 2650
+Wire Wire Line
+	5800 2650 5800 4800
+Wire Wire Line
+	5800 4800 3150 4800
+Wire Wire Line
+	3150 4800 3150 4050
+Wire Wire Line
+	3150 4050 1450 4050
+Wire Wire Line
+	4100 2550 5850 2550
+Wire Wire Line
+	5850 2550 5850 4850
+Wire Wire Line
+	5850 4850 3100 4850
+Wire Wire Line
+	3100 4850 3100 3950
+Wire Wire Line
+	3100 3950 1450 3950
+Wire Wire Line
+	1450 3650 2050 3650
+Wire Wire Line
+	1450 3550 1900 3550
+Wire Wire Line
+	1450 3450 1750 3450
+Wire Wire Line
+	1450 3350 1600 3350
+Wire Wire Line
+	1450 3250 2500 3250
+Wire Wire Line
+	1600 3050 1600 3350
+Connection ~ 1600 3350
+Wire Wire Line
+	1600 3350 2650 3350
+Wire Wire Line
+	1750 3050 1750 3450
+Connection ~ 1750 3450
+Wire Wire Line
+	1750 3450 2800 3450
+Wire Wire Line
+	1900 3050 1900 3550
+Connection ~ 1900 3550
+Wire Wire Line
+	1900 3550 2950 3550
+Wire Wire Line
+	2050 3050 2050 3650
+Connection ~ 2050 3650
+Wire Wire Line
+	2050 3650 3050 3650
+Wire Wire Line
+	2200 3050 2200 3750
+Connection ~ 2200 3750
+Wire Wire Line
+	2200 3750 3150 3750
+Wire Wire Line
+	2350 3050 2350 3850
+Connection ~ 2350 3850
+Wire Wire Line
+	2350 3850 3300 3850
+Wire Wire Line
+	1600 2750 1600 2600
+Wire Wire Line
+	1600 2600 1750 2600
+Wire Wire Line
+	2350 2600 2350 2750
+Wire Wire Line
+	2200 2750 2200 2600
+Connection ~ 2200 2600
+Wire Wire Line
+	2200 2600 2350 2600
+Wire Wire Line
+	2050 2750 2050 2600
+Connection ~ 2050 2600
+Wire Wire Line
+	2050 2600 2200 2600
+Wire Wire Line
+	1900 2750 1900 2600
+Connection ~ 1900 2600
+Wire Wire Line
+	1900 2600 1950 2600
+Wire Wire Line
+	1750 2750 1750 2600
+Connection ~ 1750 2600
+Wire Wire Line
+	1750 2600 1900 2600
+Wire Wire Line
+	2500 2350 1950 2350
+Wire Wire Line
+	1950 2350 1950 2600
+Connection ~ 2500 2350
+Connection ~ 1950 2600
+Wire Wire Line
+	1950 2600 2050 2600
+Wire Wire Line
+	3700 4350 6300 4350
+Wire Wire Line
+	6300 4350 6300 3450
+Connection ~ 3700 4350
+Wire Wire Line
+	6300 3150 6300 2350
+Wire Wire Line
+	6300 2350 3700 2350
+Connection ~ 3700 2350
+$EndSCHEMATC
