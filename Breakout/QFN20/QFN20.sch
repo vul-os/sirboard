@@ -5,13 +5,13 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
+Title "QFN20 TO DIP20 Breakout Board"
+Date "2019-07-11"
+Rev "1"
+Comp "SirBoard"
+Comment1 "QFN20 P = 0.5mm"
+Comment2 "QFN20 P = 0.65mm"
+Comment3 "DIP20 P = 2.54mm"
 Comment4 ""
 $EndDescr
 $Comp

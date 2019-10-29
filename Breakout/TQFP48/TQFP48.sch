@@ -2,130 +2,130 @@ EESchema Schematic File Version 4
 LIBS:TQFP48-cache
 EELAYER 29 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr User 5197 4016
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
+Title "TQFP48 to DIP48 Breakout Board"
+Date "2019-07-24"
+Rev "1"
+Comp "SirBoard"
+Comment1 "TQFP48 P = 0.5mm"
+Comment2 "QFN48 P = 0.4mm"
+Comment3 "DIP48 P = 2.54mm"
 Comment4 ""
 $EndDescr
 $Comp
 L Connector_Generic:Conn_01x24 J1
 U 1 1 5D370B07
-P 5400 3450
-F 0 "J1" H 5479 3442 50  0000 L CNN
-F 1 "Conn_01x24" H 5479 3352 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x24_P2.54mm_Vertical" H 5400 3450 50  0001 C CNN
-F 3 "~" H 5400 3450 50  0001 C CNN
-	1    5400 3450
-	-1   0    0    -1  
+P 2100 1900
+F 0 "J1" V 2100 3100 50  0000 L CNN
+F 1 "Conn_01x24" H 2179 1802 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x24_P2.54mm_Vertical" H 2100 1900 50  0001 C CNN
+F 3 "~" H 2100 1900 50  0001 C CNN
+	1    2100 1900
+	0    -1   1    0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x24_Counter_Clockwise J2
 U 1 1 5D3711C0
-P 5800 3450
-F 0 "J2" H 5850 4765 50  0000 C CNN
-F 1 "Conn_02x24_Counter_Clockwise" H 5850 4675 50  0000 C CNN
-F 2 "Package_QFP:TQFP-48-1EP_7x7mm_P0.5mm_EP5x5mm" H 5800 3450 50  0001 C CNN
-F 3 "~" H 5800 3450 50  0001 C CNN
-	1    5800 3450
-	1    0    0    -1  
+P 2100 1500
+F 0 "J2" V 2050 2750 50  0000 C CNN
+F 1 "Conn_02x24_Counter_Clockwise" H 2150 2725 50  0001 C CNN
+F 2 "Package_QFP:TQFP-48-1EP_7x7mm_P0.5mm_EP5x5mm" H 2100 1500 50  0001 C CNN
+F 3 "~" H 2100 1500 50  0001 C CNN
+	1    2100 1500
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x24 J4
 U 1 1 5D373583
-P 6300 3450
-F 0 "J4" H 6379 3442 50  0000 L CNN
-F 1 "Conn_01x24" H 6379 3352 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x24_P2.54mm_Vertical" H 6300 3450 50  0001 C CNN
-F 3 "~" H 6300 3450 50  0001 C CNN
-	1    6300 3450
-	1    0    0    -1  
+P 2100 1000
+F 0 "J4" V 2100 2200 50  0000 L CNN
+F 1 "Conn_01x24" H 2179 902 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x24_P2.54mm_Vertical" H 2100 1000 50  0001 C CNN
+F 3 "~" H 2100 1000 50  0001 C CNN
+	1    2100 1000
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x24_Counter_Clockwise J3
 U 1 1 5D376148
-P 5900 3450
-F 0 "J3" H 5950 4765 50  0000 C CNN
-F 1 "Conn_02x24_Counter_Clockwise" H 5950 4675 50  0000 C CNN
-F 2 "Package_DFN_QFN:UQFN-48-1EP_6x6mm_P0.4mm_EP4.62x4.62mm" H 5900 3450 50  0001 C CNN
-F 3 "~" H 5900 3450 50  0001 C CNN
-	1    5900 3450
-	-1   0    0    -1  
+P 2100 1400
+F 0 "J3" V 2050 2650 50  0000 C CNN
+F 1 "Conn_02x24_Counter_Clockwise" H 2150 2625 50  0001 C CNN
+F 2 "Package_DFN_QFN:UQFN-48-1EP_6x6mm_P0.4mm_EP4.62x4.62mm" H 2100 1400 50  0001 C CNN
+F 3 "~" H 2100 1400 50  0001 C CNN
+	1    2100 1400
+	0    -1   1    0   
 $EndComp
-Connection ~ 5600 2350
-Connection ~ 5600 2450
-Connection ~ 5600 2550
-Connection ~ 5600 2650
-Connection ~ 5600 2750
-Connection ~ 5600 2850
-Connection ~ 5600 2950
-Connection ~ 5600 3050
-Connection ~ 5600 3150
-Connection ~ 5600 3250
-Connection ~ 5600 3350
-Connection ~ 5600 3450
-Connection ~ 5600 3550
-Connection ~ 5600 3650
-Connection ~ 5600 3750
-Connection ~ 5600 3850
-Connection ~ 5600 3950
-Connection ~ 5600 4050
-Connection ~ 5600 4150
-Connection ~ 5600 4250
-Connection ~ 5600 4350
-Connection ~ 5600 4450
-Connection ~ 5600 4550
-Connection ~ 5600 4650
-Connection ~ 6100 2350
-Connection ~ 6100 2450
-Connection ~ 6100 2550
-Connection ~ 6100 2650
-Connection ~ 6100 2750
-Connection ~ 6100 2850
-Connection ~ 6100 2950
-Connection ~ 6100 3050
-Connection ~ 6100 3150
-Connection ~ 6100 3250
-Connection ~ 6100 3350
-Connection ~ 6100 3450
-Connection ~ 6100 3550
-Connection ~ 6100 3650
-Connection ~ 6100 3750
-Connection ~ 6100 3850
-Connection ~ 6100 3950
-Connection ~ 6100 4050
-Connection ~ 6100 4150
-Connection ~ 6100 4250
-Connection ~ 6100 4350
-Connection ~ 6100 4450
-Connection ~ 6100 4550
-Connection ~ 6100 4650
+Connection ~ 1000 1700
+Connection ~ 1100 1700
+Connection ~ 1200 1700
+Connection ~ 1300 1700
+Connection ~ 1400 1700
+Connection ~ 1500 1700
+Connection ~ 1600 1700
+Connection ~ 1700 1700
+Connection ~ 1800 1700
+Connection ~ 1900 1700
+Connection ~ 2000 1700
+Connection ~ 2100 1700
+Connection ~ 2200 1700
+Connection ~ 2300 1700
+Connection ~ 2400 1700
+Connection ~ 2500 1700
+Connection ~ 2600 1700
+Connection ~ 2700 1700
+Connection ~ 2800 1700
+Connection ~ 2900 1700
+Connection ~ 3000 1700
+Connection ~ 3100 1700
+Connection ~ 3200 1700
+Connection ~ 3300 1700
+Connection ~ 1000 1200
+Connection ~ 1100 1200
+Connection ~ 1200 1200
+Connection ~ 1300 1200
+Connection ~ 1400 1200
+Connection ~ 1500 1200
+Connection ~ 1600 1200
+Connection ~ 1700 1200
+Connection ~ 1800 1200
+Connection ~ 1900 1200
+Connection ~ 2000 1200
+Connection ~ 2100 1200
+Connection ~ 2200 1200
+Connection ~ 2300 1200
+Connection ~ 2400 1200
+Connection ~ 2500 1200
+Connection ~ 2600 1200
+Connection ~ 2700 1200
+Connection ~ 2800 1200
+Connection ~ 2900 1200
+Connection ~ 3000 1200
+Connection ~ 3100 1200
+Connection ~ 3200 1200
+Connection ~ 3300 1200
 $Comp
 L Connector_Generic:Conn_01x05 J5
 U 1 1 5D399F66
-P 3900 3700
-F 0 "J5" H 3980 3787 50  0000 L CNN
-F 1 "Conn_01x05" H 3980 3697 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 3980 3607 50  0000 L CNN
-F 3 "~" H 3900 3700 50  0001 C CNN
-	1    3900 3700
-	1    0    0    -1  
+P 4050 1500
+F 0 "J5" H 4130 1587 50  0000 L CNN
+F 1 "Conn_01x05" H 4130 1497 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 4130 1407 50  0001 L CNN
+F 3 "~" H 4050 1500 50  0001 C CNN
+	1    4050 1500
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3700 3500 3700 3600
-Connection ~ 3700 3600
+	4250 1700 4250 1600
+Connection ~ 4250 1600
 Wire Wire Line
-	3700 3600 3700 3700
-Connection ~ 3700 3700
+	4250 1600 4250 1500
+Connection ~ 4250 1500
 Wire Wire Line
-	3700 3700 3700 3800
-Connection ~ 3700 3800
+	4250 1500 4250 1400
+Connection ~ 4250 1400
 Wire Wire Line
-	3700 3800 3700 3900
+	4250 1400 4250 1300
 $EndSCHEMATC
