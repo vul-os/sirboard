@@ -5,11 +5,11 @@ EELAYER END
 $Descr User 7874 6299
 encoding utf-8
 Sheet 1 1
-Title "SIM28M Based GPS Module"
+Title "SIM28ML Based GPS Module"
 Date "2019-10-30"
 Rev "1"
 Comp "SirBoard"
-Comment1 "SIM28M is based on the MT3339 Chipset"
+Comment1 "SIM28ML is based on the MT3339 Chipset"
 Comment2 "Breadboard Friendly Micro GPS Module"
 Comment3 ""
 Comment4 ""

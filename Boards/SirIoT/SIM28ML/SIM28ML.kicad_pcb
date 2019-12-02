@@ -11,11 +11,11 @@
 
   (page User 132.004 102.006)
   (title_block
-    (title "SIM28M Based GPS Module")
+    (title "SIM28ML Based GPS Module")
     (date 2019-10-30)
     (rev 1)
     (company SirBoard)
-    (comment 1 "SIM28M is based on the MT3339 Chipset")
+    (comment 1 "SIM28ML is based on the MT3339 Chipset")
     (comment 2 "Breadboard Friendly Micro GPS Module")
   )
 
@@ -244,7 +244,7 @@
     (tags "Integrated Circuit")
     (path /5DC84452)
     (attr smd)
-    (fp_text reference SIM28M (at 4.85 5.05 90) (layer F.SilkS)
+    (fp_text reference SIM28ML (at 4.85 5.05 90) (layer F.SilkS)
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     )
     (fp_text value SIM28M (at 4.85 5.05) (layer F.SilkS) hide
@@ -1168,7 +1168,7 @@
     )
   )
 
-  (gr_text "SIM28M\nwww.SirBoard.com" (at 63.5 31.242 180) (layer B.SilkS)
+  (gr_text "SIM28ML\nwww.SirBoard.com" (at 63.5 31.242 180) (layer B.SilkS)
     (effects (font (size 1 0.9) (thickness 0.15)) (justify mirror))
   )
   (dimension 20.32 (width 0.15) (layer Dwgs.User)

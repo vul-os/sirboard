@@ -1,15 +1,15 @@
 EESchema Schematic File Version 4
-LIBS:SIM68M-cache
+LIBS:SIM68ML-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 6299
 encoding utf-8
 Sheet 1 1
-Title "SIM68M Based GPS+GNSS Module"
+Title "SIM68ML Based GPS+GNSS Module"
 Date "2019-10-31"
 Rev "1"
 Comp "SirBoard"
-Comment1 "SIM28M is based on the MT3333 Chipset"
+Comment1 "SIM28ML is based on the MT3333 Chipset"
 Comment2 "Breadboard Friendly Micro GPS+GNSS Module"
 Comment3 ""
 Comment4 ""
