@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "SirNano"
+Date "2019-08-21"
+Rev "2"
+Comp "SirBoard"
+Comment1 "www.SirBoard.com"
+Comment2 "ATMega328PB Based Dev Board"
 Comment3 ""
 Comment4 ""
 $EndDescr
