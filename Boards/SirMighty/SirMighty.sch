@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "SirMighty"
+Date "2019-08-11"
+Rev "1"
+Comp "SirBoard"
+Comment1 "www.SirBoard.com"
+Comment2 "ATMega1284 Based Dev Board"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -984,8 +984,8 @@ $Comp
 L MCU_Microchip_ATmega:ATmega1284P-MU U1
 U 1 1 5D524CE7
 P 4350 5400
-F 0 "U1" H 4350 3312 50  0000 C CNN
-F 1 "ATmega1284P-MU" H 4350 3222 50  0000 C CNN
+F 0 "U1" H 4775 3325 50  0000 C CNN
+F 1 "ATmega1284P-MU" H 4775 3400 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm" H 4350 5400 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8272-8-bit-AVR-microcontroller-ATmega164A_PA-324A_PA-644A_PA-1284_P_datasheet.pdf" H 4350 5400 50  0001 C CNN
 	1    4350 5400
@@ -1049,10 +1049,6 @@ Wire Wire Line
 	4950 6600 5100 6600
 Wire Wire Line
 	5100 6700 4950 6700
-Wire Wire Line
-	3450 4700 3450 7500
-Wire Wire Line
-	3450 7500 4350 7500
 Wire Wire Line
 	4350 7500 4350 7400
 Wire Wire Line
@@ -1125,14 +1121,6 @@ Text GLabel 10850 2500 2    50   Input ~ 0
 D1
 Text GLabel 10850 2000 2    50   Input ~ 0
 MISO
-Wire Wire Line
-	7800 6050 6000 6050
-Wire Wire Line
-	6000 6050 6000 7500
-Wire Wire Line
-	6000 7500 4350 7500
-Connection ~ 7800 6050
-Connection ~ 4350 7500
 Wire Wire Line
 	10700 2000 10850 2000
 Wire Wire Line
@@ -1339,6 +1327,28 @@ F 1 "AZ1117-5.0" H 2850 1050 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2850 1150 50  0001 C CIN
 F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 2850 900 50  0001 C CNN
 	1    2850 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DEF7311
+P 4350 7500
+F 0 "#PWR?" H 4350 7250 50  0001 C CNN
+F 1 "GND" H 4355 7327 50  0000 C CNN
+F 2 "" H 4350 7500 50  0001 C CNN
+F 3 "" H 4350 7500 50  0001 C CNN
+	1    4350 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DF0D40E
+P 3450 4700
+F 0 "#PWR?" H 3450 4450 50  0001 C CNN
+F 1 "GND" H 3455 4527 50  0000 C CNN
+F 2 "" H 3450 4700 50  0001 C CNN
+F 3 "" H 3450 4700 50  0001 C CNN
+	1    3450 4700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
