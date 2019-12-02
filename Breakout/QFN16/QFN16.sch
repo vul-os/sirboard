@@ -2,7 +2,7 @@ EESchema Schematic File Version 4
 LIBS:QFN16-cache
 EELAYER 29 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr User 8268 5807
 encoding utf-8
 Sheet 1 1
 Title "QFN16 to DIP Breakout Board"
@@ -17,77 +17,77 @@ $EndDescr
 $Comp
 L Connector_Generic:Conn_01x08 J3
 U 1 1 5D27708E
-P 8400 5500
-F 0 "J3" H 8479 5492 50  0000 L CNN
-F 1 "Conn_01x08" H 8479 5402 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8400 5500 50  0001 C CNN
-F 3 "~" H 8400 5500 50  0001 C CNN
-	1    8400 5500
+P 4525 2450
+F 0 "J3" H 4604 2442 50  0000 L CNN
+F 1 "Conn_01x08" H 4604 2352 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4525 2450 50  0001 C CNN
+F 3 "~" H 4525 2450 50  0001 C CNN
+	1    4525 2450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x08_Counter_Clockwise J2
 U 1 1 5D2772F5
-P 7900 5500
-F 0 "J2" H 7950 6015 50  0000 C CNN
-F 1 "Conn_02x08_Counter_Clockwise" H 7950 5925 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.7x2.7mm" H 7900 5500 50  0001 C CNN
-F 3 "~" H 7900 5500 50  0001 C CNN
-	1    7900 5500
+P 4025 2450
+F 0 "J2" H 4075 2965 50  0000 C CNN
+F 1 "Conn_02x08_Counter_Clockwise" H 4075 2875 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.7x2.7mm" H 4025 2450 50  0001 C CNN
+F 3 "~" H 4025 2450 50  0001 C CNN
+	1    4025 2450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x08 J1
 U 1 1 5D27904E
-P 7500 5500
-F 0 "J1" H 7579 5492 50  0000 L CNN
-F 1 "Conn_01x08" H 7579 5402 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 7500 5500 50  0001 C CNN
-F 3 "~" H 7500 5500 50  0001 C CNN
-	1    7500 5500
+P 3625 2450
+F 0 "J1" H 3704 2442 50  0000 L CNN
+F 1 "Conn_01x08" H 3704 2352 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3625 2450 50  0001 C CNN
+F 3 "~" H 3625 2450 50  0001 C CNN
+	1    3625 2450
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x08_Counter_Clockwise J4
 U 1 1 5D27A0A0
-P 7900 5600
-F 0 "J4" H 7950 6115 50  0000 C CNN
-F 1 "Conn_02x08_Counter_Clockwise" H 7950 6025 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-16-1EP_5x5mm_P0.8mm_EP2.7x2.7mm" H 7900 5600 50  0001 C CNN
-F 3 "~" H 7900 5600 50  0001 C CNN
-	1    7900 5600
+P 4025 2550
+F 0 "J4" H 4075 3065 50  0000 C CNN
+F 1 "Conn_02x08_Counter_Clockwise" H 4075 2975 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-16-1EP_5x5mm_P0.8mm_EP2.7x2.7mm" H 4025 2550 50  0001 C CNN
+F 3 "~" H 4025 2550 50  0001 C CNN
+	1    4025 2550
 	1    0    0    1   
 $EndComp
-Connection ~ 7700 5200
-Connection ~ 7700 5300
-Connection ~ 7700 5400
-Connection ~ 7700 5500
-Connection ~ 7700 5600
-Connection ~ 7700 5700
-Connection ~ 7700 5800
-Connection ~ 7700 5900
-Connection ~ 8200 5200
-Connection ~ 8200 5300
-Connection ~ 8200 5400
-Connection ~ 8200 5500
-Connection ~ 8200 5600
-Connection ~ 8200 5700
-Connection ~ 8200 5800
-Connection ~ 8200 5900
+Connection ~ 3825 2150
+Connection ~ 3825 2250
+Connection ~ 3825 2350
+Connection ~ 3825 2450
+Connection ~ 3825 2550
+Connection ~ 3825 2650
+Connection ~ 3825 2750
+Connection ~ 3825 2850
+Connection ~ 4325 2150
+Connection ~ 4325 2250
+Connection ~ 4325 2350
+Connection ~ 4325 2450
+Connection ~ 4325 2550
+Connection ~ 4325 2650
+Connection ~ 4325 2750
+Connection ~ 4325 2850
 $Comp
 L Connector_Generic:Conn_01x03 J5
 U 1 1 5D3B084D
-P 9200 5150
-F 0 "J5" H 9279 5192 50  0000 L CNN
-F 1 "Conn_01x03" H 9279 5102 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9200 5150 50  0001 C CNN
-F 3 "~" H 9200 5150 50  0001 C CNN
-	1    9200 5150
+P 5325 2100
+F 0 "J5" H 5404 2142 50  0000 L CNN
+F 1 "Conn_01x03" H 5404 2052 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5325 2100 50  0001 C CNN
+F 3 "~" H 5325 2100 50  0001 C CNN
+	1    5325 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9000 5050 9000 5150
-Connection ~ 9000 5150
+	5125 2000 5125 2100
+Connection ~ 5125 2100
 Wire Wire Line
-	9000 5150 9000 5250
+	5125 2100 5125 2200
 $EndSCHEMATC

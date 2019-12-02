@@ -676,7 +676,7 @@
       (net 1 GND))
     (model ${KISYS3DMOD}/Battery.3dshapes/BatteryHolder_Keystone_3008_1x2450.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
+      (scale (xyz 0.9 1 0.9))
       (rotate (xyz 0 0 0))
     )
   )
