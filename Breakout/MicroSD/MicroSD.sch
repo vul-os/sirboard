@@ -44,6 +44,7 @@ F 0 "J3" H 6750 4565 50  0000 C CNN
 F 1 "Micro_SD_Card_Det" H 6750 4475 50  0000 C CNN
 F 2 "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5" H 8850 4450 50  0001 C CNN
 F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 6800 3850 50  0001 C CNN
+F 4 "C114218" H 6800 3750 50  0001 C CNN "Part"
 	1    6800 3750
 	1    0    0    -1  
 $EndComp
@@ -132,6 +133,7 @@ F 0 "U2" H 2730 4595 50  0000 L CNN
 F 1 "4050" H 2730 4505 50  0000 L CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2500 4550 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4050bms.pdf" H 2500 4550 50  0001 C CNN
+F 4 "C352821" H 2500 4550 50  0001 C CNN "Part"
 	7    2500 4550
 	1    0    0    -1  
 $EndComp
@@ -143,6 +145,7 @@ F 0 "U1" H 9300 4340 50  0000 C CNN
 F 1 "AP7365" H 9300 4250 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 9300 4250 50  0001 C CNN
 F 3 "" H 9300 4250 50  0001 C CNN
+F 4 "C264087" H 9250 3250 50  0001 C CNN "Part"
 	1    9250 3250
 	1    0    0    -1  
 $EndComp
@@ -154,6 +157,7 @@ F 0 "C1" H 8768 2845 50  0000 L CNN
 F 1 "1uF" H 8768 2755 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8688 2650 50  0001 C CNN
 F 3 "~" H 8650 2800 50  0001 C CNN
+F 4 "C29936" H 8650 2800 50  0001 C CNN "Part"
 	1    8650 2800
 	1    0    0    -1  
 $EndComp
@@ -165,6 +169,7 @@ F 0 "C2" H 10018 2845 50  0000 L CNN
 F 1 "1uF" H 10018 2755 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9938 2650 50  0001 C CNN
 F 3 "~" H 9900 2800 50  0001 C CNN
+F 4 "C29936" H 9900 2800 50  0001 C CNN "Part"
 	1    9900 2800
 	1    0    0    -1  
 $EndComp
@@ -214,6 +219,7 @@ F 0 "R1" H 9468 4295 50  0000 L CNN
 F 1 "31K6" H 9468 4205 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 9440 4240 50  0001 C CNN
 F 3 "~" H 9400 4250 50  0001 C CNN
+F 4 "C227816" H 9400 4250 50  0001 C CNN "Part"
 	1    9400 4250
 	1    0    0    -1  
 $EndComp
@@ -225,6 +231,7 @@ F 0 "R3" H 9468 4895 50  0000 L CNN
 F 1 "10K" H 9468 4805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 9440 4840 50  0001 C CNN
 F 3 "~" H 9400 4850 50  0001 C CNN
+F 4 "C99198" H 9400 4850 50  0001 C CNN "Part"
 	1    9400 4850
 	1    0    0    -1  
 $EndComp
@@ -406,6 +413,7 @@ F 0 "R6" V 4953 4800 50  0000 C CNN
 F 1 "1K" V 4863 4800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4790 4790 50  0001 C CNN
 F 3 "~" H 4750 4800 50  0001 C CNN
+F 4 "C25585" V 4750 4800 50  0001 C CNN "Part"
 	1    4750 4800
 	0    -1   -1   0   
 $EndComp
@@ -419,6 +427,7 @@ F 0 "D1" H 5143 4547 50  0000 C CNN
 F 1 "LED" H 5143 4637 50  0000 C CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 5150 4800 50  0001 C CNN
 F 3 "~" H 5150 4800 50  0001 C CNN
+F 4 "C118330" H 5150 4800 50  0001 C CNN "Part"
 	1    5150 4800
 	-1   0    0    1   
 $EndComp

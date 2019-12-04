@@ -30,9 +30,10 @@ L Connector:USB_B_Micro J1
 U 1 1 5DB35FF0
 P 2450 1350
 F 0 "J1" H 2506 1815 50  0000 C CNN
-F 1 "USB_B_Micro" H 2506 1725 50  0000 C CNN
-F 2 "Connector_USB:USB_Mini-B_Lumberg_2486_01_Horizontal" H 2600 1300 50  0001 C CNN
+F 1 "USB_B_Mini" H 2506 1725 50  0000 C CNN
+F 2 "SirBoardLibrary:SirBoard_USB_Mini-B" H 2600 1300 50  0001 C CNN
 F 3 "~" H 2600 1300 50  0001 C CNN
+F 4 "C69074" H 2450 1350 50  0001 C CNN "Part"
 	1    2450 1350
 	1    0    0    -1  
 $EndComp

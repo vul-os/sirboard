@@ -44,6 +44,7 @@ F 0 "J1" H 2456 2465 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 2456 2375 50  0000 C CNN
 F 2 "U_FL:USB_C" H 2500 1600 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 2500 1600 50  0001 C CNN
+F 4 "C165948" H 2350 1600 50  0001 C CNN "Part"
 	1    2350 1600
 	1    0    0    -1  
 $EndComp
@@ -55,6 +56,7 @@ F 0 "R1" V 3097 1200 50  0000 C CNN
 F 1 "5K1" V 3187 1200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 3340 1190 50  0001 C CNN
 F 3 "~" H 3300 1200 50  0001 C CNN
+F 4 "C332117" V 3300 1200 50  0001 C CNN "Part"
 	1    3300 1200
 	0    1    1    0   
 $EndComp
@@ -66,6 +68,7 @@ F 0 "R2" V 3503 1300 50  0000 C CNN
 F 1 "5K1" V 3413 1300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 3340 1290 50  0001 C CNN
 F 3 "~" H 3300 1300 50  0001 C CNN
+F 4 "C332117" V 3300 1300 50  0001 C CNN "Part"
 	1    3300 1300
 	0    1    1    0   
 $EndComp

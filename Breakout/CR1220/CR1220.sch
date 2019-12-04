@@ -44,6 +44,7 @@ F 0 "BT1" H 2268 1495 50  0000 L CNN
 F 1 "Battery_Cell" H 2268 1405 50  0000 L CNN
 F 2 "Battery:BatteryHolder_Keystone_3000_1x12mm" V 2150 1460 50  0001 C CNN
 F 3 "~" V 2150 1460 50  0001 C CNN
+F 4 "C238097" H 2150 1400 50  0001 C CNN "Part"
 	1    2150 1400
 	1    0    0    -1  
 $EndComp
