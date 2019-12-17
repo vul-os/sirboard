@@ -1,5 +1,5 @@
 /**
- * @file adlx_337.ino
+ * @file adlx337/adlx337.ino
  *
  * @brief: This code serves as an example on how to gather accelerometer data 
  *         using the arduino's "AnalogRead" function. This data will use a
