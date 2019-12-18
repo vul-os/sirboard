@@ -40,7 +40,7 @@ int maxG = 3;
 float VRef = 5.00;
 
 float toGForce(float raw) {
-  return (raw / 1023.00) * (Vref / 3.3);
+  return (raw / 1023.00) * (VRef / 3.3);
 }
 
 void setup()
