@@ -5,13 +5,13 @@ EELAYER END
 $Descr User 7874 5118
 encoding utf-8
 Sheet 1 1
-Title "24LC512 Based EEPROM Module"
+Title "24LCXXX Based EEPROM Module"
 Date "2019-12-05"
 Rev "1"
 Comp "www.SirBoard.com"
 Comment1 "SirBoard"
 Comment2 "SirKeep"
-Comment3 "24LC512"
+Comment3 "24LC64, 24LC128, 24LC256, 24LC512, 24LC1024"
 Comment4 ""
 $EndDescr
 Text GLabel 5900 2150 0    50   Input ~ 0
@@ -130,7 +130,7 @@ L Memory_EEPROM:24LC1025 U1
 U 1 1 5DE9E2AA
 P 4300 2200
 F 0 "U1" H 4300 2678 50  0000 C CNN
-F 1 "24LC1025" H 4300 2588 50  0000 C CNN
+F 1 "24LCXXX" H 4300 2588 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4300 2200 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21941B.pdf" H 4300 2200 50  0001 C CNN
 F 4 "C79986" H 4300 2200 50  0001 C CNN "Part"
