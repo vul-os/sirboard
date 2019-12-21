@@ -1,18 +1,18 @@
 EESchema Schematic File Version 4
-LIBS:ADS1015-cache
+LIBS:ADS1X15-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 5118
 encoding utf-8
 Sheet 1 1
-Title "ADS1015 Based 12 Bit 4-Channel I2C ADC"
-Date "2019-12-10"
+Title "ADS1X15 Based 12/16 Bit 4-Channel I2C ADC"
+Date "2019-12-18"
 Rev "1"
 Comp "www.SirBoard.com"
 Comment1 "SirBoard"
 Comment2 "AnalogSensors"
-Comment3 "ADS1015"
-Comment4 ""
+Comment3 "ADS1115"
+Comment4 "ADS1015"
 $EndDescr
 $Comp
 L Device:R_US R1
@@ -161,18 +161,6 @@ VCC
 Wire Wire Line
 	4925 1150 4775 1150
 Connection ~ 4775 1150
-$Comp
-L Analog_ADC:ADS1015IDGS U1
-U 1 1 5DF0103B
-P 3175 2100
-F 0 "U1" H 3175 2778 50  0000 C CNN
-F 1 "ADS1015IDGS" H 3175 2688 50  0000 C CNN
-F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 3175 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ads1015.pdf" H 3125 1200 50  0001 C CNN
-F 4 "C193969" H 3175 2100 50  0001 C CNN "Part"
-	1    3175 2100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1975 1150 3175 1150
 Wire Wire Line
@@ -333,6 +321,18 @@ F 1 "MountingHole" H 1075 2055 50  0000 L CNN
 F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 975 2100 50  0001 C CNN
 F 3 "~" H 975 2100 50  0001 C CNN
 	1    975  2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_ADC:ADS1115IDGS ADS1X15
+U 1 1 5DF01CDA
+P 3175 2100
+F 0 "ADS1X15" H 3175 2778 50  0000 C CNN
+F 1 "ADS1115IDGS" H 3175 2688 50  0000 C CNN
+F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 3175 1600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ads1113.pdf" H 3125 1200 50  0001 C CNN
+F 4 "C37593" H 3175 2100 50  0001 C CNN "Part"
+	1    3175 2100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
