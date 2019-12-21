@@ -5,13 +5,13 @@ EELAYER END
 $Descr User 7874 5118
 encoding utf-8
 Sheet 1 1
-Title "MB85RS256B Based FRAM Module"
+Title "MB85RSXXX Based FRAM Module"
 Date "2019-12-06"
 Rev "1"
 Comp "www.SirBoard.com"
 Comment1 "SirBoard"
 Comment2 "SirKeep"
-Comment3 "MB85RS256B"
+Comment3 "MB85RS16, MB85RS64, MB85RS128, MB85RS256, MB85RS512, MB85RS1M"
 Comment4 ""
 $EndDescr
 $Comp
