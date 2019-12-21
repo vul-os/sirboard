@@ -160,23 +160,19 @@ Wire Wire Line
 $Comp
 L Device:Battery_Cell BT1
 U 1 1 5DE772AA
-P 4100 1150
-F 0 "BT1" V 4325 1125 50  0000 L CNN
-F 1 "Battery_Cell" V 4250 975 50  0000 L CNN
-F 2 "Battery:BatteryHolder_Keystone_3000_1x12mm" V 4100 1210 50  0001 C CNN
-F 3 "~" V 4100 1210 50  0001 C CNN
-F 4 "C238097" V 4100 1150 50  0001 C CNN "PartNo."
-	1    4100 1150
+P 4225 1150
+F 0 "BT1" V 4450 1125 50  0000 L CNN
+F 1 "Battery_Cell" V 4375 975 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_3000_1x12mm" V 4225 1210 50  0001 C CNN
+F 3 "~" V 4225 1210 50  0001 C CNN
+F 4 "C238097" V 4225 1150 50  0001 C CNN "PartNo."
+	1    4225 1150
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3900 1150 3725 1150
+	4025 1150 3725 1150
 Wire Wire Line
-	3725 1150 3725 1900
-Wire Wire Line
-	4200 1150 4575 1150
-Wire Wire Line
-	4575 1150 4575 2800
+	4325 1150 4575 1150
 Wire Wire Line
 	4575 2800 3725 2800
 Wire Wire Line
@@ -232,9 +228,9 @@ U 1 1 5DE90F8C
 P 2150 2000
 F 0 "C1" H 2265 2045 50  0000 L CNN
 F 1 "1uF" H 2265 1955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2188 1850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2188 1850 50  0001 C CNN
 F 3 "~" H 2150 2000 50  0001 C CNN
-F 4 "C29936" H 2150 2000 50  0001 C CNN "Part"
+F 4 "C396719" H 2150 2000 50  0001 C CNN "Part"
 	1    2150 2000
 	1    0    0    -1  
 $EndComp
@@ -247,4 +243,52 @@ Wire Wire Line
 	2150 2150 2150 2800
 Wire Wire Line
 	2150 2800 3725 2800
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5DFA23AE
+P 5225 1025
+F 0 "H1" H 5325 1070 50  0000 L CNN
+F 1 "MountingHole" H 5325 980 50  0000 L CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 5225 1025 50  0001 C CNN
+F 3 "~" H 5225 1025 50  0001 C CNN
+	1    5225 1025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5DFA2A96
+P 5225 1200
+F 0 "H2" H 5325 1245 50  0000 L CNN
+F 1 "MountingHole" H 5325 1155 50  0000 L CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 5225 1200 50  0001 C CNN
+F 3 "~" H 5225 1200 50  0001 C CNN
+	1    5225 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5DFA32E1
+P 5225 1375
+F 0 "H3" H 5325 1420 50  0000 L CNN
+F 1 "MountingHole" H 5325 1330 50  0000 L CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 5225 1375 50  0001 C CNN
+F 3 "~" H 5225 1375 50  0001 C CNN
+	1    5225 1375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5DFA3BBD
+P 5225 1550
+F 0 "H4" H 5325 1595 50  0000 L CNN
+F 1 "MountingHole" H 5325 1505 50  0000 L CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 5225 1550 50  0001 C CNN
+F 3 "~" H 5225 1550 50  0001 C CNN
+	1    5225 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4575 1150 4575 2800
+Wire Wire Line
+	3725 1150 3725 1900
 $EndSCHEMATC
