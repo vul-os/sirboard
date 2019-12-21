@@ -34,7 +34,7 @@ F 0 "C2" H 6318 1345 50  0000 L CNN
 F 1 "1uF" H 6318 1255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6238 1150 50  0001 C CNN
 F 3 "~" H 6200 1300 50  0001 C CNN
-F 4 "C29936" H 6200 1300 50  0001 C CNN "part"
+F 4 "C29936" H 6200 1300 50  0001 C CNN "Part"
 	1    6200 1300
 	1    0    0    -1  
 $EndComp
@@ -143,7 +143,6 @@ F 0 "Q2" H 4005 1950 50  0000 L CNN
 F 1 "BSS138DW" H 4005 1905 50  0001 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 4000 1950 50  0001 C CNN
 F 3 "~" H 4000 1950 50  0001 C CNN
-F 4 "C193381" H 3800 1950 50  0001 C CNN "Part"
 	2    3800 1950
 	1    0    0    -1  
 $EndComp
@@ -246,6 +245,7 @@ F 0 "Q1" H 1656 1950 50  0000 L CNN
 F 1 "BSS138DW" H 1655 1905 50  0001 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 1650 1950 50  0001 C CNN
 F 3 "~" H 1650 1950 50  0001 C CNN
+F 4 "C193381" H 1450 1950 50  0001 C CNN "Part"
 	1    1450 1950
 	1    0    0    -1  
 $EndComp
@@ -485,18 +485,6 @@ F 3 "~" H 2900 3250 50  0001 C CNN
 	1    2900 3250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Sensor:BME280 U2
-U 1 1 5DEB7D0F
-P 4950 3050
-F 0 "U2" H 4520 3095 50  0000 R CNN
-F 1 "BME280" H 4520 3005 50  0000 R CNN
-F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 4950 2850 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 4950 2850 50  0001 C CNN
-F 4 "C92489" H 4950 3050 50  0001 C CNN "Part "
-	1    4950 3050
-	1    0    0    -1  
-$EndComp
 Connection ~ 4950 2450
 Wire Wire Line
 	4950 2450 4850 2450
@@ -540,6 +528,17 @@ F 1 "GND" H 4954 3628 50  0000 C CNN
 F 2 "" H 4950 3800 50  0001 C CNN
 F 3 "" H 4950 3800 50  0001 C CNN
 	1    4950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor:BME280 U2
+U 1 1 5DF129EC
+P 4950 3050
+F 0 "U2" H 4520 3095 50  0000 R CNN
+F 1 "BME280" H 4520 3005 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 4950 2850 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 4950 2850 50  0001 C CNN
+	1    4950 3050
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
