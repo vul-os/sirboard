@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:MicroSDv2-cache
+LIBS:MicroSD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -138,7 +138,7 @@ F 4 "C352821" H 6175 5450 50  0001 C CNN "Part"
 	1    0    0    -1  
 $EndComp
 $Comp
-L U.FL-R-SMT(01):AP7365 U1
+L MicroSD-rescue:AP7365-U.FL-R-SMT(01) U1
 U 1 1 5DB62551
 P 8425 5775
 F 0 "U1" H 8475 6865 50  0000 C CNN

@@ -71,7 +71,7 @@ F 3 "~" H 9000 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L U.FL-R-SMT(01):AP7365 U1
+L MicroSD_DualVoltage-rescue:AP7365-U.FL-R-SMT(01) U1
 U 1 1 5DB62551
 P 4850 5950
 F 0 "U1" H 4900 7040 50  0000 C CNN
