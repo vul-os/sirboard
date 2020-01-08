@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ADXL345v2-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 5906
@@ -503,18 +502,6 @@ GND
 Wire Wire Line
 	6200 900  6850 900 
 $Comp
-L ADXL345:ADXL345 U2
-U 1 1 5DFC1741
-P 5950 3075
-F 0 "U2" H 5937 3893 50  0000 C CNN
-F 1 "ADXL345" H 5937 3803 50  0000 C CNN
-F 2 "Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y" H 5950 3650 50  0001 C CNN
-F 3 "" H 5950 3650 50  0001 C CNN
-F 4 "C9667" H 5937 3713 50  0000 C CNN "Part"
-	1    5950 3075
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x05 J1
 U 1 1 5DF146B7
 P 3800 3325
@@ -558,6 +545,18 @@ F 1 "MountingHole" H 1250 3380 50  0000 L CNN
 F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 1150 3425 50  0001 C CNN
 F 3 "~" H 1150 3425 50  0001 C CNN
 	1    1150 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L SirBoard_Library:ADXL345 U?
+U 1 1 5E13193E
+P 5950 3075
+F 0 "U?" H 5937 3803 50  0000 C CNN
+F 1 "ADXL345" H 5937 3713 50  0000 C CNN
+F 2 "Package_LGA:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y" H 5950 3650 50  0001 C CNN
+F 3 "" H 5950 3650 50  0001 C CNN
+F 4 "C9667" H 5937 3713 50  0001 C CNN "Part"
+	1    5950 3075
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
