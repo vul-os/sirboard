@@ -174,6 +174,7 @@ F 0 "U1" H 3125 1812 50  0000 C CNN
 F 1 "DS3231MZ" H 3125 1722 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3125 1800 50  0001 C CNN
 F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231M.pdf" H 3125 1700 50  0001 C CNN
+F 4 "C107410" H 3125 2300 50  0001 C CNN "Part"
 	1    3125 2300
 	1    0    0    -1  
 $EndComp
