@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:MB85RS256V-cache
+LIBS:MB85RSXXX-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 5118
@@ -75,7 +75,7 @@ F 0 "U1" H 4150 2528 50  0000 C CNN
 F 1 "MB85RS64" H 4150 2438 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3800 2000 50  0001 C CNN
 F 3 "http://www.fujitsu.com/downloads/MICRO/fme/fram/datasheet-MB85RS64.pdf" H 3800 2000 50  0001 C CNN
-F 4 "C8742" H 4150 2050 50  0001 C CNN "Part"
+F 4 "C38647; C8741; C126732; C8742; C93052; C126733" H 4150 2050 50  0001 C CNN "Part"
 	1    4150 2050
 	1    0    0    -1  
 $EndComp
