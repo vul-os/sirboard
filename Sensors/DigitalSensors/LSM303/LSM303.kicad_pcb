@@ -16,7 +16,7 @@
     (rev 1)
     (company SirBoard)
     (comment 1 "Digital 16 bit I2C/SPI Accelerometer And Magnetometer")
-    (comment 2 "Magnetometer: ±50Gauss")
+    (comment 2 "Magnetometer: ±5000µT")
     (comment 3 "Accelerometer: ±2g, ±4g, ±8g, ±16g ")
     (comment 4 LSM303AGR)
   )
@@ -45,7 +45,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.127)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)

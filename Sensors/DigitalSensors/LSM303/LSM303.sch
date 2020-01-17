@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:LSM303-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 5906
@@ -9,7 +10,7 @@ Date "2019-12-20"
 Rev "1"
 Comp "SirBoard"
 Comment1 "Digital 16 bit I2C/SPI Accelerometer And Magnetometer"
-Comment2 "Magnetometer: ±50Gauss"
+Comment2 "Magnetometer: ±5000µT"
 Comment3 "Accelerometer: ±2g, ±4g, ±8g, ±16g "
 Comment4 "LSM303AGR"
 $EndDescr
