@@ -1,2 +1,2 @@
 # SirBlue
-Digital Sensors with 1.0mm Pitch Plug-In I2C connectors as well as a breadboard friendly layout. 
+A range of Digital Sensors with a common breadboard-friendly footprint that utilizes a 4-Pin 1.00mm Pitch JST-SH connector. 
