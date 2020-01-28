@@ -494,4 +494,10 @@ Text GLabel 1975 4125 2    50   Input ~ 0
 INT1
 Text GLabel 1250 3925 0    50   Input ~ 0
 SA0
+Text GLabel 1975 3725 2    50   Input ~ 0
+3V3
+Text GLabel 1975 3625 2    50   Input ~ 0
+5V
+Text GLabel 1975 3825 2    50   Input ~ 0
+GND
 $EndSCHEMATC
