@@ -20,7 +20,7 @@ U 1 1 5DB38589
 P 3050 800
 F 0 "H1" H 3150 845 50  0000 L CNN
 F 1 "MountingHole" H 3150 755 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 3050 800 50  0001 C CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 3050 800 50  0001 C CNN
 F 3 "~" H 3050 800 50  0001 C CNN
 	1    3050 800 
 	-1   0    0    -1  
@@ -31,7 +31,7 @@ U 1 1 5DB39176
 P 3050 2000
 F 0 "H2" H 3150 2045 50  0000 L CNN
 F 1 "MountingHole" H 3150 1955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 3050 2000 50  0001 C CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 3050 2000 50  0001 C CNN
 F 3 "~" H 3050 2000 50  0001 C CNN
 	1    3050 2000
 	-1   0    0    -1  
@@ -68,7 +68,7 @@ U 1 1 5DB4621D
 P 2250 800
 F 0 "H3" H 2350 845 50  0000 L CNN
 F 1 "MountingHole" H 2350 755 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2250 800 50  0001 C CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 2250 800 50  0001 C CNN
 F 3 "~" H 2250 800 50  0001 C CNN
 	1    2250 800 
 	-1   0    0    -1  
@@ -79,7 +79,7 @@ U 1 1 5DB46223
 P 2250 2000
 F 0 "H4" H 2350 2045 50  0000 L CNN
 F 1 "MountingHole" H 2350 1955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2250 2000 50  0001 C CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 2250 2000 50  0001 C CNN
 F 3 "~" H 2250 2000 50  0001 C CNN
 	1    2250 2000
 	-1   0    0    -1  
