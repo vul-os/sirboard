@@ -44,7 +44,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.127)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
@@ -1539,8 +1539,8 @@
       (net 11 "Net-(J3-Pad8)"))
     (pad 9 smd rect (at -5.875 -7.725 180) (size 0.7 1.2) (layers F.Cu F.Paste F.Mask)
       (net 12 DETB))
-    (model ${KISYS3DMOD}/Connector_Card.3dshapes/microSD_HC_Hirose_DM3AT-SF-PEJM5.wrl
-      (at (xyz 0 0 0))
+    (model ${KISYS3DMOD}/DM3AT-SF-PEJM5.IGS
+      (offset (xyz -165.2 -154 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )

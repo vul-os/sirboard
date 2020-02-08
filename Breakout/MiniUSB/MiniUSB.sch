@@ -59,25 +59,35 @@ Wire Wire Line
 	3000 1750 2450 1750
 Connection ~ 2450 1750
 $Comp
-L Mechanical:MountingHole H1
-U 1 1 5DB38589
-P 2400 750
-F 0 "H1" H 2500 795 50  0000 L CNN
-F 1 "MountingHole" H 2500 705 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2400 750 50  0001 C CNN
-F 3 "~" H 2400 750 50  0001 C CNN
-	1    2400 750 
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H2
 U 1 1 5DB39176
 P 2400 1950
 F 0 "H2" H 2500 1995 50  0000 L CNN
 F 1 "MountingHole" H 2500 1905 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2400 1950 50  0001 C CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 2400 1950 50  0001 C CNN
 F 3 "~" H 2400 1950 50  0001 C CNN
 	1    2400 1950
+	1    0    0    -1  
+$EndComp
+Text Label 2800 1150 0    50   ~ 0
+VBus
+Text Label 2825 1350 0    50   ~ 0
+D+
+Text Label 2825 1450 0    50   ~ 0
+D-
+Text Label 2825 1550 0    50   ~ 0
+ID
+Text Label 2825 1750 0    50   ~ 0
+GND
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5E383516
+P 2400 775
+F 0 "H1" H 2500 820 50  0000 L CNN
+F 1 "MountingHole" H 2500 730 50  0000 L CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 2400 775 50  0001 C CNN
+F 3 "~" H 2400 775 50  0001 C CNN
+	1    2400 775 
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

@@ -17,23 +17,12 @@ $EndDescr
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5DB38589
-P 1750 1000
-F 0 "H1" H 1850 1045 50  0000 L CNN
-F 1 "MountingHole" H 1850 955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 1750 1000 50  0001 C CNN
-F 3 "~" H 1750 1000 50  0001 C CNN
-	1    1750 1000
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 5DB39176
-P 1750 2200
-F 0 "H2" H 1850 2245 50  0000 L CNN
-F 1 "MountingHole" H 1850 2155 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 1750 2200 50  0001 C CNN
-F 3 "~" H 1750 2200 50  0001 C CNN
-	1    1750 2200
+P 1725 1425
+F 0 "H1" H 1825 1470 50  0000 L CNN
+F 1 "MountingHole" H 1825 1380 50  0000 L CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 1725 1425 50  0001 C CNN
+F 3 "~" H 1725 1425 50  0001 C CNN
+	1    1725 1425
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -42,7 +31,7 @@ U 1 1 5DB44CE9
 P 2350 1600
 F 0 "J1" H 2456 2465 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 2456 2375 50  0000 C CNN
-F 2 "U_FL:USB_C" H 2500 1600 50  0001 C CNN
+F 2 "SirBoardLibrary:USB_C" H 2500 1600 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 2500 1600 50  0001 C CNN
 F 4 "C165948" H 2350 1600 50  0001 C CNN "Part"
 	1    2350 1600
@@ -138,15 +127,9 @@ Connection ~ 3100 1300
 Wire Wire Line
 	3100 1300 3150 1300
 Wire Wire Line
-	2950 2200 3650 2200
-Wire Wire Line
-	3650 2200 3650 1500
-Wire Wire Line
 	3650 1500 4050 1500
 Wire Wire Line
 	3400 1500 3400 1600
-Wire Wire Line
-	3400 1600 4050 1600
 Wire Wire Line
 	2950 1800 3000 1800
 Wire Wire Line
@@ -157,18 +140,11 @@ Connection ~ 3050 1200
 Wire Wire Line
 	3050 1200 3150 1200
 Wire Wire Line
-	2950 2100 4050 2100
-Wire Wire Line
-	4050 2100 4050 1900
-Wire Wire Line
 	2950 1700 3000 1700
 Wire Wire Line
 	2950 1500 3000 1500
 Wire Wire Line
 	3000 1800 3000 1700
-Connection ~ 3000 1700
-Wire Wire Line
-	3000 1700 4050 1700
 Wire Wire Line
 	2950 1600 3000 1600
 Wire Wire Line
@@ -182,14 +158,46 @@ Text Label 3700 1200 0    50   ~ 0
 GND
 Text Label 3700 1400 0    50   ~ 0
 CC2
-Text Label 3700 1500 0    50   ~ 0
+Text Label 3700 2200 0    50   ~ 0
 SBU2
 Text Label 3700 1600 0    50   ~ 0
-D-
-Text Label 3700 1700 0    50   ~ 0
 D+
 Text Label 3700 1800 0    50   ~ 0
 CC1
-Text Label 3700 2100 0    50   ~ 0
+Text Label 3700 1500 0    50   ~ 0
 SBU1
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5E3F3E24
+P 1725 1750
+F 0 "H2" H 1825 1795 50  0000 L CNN
+F 1 "MountingHole" H 1825 1705 50  0000 L CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 1725 1750 50  0001 C CNN
+F 3 "~" H 1725 1750 50  0001 C CNN
+	1    1725 1750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1700 3400 1700
+Wire Wire Line
+	3400 1700 3450 1650
+Wire Wire Line
+	3500 1600 4050 1600
+Connection ~ 3000 1700
+Wire Wire Line
+	3450 1650 3500 1600
+Wire Wire Line
+	3400 1600 3500 1700
+Wire Wire Line
+	3500 1700 4050 1700
+Text Label 3700 1700 0    50   ~ 0
+D-
+Wire Wire Line
+	4050 1900 4050 2200
+Wire Wire Line
+	2950 2200 4050 2200
+Wire Wire Line
+	2950 2100 3650 2100
+Wire Wire Line
+	3650 2100 3650 1500
 $EndSCHEMATC

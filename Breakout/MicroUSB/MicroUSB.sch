@@ -64,20 +64,30 @@ U 1 1 5DB38589
 P 2250 750
 F 0 "H1" H 2350 795 50  0000 L CNN
 F 1 "MountingHole" H 2350 705 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2250 750 50  0001 C CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 2250 750 50  0001 C CNN
 F 3 "~" H 2250 750 50  0001 C CNN
 	1    2250 750 
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
-U 1 1 5DB39176
-P 2250 1950
-F 0 "H2" H 2350 1995 50  0000 L CNN
-F 1 "MountingHole" H 2350 1905 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2250 1950 50  0001 C CNN
-F 3 "~" H 2250 1950 50  0001 C CNN
-	1    2250 1950
+U 1 1 5E38278B
+P 2275 2050
+F 0 "H2" H 2375 2095 50  0000 L CNN
+F 1 "MountingHole" H 2375 2005 50  0000 L CNN
+F 2 "SirBoardLibrary:MountingHole_M2.5_SirBoard" H 2275 2050 50  0001 C CNN
+F 3 "~" H 2275 2050 50  0001 C CNN
+	1    2275 2050
 	1    0    0    -1  
 $EndComp
+Text Label 2625 1150 0    50   ~ 0
+VBus
+Text Label 2625 1350 0    50   ~ 0
+D+
+Text Label 2625 1450 0    50   ~ 0
+D-
+Text Label 2625 1550 0    50   ~ 0
+ID
+Text Label 2625 1750 0    50   ~ 0
+GND
 $EndSCHEMATC
