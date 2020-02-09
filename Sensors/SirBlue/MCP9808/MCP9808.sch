@@ -170,13 +170,13 @@ Wire Wire Line
 $Comp
 L Device:C C1
 U 1 1 5E0038E9
-P 5325 1900
-F 0 "C1" H 5440 1945 50  0000 L CNN
-F 1 "10uF" H 5440 1855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5363 1750 50  0001 C CNN
-F 3 "~" H 5325 1900 50  0001 C CNN
-F 4 "C95841" H 5325 1900 50  0001 C CNN "Part"
-	1    5325 1900
+P 5325 1800
+F 0 "C1" H 5440 1845 50  0000 L CNN
+F 1 "10uF" H 5440 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5363 1650 50  0001 C CNN
+F 3 "~" H 5325 1800 50  0001 C CNN
+F 4 "C95841" H 5325 1800 50  0001 C CNN "Part"
+	1    5325 1800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -223,7 +223,7 @@ Connection ~ 3825 800
 Wire Wire Line
 	3550 800  3825 800 
 Wire Wire Line
-	5325 1750 5325 800 
+	5325 1650 5325 800 
 Wire Wire Line
 	4375 1475 4375 800 
 $Comp
@@ -356,7 +356,7 @@ Connection ~ 3575 2850
 Wire Wire Line
 	3575 2850 3850 2850
 Wire Wire Line
-	5325 2050 5325 2850
+	5325 1950 5325 2850
 Wire Wire Line
 	4375 2900 4375 2850
 Connection ~ 4375 2850
@@ -419,4 +419,16 @@ Text GLabel 1725 2800 2    50   Input ~ 0
 SCL
 Text GLabel 1725 2900 2    50   Input ~ 0
 SDA
+Text Label 3650 2075 0    50   ~ 0
+A0
+Text Label 3650 2175 0    50   ~ 0
+A1
+Text Label 3650 2275 0    50   ~ 0
+A2
+Text GLabel 1725 2300 2    50   Input ~ 0
+A2
+Text GLabel 1725 2200 2    50   Input ~ 0
+A1
+Text GLabel 1725 2100 2    50   Input ~ 0
+A0
 $EndSCHEMATC
