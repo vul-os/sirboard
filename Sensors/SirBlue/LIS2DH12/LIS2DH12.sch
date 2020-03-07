@@ -238,7 +238,7 @@ F 3 "~" H 1200 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 1975 4125 2    50   Input ~ 0
-INT
+INT2
 Text GLabel 1250 3825 0    50   Input ~ 0
 GND
 Wire Wire Line
@@ -478,7 +478,7 @@ SDA_5V
 Text GLabel 1250 3925 0    50   Input ~ 0
 VDDIO
 Text GLabel 1975 4025 2    50   Input ~ 0
-DRDY
+INT1
 $Comp
 L Connector_Generic:Conn_01x04 J2
 U 1 1 5E3D9C60
@@ -605,11 +605,11 @@ CS_3V3
 Text GLabel 6050 3125 2    50   Input ~ 0
 INT2
 $Comp
-L Sensor_Motion:LIS2HH12 U?
+L Sensor_Motion:LIS2HH12 U2
 U 1 1 5E709889
 P 5550 3125
-F 0 "U?" H 5750 3700 50  0000 C CNN
-F 1 "LIS2HH12" H 5875 3600 50  0000 C CNN
+F 0 "U2" H 5750 3700 50  0000 C CNN
+F 1 "LIS2DH12" H 5875 3600 50  0000 C CNN
 F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 5700 3675 50  0001 L CNN
 F 3 "www.st.com/resource/en/datasheet/lis2hh12.pdf" H 5200 3125 50  0001 C CNN
 	1    5550 3125
