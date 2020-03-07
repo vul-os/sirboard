@@ -557,10 +557,10 @@ SDA_5V
 Text GLabel 6100 3075 2    50   Input ~ 0
 DRDY
 $Comp
-L SirBoard_Library:LIS3MDL U?
+L SirBoard_Library:LIS3MDL U2
 U 1 1 5E668B4C
 P 5600 3175
-F 0 "U?" H 5775 3825 50  0000 C CNN
+F 0 "U2" H 5775 3825 50  0000 C CNN
 F 1 "LIS3MDL" H 5900 3725 50  0000 C CNN
 F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 5900 3775 50  0001 C CNN
 F 3 "https://docs.rs-online.com/5fad/0900766b814b0357.pdf" H 5900 3775 50  0001 C CNN
@@ -569,10 +569,10 @@ F 4 "917-2725" H 5600 3175 50  0001 C CNN "Part"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C5
 U 1 1 5E68F887
 P 6850 3175
-F 0 "C?" H 6965 3220 50  0000 L CNN
+F 0 "C5" H 6965 3220 50  0000 L CNN
 F 1 "100nF" H 6965 3130 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6888 3025 50  0001 C CNN
 F 3 "~" H 6850 3175 50  0001 C CNN
@@ -581,10 +581,10 @@ F 4 "C42998" H 6850 3175 50  0001 C CNN "Part"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 5E6912E4
 P 4475 3175
-F 0 "C?" H 4590 3220 50  0000 L CNN
+F 0 "C3" H 4590 3220 50  0000 L CNN
 F 1 "1uF" H 4590 3130 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4513 3025 50  0001 C CNN
 F 3 "~" H 4475 3175 50  0001 C CNN
@@ -635,10 +635,10 @@ Wire Wire Line
 Wire Wire Line
 	5550 2450 5550 2625
 $Comp
-L Jumper:SolderJumper_2_Open JP?
+L Jumper:SolderJumper_2_Open JP1
 U 1 1 5E6BA06F
 P 5600 2300
-F 0 "JP?" H 5600 2413 50  0000 C CNN
+F 0 "JP1" H 5600 2413 50  0000 C CNN
 F 1 "SolderJumper_2_Open" H 5600 2413 50  0001 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5600 2300 50  0001 C CNN
 F 3 "~" H 5600 2300 50  0001 C CNN
