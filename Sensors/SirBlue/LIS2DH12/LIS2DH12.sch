@@ -1,17 +1,17 @@
 EESchema Schematic File Version 4
-LIBS:LIS3MDL-cache
+LIBS:LIS2DH12-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 5906
 encoding utf-8
 Sheet 1 1
-Title "LIS3MDL Breakout with 5V Level Shift"
-Date "2020-03-06"
+Title "LIS2DH12 Breakout with 5V Level Shift"
+Date "2020-03-07"
 Rev "1"
 Comp "SirBoard"
-Comment1 "Magnetometer = ±4/ ±8/ ±12/ ±16 Gauss"
-Comment2 "Digital Magnetometer with I2C and SPI"
-Comment3 "LIS3MDL - SirBlue"
+Comment1 "Accelerometer = ±4g/ ±8g/ ±12g/ ±16g"
+Comment2 "Digital Accelerometer with I2C and SPI"
+Comment3 "LIS2DH12 - SirBlue"
 Comment4 ""
 $EndDescr
 Wire Wire Line
@@ -237,19 +237,6 @@ F 3 "~" H 1200 2800 50  0001 C CNN
 	1    1200 2800
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 5DCCDF08
-P 5600 3950
-F 0 "#PWR0106" H 5600 3700 50  0001 C CNN
-F 1 "GND" H 5604 3778 50  0000 C CNN
-F 2 "" H 5600 3950 50  0001 C CNN
-F 3 "" H 5600 3950 50  0001 C CNN
-	1    5600 3950
-	1    0    0    -1  
-$EndComp
-Text GLabel 6100 3175 2    50   Input ~ 0
-INT
 Text GLabel 1975 4125 2    50   Input ~ 0
 INT
 Text GLabel 1250 3825 0    50   Input ~ 0
@@ -302,24 +289,6 @@ F 4 "C95841" H 5250 1325 50  0001 C CNN "Part"
 	1    5250 1325
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C2
-U 1 1 5E010087
-P 6375 3525
-F 0 "C2" H 6490 3570 50  0000 L CNN
-F 1 "100nF" H 6490 3480 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6413 3375 50  0001 C CNN
-F 3 "~" H 6375 3525 50  0001 C CNN
-F 4 "C42998" H 6375 3525 50  0001 C CNN "Part"
-	1    6375 3525
-	-1   0    0    -1  
-$EndComp
-Text GLabel 5100 3125 0    50   Input ~ 0
-SDA_3V3
-Text GLabel 5100 3025 0    50   Input ~ 0
-SCL_3V3
-Wire Wire Line
-	5600 3950 5600 3900
 $Comp
 L Device:Q_DUAL_NMOS_S1G1D2S2G2D1 Q2
 U 1 1 5E08E54B
@@ -462,10 +431,6 @@ Connection ~ 1725 1375
 Connection ~ 2275 625 
 Text GLabel 1975 3925 2    50   Input ~ 0
 CS_5V
-Text GLabel 5100 3325 0    50   Input ~ 0
-SDO_3V3
-Text GLabel 5100 3225 0    50   Input ~ 0
-CS_3V3
 Text GLabel 1425 2275 0    50   Input ~ 0
 SDO_3V3
 Text GLabel 1575 1225 2    50   Input ~ 0
@@ -554,20 +519,6 @@ Text GLabel 2100 4625 2    50   Input ~ 0
 SCL_5V
 Text GLabel 2100 4725 2    50   Input ~ 0
 SDA_5V
-Text GLabel 6100 3075 2    50   Input ~ 0
-DRDY
-$Comp
-L SirBoard_Library:LIS3MDL U2
-U 1 1 5E668B4C
-P 5600 3175
-F 0 "U2" H 5775 3825 50  0000 C CNN
-F 1 "LIS3MDL" H 5900 3725 50  0000 C CNN
-F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 5900 3775 50  0001 C CNN
-F 3 "https://docs.rs-online.com/5fad/0900766b814b0357.pdf" H 5900 3775 50  0001 C CNN
-F 4 "917-2725" H 5600 3175 50  0001 C CNN "Part"
-	1    5600 3175
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C5
 U 1 1 5E68F887
@@ -601,33 +552,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 3325 6850 3900
 Wire Wire Line
-	6850 3900 6375 3900
-Connection ~ 5600 3900
-Wire Wire Line
-	5600 3900 5500 3900
-Wire Wire Line
-	5600 3675 5600 3900
-Wire Wire Line
-	5500 3675 5500 3900
-Connection ~ 5500 3900
-Wire Wire Line
-	5700 3675 5700 3900
-Connection ~ 5700 3900
-Wire Wire Line
-	5700 3900 5600 3900
-Wire Wire Line
-	6375 3675 6375 3900
-Connection ~ 6375 3900
-Wire Wire Line
-	6375 3900 5700 3900
-Wire Wire Line
-	6375 3375 6375 3275
-Wire Wire Line
-	6375 3275 6100 3275
-Wire Wire Line
 	4475 3325 4475 3900
-Wire Wire Line
-	4475 3900 5500 3900
 Wire Wire Line
 	4475 3025 4475 2450
 Wire Wire Line
@@ -667,4 +592,64 @@ VDDIO
 Wire Wire Line
 	6975 2450 6850 2450
 Connection ~ 6850 2450
+Text GLabel 6050 3025 2    50   Input ~ 0
+INT1
+Text GLabel 5150 3025 0    50   Input ~ 0
+SDA_3V3
+Text GLabel 5150 3225 0    50   Input ~ 0
+SCL_3V3
+Text GLabel 5150 3125 0    50   Input ~ 0
+SDO_3V3
+Text GLabel 5150 2925 0    50   Input ~ 0
+CS_3V3
+Text GLabel 6050 3125 2    50   Input ~ 0
+INT2
+$Comp
+L Sensor_Motion:LIS2HH12 U?
+U 1 1 5E709889
+P 5550 3125
+F 0 "U?" H 5750 3700 50  0000 C CNN
+F 1 "LIS2HH12" H 5875 3600 50  0000 C CNN
+F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 5700 3675 50  0001 L CNN
+F 3 "www.st.com/resource/en/datasheet/lis2hh12.pdf" H 5200 3125 50  0001 C CNN
+	1    5550 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3625 5650 3900
+Connection ~ 5650 3900
+Wire Wire Line
+	5550 3625 5550 3900
+Connection ~ 5550 3900
+Wire Wire Line
+	5450 3625 5450 3900
+Wire Wire Line
+	4475 3900 5450 3900
+Wire Wire Line
+	5450 3900 5550 3900
+Connection ~ 5450 3900
+$Comp
+L power:GND #PWR0106
+U 1 1 5DCCDF08
+P 5550 3950
+F 0 "#PWR0106" H 5550 3700 50  0001 C CNN
+F 1 "GND" H 5554 3778 50  0000 C CNN
+F 2 "" H 5550 3950 50  0001 C CNN
+F 3 "" H 5550 3950 50  0001 C CNN
+	1    5550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3950 5550 3900
+Wire Wire Line
+	5550 3900 5650 3900
+Wire Wire Line
+	6050 3425 6200 3425
+Wire Wire Line
+	6200 3425 6200 3900
+Wire Wire Line
+	5650 3900 6200 3900
+Wire Wire Line
+	6200 3900 6850 3900
+Connection ~ 6200 3900
 $EndSCHEMATC
