@@ -6,8 +6,8 @@ $Descr User 7874 5906
 encoding utf-8
 Sheet 1 1
 Title "LTR-381RGB Breakout with 5V Level Shift"
-Date "2020-01-29"
-Rev "1"
+Date "2020-03-10"
+Rev "2"
 Comp "SirBoard"
 Comment1 "Automatic rejection for 50Hz/60Hz lighting"
 Comment2 "Programmable 16 to 20 Bit Output"
@@ -155,8 +155,8 @@ F 3 "~" H 1200 2800 50  0001 C CNN
 	1    1200 2800
 	1    0    0    -1  
 $EndComp
-Text GLabel 1975 4125 2    50   Input ~ 0
-INT1
+Text GLabel 1975 3925 2    50   Input ~ 0
+INT_5V
 Text GLabel 1250 3825 0    50   Input ~ 0
 GND
 Wire Wire Line
@@ -500,4 +500,10 @@ Text GLabel 1975 3625 2    50   Input ~ 0
 5V
 Text GLabel 1975 3825 2    50   Input ~ 0
 GND
+Text GLabel 1250 3925 0    50   Input ~ 0
+INT_5V
+Text GLabel 1975 4025 2    50   Input ~ 0
+SCL_5V
+Text GLabel 1975 4125 2    50   Input ~ 0
+SDA_5V
 $EndSCHEMATC

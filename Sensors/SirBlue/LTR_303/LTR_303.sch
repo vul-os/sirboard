@@ -6,73 +6,16 @@ $Descr User 7874 5906
 encoding utf-8
 Sheet 1 1
 Title "LTR-303ALS Breakout with 5V Level Shift"
-Date "2020-01-29"
-Rev "1"
+Date "2020-03-10"
+Rev "2"
 Comp "SirBoard"
 Comment1 "Automatic rejection for 50Hz/60Hz lighting"
 Comment2 "Full dynamic range from 0.01 lux to 64k lux"
 Comment3 "Digital Ambient Light and Infrared Sensor with I2C"
 Comment4 "LTR-303ALS - SirBlue"
 $EndDescr
-Wire Wire Line
-	5400 1700 5400 1900
-Wire Wire Line
-	5400 1900 6050 1900
-Connection ~ 6050 1900
-Wire Wire Line
-	5750 1175 5400 1175
-Wire Wire Line
-	5400 1175 5400 1275
-Wire Wire Line
-	5400 1275 5750 1275
-Wire Wire Line
-	5400 1275 5400 1400
-Connection ~ 5400 1275
-Wire Wire Line
-	6350 1175 6650 1175
-Wire Wire Line
-	6650 1175 6650 1375
-Text GLabel 5100 1175 0    50   Input ~ 0
-5V
-Wire Wire Line
-	5100 1175 5400 1175
-Connection ~ 5400 1175
-Text GLabel 6975 1175 2    50   Input ~ 0
-3V3
-Connection ~ 6650 1175
-$Comp
-L power:GND #PWR0101
-U 1 1 5DB78905
-P 6050 1975
-F 0 "#PWR0101" H 6050 1725 50  0001 C CNN
-F 1 "GND" H 6054 1803 50  0000 C CNN
-F 2 "" H 6050 1975 50  0001 C CNN
-F 3 "" H 6050 1975 50  0001 C CNN
-	1    6050 1975
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 1975 6050 1900
 Text GLabel 1400 750  0    50   Input ~ 0
 5V
-Wire Wire Line
-	6650 1900 6050 1900
-Wire Wire Line
-	6650 1675 6650 1900
-$Comp
-L Regulator_Linear:AP2127K-3.3 U1
-U 1 1 5DC7F7BD
-P 6050 1275
-F 0 "U1" H 6050 1615 50  0000 C CNN
-F 1 "AP2127K-3.3" H 6050 1525 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6050 1600 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 6050 1375 50  0001 C CNN
-F 4 "C156285" H 6050 1275 50  0001 C CNN "Part"
-	1    6050 1275
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 1575 6050 1900
 $Comp
 L Device:Q_DUAL_NMOS_S1G1D2S2G2D1 Q1
 U 2 1 5DCC5316
@@ -155,12 +98,8 @@ F 3 "~" H 1200 2800 50  0001 C CNN
 	1    1200 2800
 	1    0    0    -1  
 $EndComp
-Text GLabel 1975 4125 2    50   Input ~ 0
-INT1
 Text GLabel 1250 3825 0    50   Input ~ 0
 GND
-Wire Wire Line
-	6650 1175 6975 1175
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5DF50F6A
@@ -194,18 +133,6 @@ F 3 "~" H 1225 2150 50  0001 C CNN
 F 4 "C99198" V 1225 2150 50  0001 C CNN "Part"
 	1    1225 2150
 	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5E0038E9
-P 5400 1550
-F 0 "C1" H 5515 1595 50  0000 L CNN
-F 1 "10uF" H 5515 1505 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 5438 1400 50  0001 C CNN
-F 3 "~" H 5400 1550 50  0001 C CNN
-F 4 "C95841" H 5400 1550 50  0001 C CNN "Part"
-	1    5400 1550
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Q_DUAL_NMOS_S1G1D2S2G2D1 Q2
@@ -280,18 +207,6 @@ Wire Wire Line
 Connection ~ 975  1500
 Connection ~ 1525 750 
 $Comp
-L Device:C C4
-U 1 1 5E37B1B0
-P 6650 1525
-F 0 "C4" H 6765 1570 50  0000 L CNN
-F 1 "10uF" H 6765 1480 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 6688 1375 50  0001 C CNN
-F 3 "~" H 6650 1525 50  0001 C CNN
-F 4 "C95841" H 6650 1525 50  0001 C CNN "Part"
-	1    6650 1525
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x06 J1
 U 1 1 5E3A64F0
 P 1450 3825
@@ -313,10 +228,6 @@ F 3 "~" H 1775 3825 50  0001 C CNN
 	1    1775 3825
 	-1   0    0    -1  
 $EndComp
-Text GLabel 1250 4025 0    50   Input ~ 0
-SCL_5V
-Text GLabel 1250 4125 0    50   Input ~ 0
-SDA_5V
 $Comp
 L Connector_Generic:Conn_01x04 J2
 U 1 1 5E3D9C60
@@ -499,4 +410,99 @@ F 3 "http://optoelectronics.liteon.com/upload/download/DS86-2013-0004/LTR-303ALS
 	1    5400 3100
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C4
+U 1 1 5E37B1B0
+P 6650 1525
+F 0 "C4" H 6765 1570 50  0000 L CNN
+F 1 "10uF" H 6765 1480 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6688 1375 50  0001 C CNN
+F 3 "~" H 6650 1525 50  0001 C CNN
+F 4 "C95841" H 6650 1525 50  0001 C CNN "Part"
+	1    6650 1525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5E0038E9
+P 5400 1550
+F 0 "C1" H 5515 1595 50  0000 L CNN
+F 1 "10uF" H 5515 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5438 1400 50  0001 C CNN
+F 3 "~" H 5400 1550 50  0001 C CNN
+F 4 "C95841" H 5400 1550 50  0001 C CNN "Part"
+	1    5400 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1175 6975 1175
+Wire Wire Line
+	6050 1575 6050 1900
+$Comp
+L Regulator_Linear:AP2127K-3.3 U1
+U 1 1 5DC7F7BD
+P 6050 1275
+F 0 "U1" H 6050 1615 50  0000 C CNN
+F 1 "AP2127K-3.3" H 6050 1525 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6050 1600 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 6050 1375 50  0001 C CNN
+F 4 "C156285" H 6050 1275 50  0001 C CNN "Part"
+	1    6050 1275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1675 6650 1900
+Wire Wire Line
+	6650 1900 6050 1900
+Wire Wire Line
+	6050 1975 6050 1900
+$Comp
+L power:GND #PWR0101
+U 1 1 5DB78905
+P 6050 1975
+F 0 "#PWR0101" H 6050 1725 50  0001 C CNN
+F 1 "GND" H 6054 1803 50  0000 C CNN
+F 2 "" H 6050 1975 50  0001 C CNN
+F 3 "" H 6050 1975 50  0001 C CNN
+	1    6050 1975
+	1    0    0    -1  
+$EndComp
+Connection ~ 6650 1175
+Text GLabel 6975 1175 2    50   Input ~ 0
+3V3
+Connection ~ 5400 1175
+Wire Wire Line
+	5100 1175 5400 1175
+Text GLabel 5100 1175 0    50   Input ~ 0
+5V
+Wire Wire Line
+	6650 1175 6650 1375
+Wire Wire Line
+	6350 1175 6650 1175
+Connection ~ 5400 1275
+Wire Wire Line
+	5400 1275 5400 1400
+Wire Wire Line
+	5400 1275 5750 1275
+Wire Wire Line
+	5400 1175 5400 1275
+Wire Wire Line
+	5750 1175 5400 1175
+Connection ~ 6050 1900
+Wire Wire Line
+	5400 1900 6050 1900
+Wire Wire Line
+	5400 1700 5400 1900
+Text GLabel 1975 3925 2    50   Input ~ 0
+INT_5V
+Text GLabel 1250 4125 0    50   Input ~ 0
+SDA_5V
+Text GLabel 1250 4025 0    50   Input ~ 0
+SCL_5V
+Text GLabel 1250 3925 0    50   Input ~ 0
+INT_5V
+Text GLabel 1975 4125 2    50   Input ~ 0
+SDA_5V
+Text GLabel 1975 4025 2    50   Input ~ 0
+SCL_5V
 $EndSCHEMATC
