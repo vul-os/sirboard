@@ -6,8 +6,8 @@ $Descr User 6299 5118
 encoding utf-8
 Sheet 1 1
 Title "MCP4728 Breakout "
-Date "2020-01-23"
-Rev "2"
+Date "2020-03-10"
+Rev "3"
 Comp "SirBoard"
 Comment1 "4 Channel I2C DAC with 12 Bit Resolution"
 Comment2 "MCP4728 - SirBlue"
@@ -141,10 +141,6 @@ F 3 "" H 3950 2800 50  0001 C CNN
 	1    3950 2800
 	1    0    0    -1  
 $EndComp
-Text GLabel 2500 2300 0    50   Input ~ 0
-SDA
-Text GLabel 2500 2200 0    50   Input ~ 0
-SCL
 $Comp
 L Device:R_US R2
 U 1 1 5E2C9265
@@ -346,4 +342,8 @@ Wire Wire Line
 Connection ~ 3950 1325
 Wire Wire Line
 	3950 1325 4975 1325
+Text GLabel 2500 2300 0    50   Input ~ 0
+SDA_5V
+Text GLabel 2500 2200 0    50   Input ~ 0
+SCL_5V
 $EndSCHEMATC
