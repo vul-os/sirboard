@@ -9,10 +9,10 @@ Title "MMA845X Breakout with 5V Level Shift"
 Date "2020-01-22"
 Rev "2"
 Comp "SirBoard"
-Comment1 "Digital 8bit/10Bit,12Bit or 14Bit bit I2C Accelerometer"
+Comment1 "Digital 10 Bit, 8bit/12Bit or 14bit I2C Accelerometer"
 Comment2 "1.56Hz - 800Hz Data Rate"
-Comment3 "±2g, ±4g, ±8g"
-Comment4 "MMA8451, MMA8452 - SirBlue"
+Comment3 "Accelerometer: ±2g, ±4g, ±8g"
+Comment4 "MMA8451, MMA8452, MMA8453 - SirBlue"
 $EndDescr
 Wire Wire Line
 	4650 1600 4650 1800
