@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 40)
+    (drawings 39)
     (tracks 166)
     (zones 0)
     (modules 20)
@@ -44,7 +44,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.127)
     (user_trace_width 0.127)
     (user_trace_width 0.15)
     (user_trace_width 0.2)
@@ -1486,9 +1486,6 @@
   )
 
   (gr_text www.SirBoard.com (at 55.753 31.75) (layer F.SilkS)
-    (effects (font (size 0.9 0.8) (thickness 0.13)))
-  )
-  (gr_text "JLCJLCJLCJLC\nJLCJLCJLCJLC" (at 66.04 35.306 90) (layer F.SilkS)
     (effects (font (size 0.9 0.8) (thickness 0.13)))
   )
   (gr_text SC7 (at 50.673 30.353) (layer F.SilkS)
