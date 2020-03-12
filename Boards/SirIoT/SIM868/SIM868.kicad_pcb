@@ -43,7 +43,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.127)
     (user_trace_width 0.127)
     (user_trace_width 0.15)
     (user_trace_width 0.2)
@@ -83,7 +83,7 @@
     (pad_size 5 5)
     (pad_drill 0)
     (pad_to_mask_clearance 0)
-    (solder_mask_min_width 0.1)
+    (solder_mask_min_width 0.05)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
@@ -3539,7 +3539,7 @@
     (arrow2b (pts (xy 47.498 20.193) (xy 48.624504 19.606579)))
   )
   (dimension 38.1 (width 0.12) (layer Dwgs.User) (tstamp 5DEFD56A)
-    (gr_text "38.100 mm" (at 100.584 42.291 90) (layer Dwgs.User) (tstamp 5DEFD56B)
+    (gr_text "38.100 mm" (at 100.584 42.291 90) (layer Dwgs.User) (tstamp 5DEFD56A)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (feature1 (pts (xy 83.058 23.241) (xy 99.900421 23.241)))
