@@ -22,7 +22,7 @@
 
   (layers
     (0 F.Cu signal)
-    (31 B.Cu signal hide)
+    (31 B.Cu signal)
     (32 B.Adhes user hide)
     (33 F.Adhes user hide)
     (34 B.Paste user hide)
@@ -44,7 +44,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.127)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
@@ -78,7 +78,7 @@
     (pad_size 1.7 1.7)
     (pad_drill 1)
     (pad_to_mask_clearance 0)
-    (solder_mask_min_width 0.1)
+    (solder_mask_min_width 0.05)
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
