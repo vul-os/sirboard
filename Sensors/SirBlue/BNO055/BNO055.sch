@@ -657,6 +657,7 @@ F 0 "U2" H 4925 3903 50  0000 C CNN
 F 1 "BNO055" H 4925 3813 50  0000 C CNN
 F 2 "Package_LGA:LGA-28_5.2x3.8mm_P0.5mm" H 5175 2375 50  0001 L CNN
 F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST_BNO055_DS000_14.pdf" H 4925 3225 50  0001 C CNN
+F 4 "C93216" H 4925 3025 50  0001 C CNN "Part"
 	1    4925 3025
 	1    0    0    -1  
 $EndComp

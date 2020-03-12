@@ -612,6 +612,7 @@ F 0 "U2" H 5750 3700 50  0000 C CNN
 F 1 "LIS2DH12" H 5875 3600 50  0000 C CNN
 F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 5700 3675 50  0001 L CNN
 F 3 "www.st.com/resource/en/datasheet/lis2hh12.pdf" H 5200 3125 50  0001 C CNN
+F 4 "C110926" H 5550 3125 50  0001 C CNN "Part"
 	1    5550 3125
 	1    0    0    -1  
 $EndComp
