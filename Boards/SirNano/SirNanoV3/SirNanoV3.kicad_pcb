@@ -45,7 +45,7 @@
   )
 
   (setup
-    (last_trace_width 0.25)
+    (last_trace_width 0.127)
     (user_trace_width 0.127)
     (user_trace_width 0.15)
     (user_trace_width 0.2)
@@ -85,7 +85,7 @@
     (pad_size 1.7 1.7)
     (pad_drill 1)
     (pad_to_mask_clearance 0)
-    (solder_mask_min_width 0.1)
+    (solder_mask_min_width 0.05)
     (aux_axis_origin 0 0)
     (grid_origin 43.18 45.72)
     (visible_elements 7FFFFFFF)
