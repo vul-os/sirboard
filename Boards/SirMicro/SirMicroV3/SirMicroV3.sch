@@ -182,10 +182,10 @@ L Device:Resonator Y1
 U 1 1 5DEA6F3D
 P 7725 3075
 F 0 "Y1" V 7770 3185 50  0000 L CNN
-F 1 "20MHz" V 7680 3185 50  0000 L CNN
+F 1 "16MHz" V 7680 3185 50  0000 L CNN
 F 2 "Crystal:Resonator_SMD_muRata_CSTxExxV-3Pin_3.0x1.1mm" H 7700 3075 50  0001 C CNN
 F 3 "~" H 7700 3075 50  0001 C CNN
-F 4 "C91586" V 7725 3075 50  0001 C CNN "Part"
+F 4 "C32180" V 7725 3075 50  0001 C CNN "Part"
 	1    7725 3075
 	0    1    -1   0   
 $EndComp
@@ -730,7 +730,8 @@ P 5750 1700
 F 0 "U2" H 5750 2040 50  0000 C CNN
 F 1 "SPX3819M5-L-3-3" H 5750 1950 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5750 2025 50  0001 C CNN
-F 3 "https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819" H 5750 1700 50  0001 C CNN
+F 3 "https://lcsc.com/product-detail/Low-Dropout-Regulators-LDO_Exar-SPX3819M5-L-3-3-TR_C9055.html" H 5750 1700 50  0001 C CNN
+F 4 "C9055" H 5750 1700 50  0001 C CNN "Part"
 	1    5750 1700
 	1    0    0    -1  
 $EndComp
