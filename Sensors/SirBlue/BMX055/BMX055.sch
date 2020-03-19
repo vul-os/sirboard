@@ -569,13 +569,6 @@ F 4 "C99198" V 4675 3650 50  0001 C CNN "Part"
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4675 3800 4625 3850
-Wire Wire Line
-	4625 3850 5550 3850
-Wire Wire Line
-	4625 3850 4325 3850
-Connection ~ 4625 3850
-Wire Wire Line
 	4325 3850 4025 3850
 Connection ~ 4325 3850
 Wire Wire Line
@@ -654,4 +647,11 @@ A_LSB_M
 Connection ~ 4675 3375
 Connection ~ 4600 3050
 Connection ~ 4525 2875
+Wire Wire Line
+	4675 3800 4675 3850
+Wire Wire Line
+	4675 3850 5550 3850
+Wire Wire Line
+	4675 3850 4325 3850
+Connection ~ 4675 3850
 $EndSCHEMATC

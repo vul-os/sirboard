@@ -189,9 +189,9 @@
       (net 6 "Net-(A0-Pad1)"))
     (pad 1 smd roundrect (at -1.2 -0.75 90) (size 0.55 0.25) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.1)
       (net 5 SDA))
-    (model ${KISYS3DMOD}/Package_DFN_QFN.3dshapes/DFN-8-1EP_3x3mm_P0.65mm_EP1.55x2.4mm.wrl
+    (model "${KISYS3DMOD}/User Library-SHT3x.STEP"
       (at (xyz 0 0 0))
-      (scale (xyz 0.8333333000000001 0.8333333000000001 0.8333333000000001))
+      (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
