@@ -272,10 +272,10 @@
       (net 6 SDA_3V3))
     (pad 4 smd rect (at 0.975 -1.025 90) (size 0.5 0.35) (layers F.Cu F.Paste F.Mask)
       (net 8 SCL_3V3))
-    (model ${KISYS3DMOD}/Package_LGA.3dshapes/Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering.wrl
-      (offset (xyz 0.01500000025472259 -0.03500000059435272 0))
+    (model "${KISYS3DMOD}/User Library-BME280-1.STEP"
+      (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 0))
     )
   )
 
