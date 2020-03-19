@@ -407,6 +407,7 @@ F 0 "U2" H 5843 3145 50  0000 L CNN
 F 1 "LTR-303ALS-01" H 5843 3055 50  0000 L CNN
 F 2 "OptoDevice:Lite-On_LTR-303ALS-01" H 5400 3550 50  0001 C CNN
 F 3 "http://optoelectronics.liteon.com/upload/download/DS86-2013-0004/LTR-303ALS-01_DS_V1.pdf" H 5100 3450 50  0001 C CNN
+F 4 "C364577" H 5400 3100 50  0001 C CNN "Part"
 	1    5400 3100
 	1    0    0    -1  
 $EndComp
