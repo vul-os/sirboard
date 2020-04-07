@@ -209,7 +209,7 @@ Wire Wire Line
 Wire Wire Line
 	4675 2025 4675 2500
 Wire Wire Line
-	3825 2025 3225 2025
+	3825 2025 3725 2025
 Text GLabel 5175 3100 2    50   Input ~ 0
 CTS
 Text GLabel 5175 3000 2    50   Input ~ 0
@@ -257,17 +257,6 @@ Wire Wire Line
 	3500 825  4175 825 
 Wire Wire Line
 	7250 1175 7250 1150
-$Comp
-L power:GND #PWR0103
-U 1 1 5E4C8EE3
-P 7250 1525
-F 0 "#PWR0103" H 7250 1275 50  0001 C CNN
-F 1 "GND" H 7254 1353 50  0000 C CNN
-F 2 "" H 7250 1525 50  0001 C CNN
-F 3 "" H 7250 1525 50  0001 C CNN
-	1    7250 1525
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7250 1525 7250 1475
 $Comp
@@ -282,16 +271,10 @@ F 4 "C25585" H 7250 1000 50  0001 C CNN "Part"
 	1    7250 1000
 	1    0    0    -1  
 $EndComp
-Text GLabel 7300 775  2    50   Input ~ 0
+Text GLabel 7250 1525 3    50   Input ~ 0
 RX
-Wire Wire Line
-	7300 775  7250 775 
-Wire Wire Line
-	7250 775  7250 850 
-Text GLabel 6750 775  0    50   Input ~ 0
+Text GLabel 6800 1525 3    50   Input ~ 0
 TX
-Wire Wire Line
-	6750 775  6800 775 
 $Comp
 L Device:LED RX1
 U 1 1 5E4CEE4C
@@ -306,19 +289,6 @@ F 4 "C205443" H 7250 1325 50  0001 C CNN "Part"
 $EndComp
 Wire Wire Line
 	6800 1525 6800 1475
-$Comp
-L power:GND #PWR0104
-U 1 1 5E4E74AC
-P 6800 1525
-F 0 "#PWR0104" H 6800 1275 50  0001 C CNN
-F 1 "GND" H 6804 1353 50  0000 C CNN
-F 2 "" H 6800 1525 50  0001 C CNN
-F 3 "" H 6800 1525 50  0001 C CNN
-	1    6800 1525
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6800 825  6800 775 
 Wire Wire Line
 	6800 1175 6800 1125
 $Comp
@@ -390,19 +360,6 @@ Connection ~ 4175 825
 Wire Wire Line
 	4175 825  4350 825 
 $Comp
-L Device:Fuse F1
-U 1 1 5E50B6C1
-P 2200 2050
-F 0 "F1" V 2005 2050 50  0000 C CNN
-F 1 "500mA" V 2095 2050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2130 2050 50  0001 C CNN
-F 3 "~" H 2200 2050 50  0001 C CNN
-F 4 "C89657" V 2200 2050 50  0001 C CNN "Part"
-	1    2200 2050
-	0    1    1    0   
-$EndComp
-Connection ~ 2350 2050
-$Comp
 L Power_Protection:PRTR5V0U2X D1
 U 1 1 5E5751C6
 P 6500 2875
@@ -447,15 +404,15 @@ F 4 "C99652" H 4775 3000 50  0001 C CNN "Part"
 	1    4775 3000
 	1    0    0    -1  
 $EndComp
-Connection ~ 3225 3900
+Connection ~ 3725 3900
 Wire Wire Line
-	3225 2025 3225 3900
+	3725 2025 3725 3900
 Wire Wire Line
-	3225 3900 4775 3900
+	3725 3900 4775 3900
 Connection ~ 2750 2050
 Connection ~ 2750 3900
 Wire Wire Line
-	2750 3900 3225 3900
+	2750 3900 3150 3900
 Wire Wire Line
 	2350 2050 2750 2050
 Wire Wire Line
@@ -472,4 +429,60 @@ F 4 "C42998" H 3975 2025 50  0001 C CNN "Part"
 	1    3975 2025
 	0    -1   -1   0   
 $EndComp
+Text GLabel 6625 650  0    50   Input ~ 0
+VCC
+Wire Wire Line
+	7250 850  7250 650 
+Wire Wire Line
+	6625 650  6800 650 
+Wire Wire Line
+	6800 650  6800 825 
+Connection ~ 6800 650 
+Wire Wire Line
+	6800 650  7250 650 
+$Comp
+L Device:R_US R4
+U 1 1 5E97E6A1
+P 3150 3125
+F 0 "R4" H 3218 3170 50  0000 L CNN
+F 1 "5K1" H 3218 3080 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3190 3115 50  0001 C CNN
+F 3 "~" H 3150 3125 50  0001 C CNN
+F 4 "C332117" H 3150 3125 50  0001 C CNN "Part"
+	1    3150 3125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 5E98016F
+P 3425 3125
+F 0 "R5" H 3493 3170 50  0000 L CNN
+F 1 "5K1" H 3493 3080 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3465 3115 50  0001 C CNN
+F 3 "~" H 3425 3125 50  0001 C CNN
+F 4 "C332117" H 3425 3125 50  0001 C CNN "Part"
+	1    3425 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2350 3150 2350
+Wire Wire Line
+	3150 2350 3150 2975
+Wire Wire Line
+	2050 2250 3425 2250
+Wire Wire Line
+	3425 2250 3425 2975
+Wire Wire Line
+	3150 3275 3150 3900
+Connection ~ 3150 3900
+Wire Wire Line
+	3150 3900 3425 3900
+Wire Wire Line
+	3425 3275 3425 3900
+Connection ~ 3425 3900
+Wire Wire Line
+	3425 3900 3725 3900
+Wire Wire Line
+	2050 2050 2350 2050
+Connection ~ 2350 2050
 $EndSCHEMATC
