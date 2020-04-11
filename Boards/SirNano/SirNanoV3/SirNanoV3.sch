@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "SirNano"
-Date "2020-03-02"
-Rev "3"
+Date "2020-04-11"
+Rev "3.1"
 Comp "SirBoard"
 Comment1 "www.SirBoard.com"
 Comment2 "Arduino Nano Footprint and Pinout with 3.3V and 5V Capability"
@@ -733,13 +733,13 @@ $EndComp
 $Comp
 L Device:Polyfuse F1
 U 1 1 5D513147
-P 2550 1000
-F 0 "F1" V 2675 825 50  0000 L CNN
-F 1 "500mA" V 2675 1000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 2600 800 50  0001 L CNN
-F 3 "~" H 2550 1000 50  0001 C CNN
-F 4 "C89657" H 2550 1000 50  0001 C CNN "Part"
-	1    2550 1000
+P 2825 1000
+F 0 "F1" V 2950 825 50  0000 L CNN
+F 1 "500mA" V 2950 1000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 2875 800 50  0001 L CNN
+F 3 "~" H 2825 1000 50  0001 C CNN
+F 4 "C89657" H 2825 1000 50  0001 C CNN "Part"
+	1    2825 1000
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1021,9 +1021,9 @@ F 3 "~" H 10325 4525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 10125 4425 0    50   Input ~ 0
-A5
+SCL1
 Text GLabel 10125 4525 0    50   Input ~ 0
-A4
+SDA1
 Text GLabel 10125 4625 0    50   Input ~ 0
 VCC
 Text GLabel 10125 4725 0    50   Input ~ 0
@@ -1109,19 +1109,15 @@ $EndComp
 $Comp
 L Device:D_Schottky D2
 U 1 1 5EA58C20
-P 2950 1000
-F 0 "D2" H 2950 786 50  0000 C CNN
-F 1 "MBR120" H 2950 876 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123F" H 2950 1000 50  0001 C CNN
-F 3 "~" H 2950 1000 50  0001 C CNN
-F 4 "C223608" H 2950 1000 50  0001 C CNN "Part"
-	1    2950 1000
+P 7350 1325
+F 0 "D2" H 7350 1111 50  0000 C CNN
+F 1 "MBR120" H 7350 1201 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 7350 1325 50  0001 C CNN
+F 3 "~" H 7350 1325 50  0001 C CNN
+F 4 "C223608" H 7350 1325 50  0001 C CNN "Part"
+	1    7350 1325
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2700 1000 2800 1000
-Wire Wire Line
-	7100 1325 7800 1325
 Wire Wire Line
 	7800 1325 7800 1775
 Text GLabel 9975 1525 0    50   Input ~ 0
@@ -1129,7 +1125,7 @@ VUSB
 Wire Wire Line
 	2325 3000 3125 3000
 Wire Wire Line
-	2325 1000 2400 1000
+	2325 1000 2675 1000
 $Comp
 L Jumper:SolderJumper_2_Open JP3
 U 1 1 5E9AF05C
@@ -1199,38 +1195,14 @@ F 4 "757-0045" H 4950 1900 50  0001 C CNN "Part"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal_GND24_Small Y1
-U 1 1 5E775976
-P 3750 5100
-F 0 "Y1" V 3705 5243 50  0000 L CNN
-F 1 "20MHz" V 3795 5243 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 3750 5100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/2001061508_JGHC-S3220000181060_C479198.pdf" H 3750 5100 50  0001 C CNN
-F 4 "C479198" V 3750 5100 50  0001 C CNN "Part"
-	1    3750 5100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3525 5050 3525 4950
-Wire Wire Line
-	3525 4950 3750 4950
-Wire Wire Line
-	3750 4950 3750 5000
-Wire Wire Line
-	3525 5150 3525 5250
-Wire Wire Line
-	3525 5250 3750 5250
-Wire Wire Line
-	3750 5250 3750 5200
-$Comp
 L power:GND #PWR0101
 U 1 1 5E7DEB03
-P 3400 5850
-F 0 "#PWR0101" H 3400 5600 50  0001 C CNN
-F 1 "GND" H 3405 5677 50  0000 C CNN
-F 2 "" H 3400 5850 50  0001 C CNN
-F 3 "" H 3400 5850 50  0001 C CNN
-	1    3400 5850
+P 3625 5175
+F 0 "#PWR0101" H 3625 4925 50  0001 C CNN
+F 1 "GND" H 3630 5002 50  0000 C CNN
+F 2 "" H 3625 5175 50  0001 C CNN
+F 3 "" H 3625 5175 50  0001 C CNN
+	1    3625 5175
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1245,66 +1217,6 @@ F 4 "C465158" H 900 4700 50  0001 C CNN "Part"
 	1    900  4700
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Device:C C10
-U 1 1 5E871F36
-P 3000 5500
-F 0 "C10" H 3115 5546 50  0000 L CNN
-F 1 "22pF" H 3115 5455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3038 5350 50  0001 C CNN
-F 3 "~" H 3000 5500 50  0001 C CNN
-F 4 "C42998" H 3000 5500 50  0001 C CNN "Part"
-	1    3000 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C12
-U 1 1 5E8F1B5A
-P 3400 5500
-F 0 "C12" H 3515 5546 50  0000 L CNN
-F 1 "22pF" H 3515 5455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3438 5350 50  0001 C CNN
-F 3 "~" H 3400 5500 50  0001 C CNN
-F 4 "C42998" H 3400 5500 50  0001 C CNN "Part"
-	1    3400 5500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2400 5050 3000 5050
-Wire Wire Line
-	2400 5150 3400 5150
-Wire Wire Line
-	3000 5350 3000 5050
-Connection ~ 3000 5050
-Wire Wire Line
-	3000 5050 3525 5050
-Wire Wire Line
-	3400 5350 3400 5150
-Connection ~ 3400 5150
-Wire Wire Line
-	3400 5150 3525 5150
-Wire Wire Line
-	3000 5650 3000 5725
-Wire Wire Line
-	3000 5725 3400 5725
-Wire Wire Line
-	3400 5725 3400 5650
-Wire Wire Line
-	3650 5100 3625 5100
-Wire Wire Line
-	3625 5100 3625 5725
-Wire Wire Line
-	3625 5725 3400 5725
-Connection ~ 3400 5725
-Wire Wire Line
-	3850 5100 3875 5100
-Wire Wire Line
-	3875 5100 3875 5725
-Wire Wire Line
-	3875 5725 3625 5725
-Connection ~ 3625 5725
-Wire Wire Line
-	3400 5850 3400 5725
 Wire Wire Line
 	1800 3850 2550 3850
 Wire Wire Line
@@ -1318,11 +1230,49 @@ Wire Wire Line
 	3175 3950 3175 4050
 Connection ~ 2550 3950
 Wire Wire Line
-	3100 1000 3275 1000
-Wire Wire Line
 	7800 2275 7800 2425
 Wire Wire Line
 	7800 2425 8350 2425
 Wire Wire Line
 	7800 1975 7800 1775
+$Comp
+L Device:Resonator Y1
+U 1 1 5E95E86B
+P 3300 5100
+F 0 "Y1" V 3345 5211 50  0000 L CNN
+F 1 "16MHz" V 3255 5211 50  0000 L CNN
+F 2 "Crystal:Resonator_SMD_muRata_CSTxExxV-3Pin_3.0x1.1mm" H 3275 5100 50  0001 C CNN
+F 3 "~" H 3275 5100 50  0001 C CNN
+F 4 "C32180" V 3300 5100 50  0001 C CNN "Part"
+	1    3300 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2400 5050 2950 5050
+Wire Wire Line
+	2950 5050 2950 4950
+Wire Wire Line
+	2950 4950 3300 4950
+Wire Wire Line
+	2400 5150 2950 5150
+Wire Wire Line
+	2950 5150 2950 5250
+Wire Wire Line
+	2950 5250 3300 5250
+Wire Wire Line
+	3500 5100 3625 5100
+Wire Wire Line
+	3625 5100 3625 5175
+Wire Wire Line
+	7100 1325 7200 1325
+Wire Wire Line
+	7500 1325 7800 1325
+Wire Wire Line
+	2975 1000 3275 1000
+Text Label 7825 1775 0    50   ~ 0
+LDO_in
+Text GLabel 1200 6250 0    50   Input ~ 0
+SCL1
+Text GLabel 1200 6150 0    50   Input ~ 0
+SDA1
 $EndSCHEMATC
