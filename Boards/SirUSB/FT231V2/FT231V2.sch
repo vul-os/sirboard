@@ -452,13 +452,13 @@ uD+
 $Comp
 L Connector_Generic:Conn_01x06 J1
 U 1 1 5E4934CD
-P 7325 1550
-F 0 "J1" H 7404 1497 50  0000 L CNN
-F 1 "Conn_01x06" H 7404 1452 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7325 1550 50  0001 C CNN
-F 3 "~" H 7325 1550 50  0001 C CNN
-	1    7325 1550
-	1    0    0    -1  
+P 7325 1650
+F 0 "J1" H 7404 1597 50  0000 L CNN
+F 1 "Conn_01x06" H 7404 1552 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7325 1650 50  0001 C CNN
+F 3 "~" H 7325 1650 50  0001 C CNN
+	1    7325 1650
+	1    0    0    1   
 $EndComp
 Text GLabel 7125 1550 0    50   Input ~ 0
 TX
