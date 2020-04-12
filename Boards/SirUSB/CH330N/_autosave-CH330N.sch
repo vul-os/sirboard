@@ -39,8 +39,6 @@ $EndComp
 Text GLabel 1025 950  0    50   Input ~ 0
 VBUS
 Wire Wire Line
-	1025 950  1150 950 
-Wire Wire Line
 	1300 950  1300 1050
 Wire Wire Line
 	1300 1050 1425 1050
@@ -72,32 +70,11 @@ Text GLabel 5650 1225 0    50   Input ~ 0
 TX
 Text GLabel 5650 1525 0    50   Input ~ 0
 GND
-$Comp
-L Device:C C6
-U 1 1 5E4982E1
-P 1150 1175
-F 0 "C6" H 1265 1220 50  0000 L CNN
-F 1 "10uF" H 1265 1130 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1188 1025 50  0001 C CNN
-F 3 "~" H 1150 1175 50  0001 C CNN
-F 4 "C95841" H 1150 1175 50  0001 C CNN "Part"
-	1    1150 1175
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2175 1050 2175 950 
 Connection ~ 2175 950 
 Wire Wire Line
 	2175 950  2350 950 
-Wire Wire Line
-	1150 950  1150 1025
-Connection ~ 1150 950 
-Wire Wire Line
-	1150 950  1300 950 
-Wire Wire Line
-	1150 1325 1150 1425
-Wire Wire Line
-	1150 1425 1725 1425
 Connection ~ 1725 1425
 Wire Wire Line
 	1725 1425 1725 1350
@@ -492,4 +469,6 @@ Wire Wire Line
 Connection ~ 3450 3900
 Wire Wire Line
 	3450 3900 3750 3900
+Wire Wire Line
+	1025 950  1300 950 
 $EndSCHEMATC

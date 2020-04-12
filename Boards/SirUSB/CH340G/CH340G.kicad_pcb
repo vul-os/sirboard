@@ -1493,7 +1493,7 @@
       (net 7 VBUS))
     (pad 2 smd roundrect (at 0.9375 0 270) (size 0.975 1.4) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 21 "Net-(F1-Pad2)"))
-    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0805_2012Metric.wrl
+    (model ${KISYS3DMOD}/SMD_Polyfuse_0805.stp
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
