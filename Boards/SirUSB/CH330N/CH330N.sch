@@ -6,8 +6,8 @@ $Descr User 8268 5807
 encoding utf-8
 Sheet 1 1
 Title "CH330N USB to UART converter"
-Date "2020-01-17"
-Rev "1"
+Date "2020-04-13"
+Rev "1.1"
 Comp "SirBoard"
 Comment1 "www.SirBoard.com"
 Comment2 ""
