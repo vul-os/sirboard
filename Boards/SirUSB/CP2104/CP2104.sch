@@ -284,6 +284,7 @@ F 0 "U1" H 5100 850 50  0000 C CNN
 F 1 "CP2104" H 5200 775 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 4925 900 50  0001 L CNN
 F 3 "https://www.silabs.com/documents/public/data-sheets/cp2104.pdf" H 4225 3100 50  0001 C CNN
+F 4 "C47742" H 4775 1850 50  0001 C CNN "Part"
 	1    4775 1850
 	1    0    0    -1  
 $EndComp
