@@ -1,4 +1,4 @@
-update=2019/07/21 11:37:13 PM
+update=2020/04/23 12:06:17 AM
 version=1
 last_client=kicad
 [general]
@@ -46,11 +46,11 @@ dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
 SilkLineWidth=0.12
-SilkTextSizeV=1
-SilkTextSizeH=1
-SilkTextSizeThickness=0.15
+SilkTextSizeV=0.7999999999999999
+SilkTextSizeH=0.7999999999999999
+SilkTextSizeThickness=0.12
 SilkTextItalic=0
-SilkTextUpright=1
+SilkTextUpright=0
 CopperLineWidth=0.2
 CopperTextSizeV=1.5
 CopperTextSizeH=1.5
@@ -65,9 +65,9 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.051
-SolderMaskMinWidth=0.25
-SolderPasteClearance=0
+SolderMaskClearance=0
+SolderMaskMinWidth=0
+SolderPasteClearance=-0.05
 SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
