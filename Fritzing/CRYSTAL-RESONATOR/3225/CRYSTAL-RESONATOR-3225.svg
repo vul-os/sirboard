@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="3.2mm"
+   height="2.5mm"
+   viewBox="0 0 3.2 2.5"
+   version="1.1"
+   id="svg993"
+   inkscape:version="0.92.5 (0.92.5+69)"
+   sodipodi:docname="CRYSTAL-RESONATOR-2335.svg">
+  <defs
+     id="defs987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="76.367532"
+     inkscape:cx="5.8384313"
+     inkscape:cy="4.6256359"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g22"
+     showgrid="false"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="1987"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-73.744722,-137.56443)">
+    <g
+       transform="matrix(0.0254,0,0,0.0254,73.744722,134.65387)"
+       id="g24">
+      <g
+         id="g22">
+        <rect
+           style="opacity:1;vector-effect:none;fill:#f5d8a8;fill-opacity:1;stroke-width:12.01838779;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect818"
+           width="117.7455"
+           height="88.845261"
+           x="4.0530953"
+           y="119.22137"
+           ry="4.2312551"
+           rx="2.990736" />
+        <rect
+           style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;stroke-width:11.35657978;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect818-6"
+           width="112.05531"
+           height="83.358292"
+           x="6.8188272"
+           y="121.78645"
+           ry="3.9699383"
+           rx="2.8462052" />
+      </g>
+    </g>
+  </g>
+</svg>
