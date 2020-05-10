@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="77.9625"
-     inkscape:cx="6.8910388"
-     inkscape:cy="1.5979408"
+     inkscape:zoom="90.509668"
+     inkscape:cx="4.2888418"
+     inkscape:cy="2.4613258"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g48"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1052"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="1987"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata1165">
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -59,147 +59,106 @@
       <g
          transform="matrix(0.5,0,0,0.5,53.1496,33.4646)"
          id="g46">
-        <rect
-           width="19.684999"
-           x="17.716499"
-           y="0"
-           connectorname="6"
-           height="47.243999"
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 17.716499,0 h 19.685 v 47.243999 h -19.685 z"
            id="rect6"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="49.212502"
-           y="0"
-           connectorname="5"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="M 49.212502,0 H 68.897501 V 47.243999 H 49.212502 Z"
            id="rect8"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="80.708504"
-           y="0"
-           connectorname="4"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="M 80.708504,0 H 100.3935 V 47.243999 H 80.708504 Z"
            id="rect10"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="112.204"
-           y="0"
-           connectorname="3"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 112.204,0 h 19.685 v 47.243999 h -19.685 z"
            id="rect12"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="143.701"
-           y="0"
-           connectorname="2"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 143.701,0 h 19.685 v 47.243999 h -19.685 z"
            id="rect14"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="175.19701"
-           y="0"
-           connectorname="1"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 175.19701,0 h 19.685 v 47.243999 h -19.685 z"
            id="rect16"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="47.243999"
-           x="165.354"
-           y="57.086498"
-           connectorname="14"
-           height="19.684999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 165.354,57.086498 h 47.244 v 19.685 h -47.244 z"
            id="rect18"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="175.19701"
-           y="86.613998"
-           connectorname="13"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 175.19701,86.613998 h 19.685 V 133.858 h -19.685 z"
            id="rect20"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="143.701"
-           y="86.613998"
-           connectorname="12"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 143.701,86.613998 h 19.685 V 133.858 h -19.685 z"
            id="rect22"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="112.204"
-           y="86.613998"
-           connectorname="11"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 112.204,86.613998 h 19.685 V 133.858 h -19.685 z"
            id="rect24"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="80.708504"
-           y="86.613998"
-           connectorname="10"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="M 80.708504,86.613998 H 100.3935 V 133.858 H 80.708504 Z"
            id="rect26"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="49.212502"
-           y="86.613998"
-           connectorname="9"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="M 49.212502,86.613998 H 68.897501 V 133.858 H 49.212502 Z"
            id="rect28"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="19.684999"
-           x="17.716499"
-           y="86.613998"
-           connectorname="8"
-           height="47.243999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 17.716499,86.613998 h 19.685 V 133.858 h -19.685 z"
            id="rect30"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="47.243999"
-           x="0"
-           y="57.086498"
-           connectorname="7"
-           height="19.684999"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round"
+           d="m 0,57.086498 h 47.243999 v 19.685 H 0 Z"
            id="rect32"
-           style="fill:#8c8c8c;stroke:none;stroke-width:0;stroke-linecap:round" />
-        <rect
-           width="204.85001"
-           x="3.8740201"
-           y="3.8740201"
-           height="126.11"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#303030;stroke:none;stroke-width:0"
+           d="M 3.8740201,3.8740201 H 208.72403 V 129.98402 H 3.8740201 Z"
            id="rect34"
-           style="fill:#303030;stroke:none;stroke-width:0" />
-        <polygon
-           points="208.724,3.87402 198.724,13.874 13.874,13.874 3.87402,3.87402 "
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#1f1f1f"
+           d="M 198.724,13.874 H 13.874 L 3.87402,3.87402 H 208.724 Z"
            id="polygon36"
-           style="fill:#1f1f1f" />
-        <polygon
-           points="208.724,129.984 198.724,119.984 13.874,119.984 3.87402,129.984 "
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#1f1f1f"
+           d="M 3.87402,129.984 H 208.724 l -10,-10 H 13.874 Z"
            id="polygon38"
-           style="fill:#1f1f1f" />
-        <polygon
-           points="3.87402,129.984 13.874,119.984 13.874,13.874 3.87402,3.87402 "
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000"
+           d="M 13.874,119.984 V 13.874 L 3.87402,3.87402 V 129.984 Z"
            id="polygon40"
-           style="fill:#000000" />
-        <polygon
-           points="208.724,129.984 198.724,119.984 198.724,13.874 208.724,3.87402 "
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#3d3d3d"
+           d="M 208.724,3.87402 V 129.984 l -10,-10 V 13.874 Z"
            id="polygon42"
-           style="fill:#3d3d3d" />
-        <circle
-           cx="33.874001"
-           cy="99.984299"
-           r="10"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#1f1f1f;stroke:none;stroke-width:0"
+           d="m 43.874001,99.984299 a 10,10 0 0 1 -10,10.000001 10,10 0 0 1 -10,-10.000001 10,10 0 0 1 10,-10 10,10 0 0 1 10,10 z"
            id="circle44"
-           style="fill:#1f1f1f;stroke:none;stroke-width:0" />
+           inkscape:connector-curvature="0" />
       </g>
     </g>
   </g>
