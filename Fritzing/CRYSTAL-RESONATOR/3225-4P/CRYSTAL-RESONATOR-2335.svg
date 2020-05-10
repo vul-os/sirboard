@@ -15,7 +15,7 @@
    version="1.1"
    id="svg993"
    inkscape:version="0.92.5 (0.92.5+69)"
-   sodipodi:docname="CRYSTAL-RESONATOR-3225.svg">
+   sodipodi:docname="CRYSTAL-RESONATOR-2335.svg">
   <defs
      id="defs987" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32"
-     inkscape:cx="7.911002"
-     inkscape:cy="0.76161549"
+     inkscape:zoom="64"
+     inkscape:cx="3.2797048"
+     inkscape:cy="5.8726875"
      inkscape:document-units="mm"
      inkscape:current-layer="g22"
      showgrid="false"
@@ -59,13 +59,13 @@
       <g
          id="g22">
         <path
-           style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:2.22334266;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="M 0.38867188,0.0078125 A 0.37795278,0.37795278 0 0 1 0.01171875,0.38671875 V 9.0859375 A 0.37795279,0.37795279 0 0 1 0.38085938,9.4492188 H 11.722656 a 0.37795276,0.37795276 0 0 1 0,-0.00781 0.37795276,0.37795276 0 0 1 0.375,-0.3789062 V 0.37109375 a 0.37795277,0.37795277 0 0 1 -0.0098,0 0.37795277,0.37795277 0 0 1 -0.376953,-0.36328125 z"
+           style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.98908877;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 0.390625,0.00390625 a 0.37795279,0.37795279 0 0 1 -0.37695312,0.37695313 0.37795279,0.37795279 0 0 1 -0.00585938,0 V 9.0800781 A 0.37795278,0.37795278 0 0 1 0.38476562,9.4511719 H 11.726562 a 0.37795276,0.37795276 0 0 1 0.375,-0.3730469 v -8.6875 a 0.37795277,0.37795277 0 0 1 -0.371093,-0.37695312 0.37795277,0.37795277 0 0 1 0,-0.00976563 z"
            transform="matrix(10.416667,0,0,10.416667,0,114.58898)"
-           id="rect821"
+           id="rect819"
            inkscape:connector-curvature="0" />
         <rect
-           style="opacity:1;vector-effect:none;fill:#f5d8a8;fill-opacity:1;stroke-width:12.01838779;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           style="opacity:1;vector-effect:none;fill:#f5d86b;fill-opacity:1;stroke-width:12.01838779;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="rect818"
            width="117.7455"
            height="88.845261"
