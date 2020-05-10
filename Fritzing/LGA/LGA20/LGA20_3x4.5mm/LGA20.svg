@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="5.1999998mm"
-   height="3.8mm"
-   viewBox="0 0 5.1999998 3.7999999"
+   width="4.5mm"
+   height="3mm"
+   viewBox="0 0 4.5 3"
    version="1.1"
    id="svg1476"
    inkscape:version="0.92.5 (0.92.5+69)"
-   sodipodi:docname="LGA28.svg">
+   sodipodi:docname="LGA20.svg">
   <defs
      id="defs1470" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32"
-     inkscape:cx="13.951489"
-     inkscape:cy="5.4480443"
+     inkscape:zoom="45.254834"
+     inkscape:cx="11.433437"
+     inkscape:cy="5.0834064"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -52,19 +52,19 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-63.297035,-121.30374)">
+     transform="translate(-63.297035,-122.10374)">
     <rect
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke-width:0.2616964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect846"
-       width="5.1999998"
-       height="3.8"
-       x="63.297031"
-       y="121.30392" />
+       width="4.5"
+       height="3.0999999"
+       x="63.298073"
+       y="122.10368" />
     <circle
        style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;stroke-width:0.2616964;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path848"
-       cx="64.074249"
-       cy="124.40095"
+       cx="64.270477"
+       cy="124.72079"
        r="0.15000001" />
   </g>
 </svg>
