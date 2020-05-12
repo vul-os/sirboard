@@ -1,3 +1,4 @@
 (sym_lib_table
+  (lib (name SIM68ML-rescue)(type Legacy)(uri ${KIPRJMOD}/SIM68ML-rescue.lib)(options "")(descr ""))
   (lib (name SIM28ML-rescue)(type Legacy)(uri ${KIPRJMOD}/SIM28ML-rescue.lib)(options "")(descr ""))
 )
