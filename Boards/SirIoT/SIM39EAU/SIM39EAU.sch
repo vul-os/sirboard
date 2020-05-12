@@ -6,8 +6,8 @@ $Descr User 7874 6299
 encoding utf-8
 Sheet 1 1
 Title "SIM39EA Based GPS Module "
-Date "2019-10-31"
-Rev "1"
+Date "2020-05-13"
+Rev "2"
 Comp "SirBoard"
 Comment1 "SIM39EA is based on the MT3339 Chipset"
 Comment2 "Breadboard Friendly Micro GPS Module"
@@ -17,9 +17,9 @@ $EndDescr
 Text GLabel 3550 1250 2    50   Input ~ 0
 3V3
 Wire Wire Line
-	1550 1650 1550 1350
+	1550 1575 1550 1350
 Wire Wire Line
-	1550 1950 1550 2200
+	1550 1875 1550 2200
 $Comp
 L power:GND #PWR0103
 U 1 1 5DFA7870
@@ -44,17 +44,17 @@ Wire Wire Line
 $Comp
 L Device:C C3
 U 1 1 5DCB3070
-P 1550 1800
-F 0 "C3" H 1665 1845 50  0000 L CNN
-F 1 "1uF" H 1665 1755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 1650 50  0001 C CNN
-F 3 "~" H 1550 1800 50  0001 C CNN
-F 4 "C396719" H 1550 1800 50  0001 C CNN "Part"
-	1    1550 1800
+P 1550 1725
+F 0 "C3" H 1665 1770 50  0000 L CNN
+F 1 "10uF" H 1665 1680 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1588 1575 50  0001 C CNN
+F 3 "~" H 1550 1725 50  0001 C CNN
+F 4 "C95841" H 1550 1725 50  0001 C CNN "Part"
+	1    1550 1725
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2975 1950 2975 2200
+	2975 1850 2975 2200
 Text GLabel 1300 1250 0    50   Input ~ 0
 VIN
 Wire Wire Line
@@ -97,13 +97,13 @@ Wire Wire Line
 $Comp
 L Device:C C4
 U 1 1 5DB8E885
-P 2975 1800
-F 0 "C4" H 3090 1845 50  0000 L CNN
-F 1 "4.7uF" H 3090 1755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3013 1650 50  0001 C CNN
-F 3 "~" H 2975 1800 50  0001 C CNN
-F 4 "C87998" H 2975 1800 50  0001 C CNN "Part"
-	1    2975 1800
+P 2975 1700
+F 0 "C4" H 3090 1745 50  0000 L CNN
+F 1 "10uF" H 3090 1655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3013 1550 50  0001 C CNN
+F 3 "~" H 2975 1700 50  0001 C CNN
+F 4 "C95841" H 2975 1700 50  0001 C CNN "Part"
+	1    2975 1700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -227,11 +227,11 @@ Wire Wire Line
 	4750 2750 4750 3050
 Connection ~ 4750 3050
 Wire Wire Line
-	3200 2950 2500 2950
+	3200 2950 2275 2950
 Wire Wire Line
-	2500 2950 2500 3650
+	2275 2950 2275 3650
 Wire Wire Line
-	2500 3650 2700 3650
+	2275 3650 2700 3650
 Connection ~ 3900 3650
 Text GLabel 3050 2750 0    50   Input ~ 0
 3V3
@@ -243,9 +243,9 @@ U 1 1 5DC29E4A
 P 2700 3350
 F 0 "BT1" H 2818 3445 50  0000 L CNN
 F 1 "CR1220" H 2818 3355 50  0000 L CNN
-F 2 "Battery:BatteryHolder_Keystone_3000_1x12mm" V 2700 3410 50  0001 C CNN
+F 2 "SirBoardLibrary:S8411-45R_1" V 2700 3410 50  0001 C CNN
 F 3 "~" V 2700 3410 50  0001 C CNN
-F 4 "C238097" H 2700 3350 50  0001 C CNN "Part"
+F 4 "C70381" H 2700 3350 50  0001 C CNN "Part"
 	1    2700 3350
 	-1   0    0    -1  
 $EndComp
@@ -345,7 +345,7 @@ F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 2450 1450 50  0001 C
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2975 1650 2975 1250
+	2975 1550 2975 1250
 Wire Wire Line
 	2450 1650 2450 2200
 Connection ~ 2975 1250
