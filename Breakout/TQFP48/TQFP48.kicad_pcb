@@ -12,8 +12,8 @@
   (page User 132.004 102.006)
   (title_block
     (title "TQFP48 to DIP48 Breakout Board")
-    (date 2020-04-19)
-    (rev 2)
+    (date 2022-07-14)
+    (rev 3)
     (company SirBoard)
     (comment 1 "TQFP48 P =0.5mm")
     (comment 2 "QFN48 P =0.4mm")
@@ -2308,11 +2308,11 @@
 
   (segment (start 72.324876 36.558788) (end 72.850088 37.084) (width 0.25) (layer F.Cu) (net 1) (tstamp 5D3812F6))
   (segment (start 72.850088 37.084) (end 90.551 37.084) (width 0.25) (layer F.Cu) (net 1) (tstamp 5D3812F7))
-  (segment (start 90.551 37.084) (end 95.911955 42.444955) (width 0.25) (layer F.Cu) (net 1) (tstamp 5D3812F8))
   (segment (start 95.521152 42.054152) (end 96.647 43.18) (width 0.127) (layer B.Cu) (net 1) (tstamp 5D382C62))
   (segment (start 73.85027 38.862) (end 92.329 38.862) (width 0.127) (layer B.Cu) (net 1) (tstamp 5D382CA0))
   (segment (start 92.329 38.862) (end 95.521152 42.054152) (width 0.127) (layer B.Cu) (net 1) (tstamp 5D382CA1))
   (segment (start 71.069761 36.081491) (end 73.85027 38.862) (width 0.127) (layer B.Cu) (net 1) (tstamp 5D382CA5))
+  (segment (start 90.551 37.084) (end 96.647 43.18) (width 0.25) (layer F.Cu) (net 1))
   (segment (start 94.107 43.18) (end 88.519 37.592) (width 0.25) (layer F.Cu) (net 2) (tstamp 5D381391))
   (segment (start 72.65098 37.592) (end 71.971322 36.912342) (width 0.25) (layer F.Cu) (net 2) (tstamp 5D381392))
   (segment (start 88.519 37.592) (end 72.65098 37.592) (width 0.25) (layer F.Cu) (net 2) (tstamp 5D381394))
