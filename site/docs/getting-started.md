@@ -44,14 +44,14 @@ Projects that also reference footprints by library name carry a
 
 | You want to… | Look in | Start with |
 |---|---|---|
-| Solder an SMD part onto something breadboardable | [`Breakout/`](../Breakout) | Match the package: `QFN16`, `TQFP32`, `SOIC8`… |
+| Solder an SMD part onto something breadboardable | [`Boards/Breakout/`](../Boards/Breakout) | Match the package: `QFN16`, `TQFP32`, `SOIC8`… |
 | Prototype on a small microcontroller | [`Boards/SirTiny`](../Boards/SirTiny) | `ATTinyX16` |
 | Talk to a board over USB | [`Boards/SirUSB`](../Boards/SirUSB) | `CH340G` (cheapest) or `FT231V2` (best driver support) |
-| Read a sensor | [`Sensors/SirBlue`](../Sensors/SirBlue) | Any — they share one connector |
+| Read a sensor | [`Boards/Sensors/SirBlue`](../Boards/Sensors/SirBlue) | Any — they share one connector |
 | Add WiFi or GPS | [`Boards/SirIoT`](../Boards/SirIoT) | `ESP32` or `SIM68ML` |
 | Shift 5 V to 3.3 V | [`Boards/SirLevel`](../Boards/SirLevel) | `TXB0104` |
-| Store something | [`Modules/SirKeep`](../Modules/SirKeep) | `MB85RCXXX` (FRAM) |
-| Keep time | [`Modules/SirTime`](../Modules/SirTime) | `DS3231M` |
+| Store something | [`Boards/Modules/SirKeep`](../Boards/Modules/SirKeep) | `MB85RCXXX` (FRAM) |
+| Keep time | [`Boards/Modules/SirTime`](../Boards/Modules/SirTime) | `DS3231M` |
 
 ## Wiring a SirBlue sensor
 

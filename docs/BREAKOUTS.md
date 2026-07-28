@@ -7,24 +7,24 @@ adapter PCBs that take a surface-mount package on one side and present it on
 You solder the part yourself. There is no support circuitry, no regulator and
 no decoupling — an adapter is a mechanical translation and nothing more.
 
-All 21 live in [`Breakout/`](../Breakout).
+All 21 live in [`Boards/Breakout/`](../Boards/Breakout).
 
 ## Fine-pitch IC packages
 
 | Adapter | Pins | Covers |
 |---|---|---|
-| [`SOT6`](../Breakout/SOT6) | 6 | SOT-23-6, SC-70-6 and similar small-signal packages |
-| [`SOIC8`](../Breakout/SOIC8) | 8 | SOIC, MSOP, TSSOP, VSSOP at 8 pins |
-| [`SOIC16`](../Breakout/SOIC16) | 16 | SOIC, SSOP, TSSOP, MSOP |
-| [`SOIC20`](../Breakout/SOIC20) | 20 | SOIC, SSOP, TSSOP |
-| [`SOIC24`](../Breakout/SOIC24) | 24 | SOIC, SSOP, TSSOP |
-| [`SOIC28`](../Breakout/SOIC28) | 28 | SOIC, SSOP, TSSOP |
-| [`QFN16`](../Breakout/QFN16) | 16 | QFN and DFN, leadless |
-| [`QFN20`](../Breakout/QFN20) | 20 | QFN and DFN, leadless |
-| [`TQFP32`](../Breakout/TQFP32) | 32 | TQFP, LQFP |
-| [`TQFP44`](../Breakout/TQFP44) | 44 | TQFP, LQFP |
-| [`TQFP48`](../Breakout/TQFP48) | 48 | TQFP, LQFP |
-| [`TQFP64`](../Breakout/TQFP64) | 64 | TQFP, LQFP |
+| [`SOT6`](../Boards/Breakout/SOT6) | 6 | SOT-23-6, SC-70-6 and similar small-signal packages |
+| [`SOIC8`](../Boards/Breakout/SOIC8) | 8 | SOIC, MSOP, TSSOP, VSSOP at 8 pins |
+| [`SOIC16`](../Boards/Breakout/SOIC16) | 16 | SOIC, SSOP, TSSOP, MSOP |
+| [`SOIC20`](../Boards/Breakout/SOIC20) | 20 | SOIC, SSOP, TSSOP |
+| [`SOIC24`](../Boards/Breakout/SOIC24) | 24 | SOIC, SSOP, TSSOP |
+| [`SOIC28`](../Boards/Breakout/SOIC28) | 28 | SOIC, SSOP, TSSOP |
+| [`QFN16`](../Boards/Breakout/QFN16) | 16 | QFN and DFN, leadless |
+| [`QFN20`](../Boards/Breakout/QFN20) | 20 | QFN and DFN, leadless |
+| [`TQFP32`](../Boards/Breakout/TQFP32) | 32 | TQFP, LQFP |
+| [`TQFP44`](../Boards/Breakout/TQFP44) | 44 | TQFP, LQFP |
+| [`TQFP48`](../Boards/Breakout/TQFP48) | 48 | TQFP, LQFP |
+| [`TQFP64`](../Boards/Breakout/TQFP64) | 64 | TQFP, LQFP |
 
 Most of these carry **two or more pad variations per pin count** on the same
 board — the same 16-pin adapter accepts a 0.5 mm and a 0.65 mm pitch part,
@@ -42,11 +42,11 @@ below with an iron if you have no hot air.
 
 | Adapter | What it breaks out |
 |---|---|
-| [`USB_C`](../Breakout/USB_C) | USB Type-C receptacle → 0.1″ pads |
-| [`MicroUSB`](../Breakout/MicroUSB) | Micro-B receptacle |
-| [`MiniUSB`](../Breakout/MiniUSB) | Mini-B receptacle |
-| [`MicroSD`](../Breakout/MicroSD) | MicroSD card slot, straight passthrough |
-| [`MicroSD_DualVoltage`](../Breakout/MicroSD_DualVoltage) | MicroSD with level shifting, so a 5 V micro can talk to a 3.3 V card |
+| [`USB_C`](../Boards/Breakout/USB_C) | USB Type-C receptacle → 0.1″ pads |
+| [`MicroUSB`](../Boards/Breakout/MicroUSB) | Micro-B receptacle |
+| [`MiniUSB`](../Boards/Breakout/MiniUSB) | Mini-B receptacle |
+| [`MicroSD`](../Boards/Breakout/MicroSD) | MicroSD card slot, straight passthrough |
+| [`MicroSD_DualVoltage`](../Boards/Breakout/MicroSD_DualVoltage) | MicroSD with level shifting, so a 5 V micro can talk to a 3.3 V card |
 
 The `MicroSD_DualVoltage` variant is the one you want on an ATMega running at
 5 V. The plain `MicroSD` is a passthrough and expects you to supply 3.3 V logic.
@@ -55,18 +55,18 @@ The `MicroSD_DualVoltage` variant is the one you want on an ATMega running at
 
 | Adapter | What it breaks out |
 |---|---|
-| [`CR2032`](../Breakout/CR2032) | 20 mm coin cell holder |
-| [`CR1220`](../Breakout/CR1220) | 12 mm coin cell holder |
+| [`CR2032`](../Boards/Breakout/CR2032) | 20 mm coin cell holder |
+| [`CR1220`](../Boards/Breakout/CR1220) | 12 mm coin cell holder |
 
 Both are sized for RTC backup duty — pair either with a `DS3231M` from
-[`Modules/SirTime`](../Modules/SirTime).
+[`Boards/Modules/SirTime`](../Boards/Modules/SirTime).
 
 ## Module carriers
 
 | Adapter | What it breaks out |
 |---|---|
-| [`ESP-12F`](../Breakout/ESP-12F) | ESP-12F / ESP-12E castellated module → 0.1″ |
-| [`WROOM02`](../Breakout/WROOM02) | ESP-WROOM-02 module → 0.1″ |
+| [`ESP-12F`](../Boards/Breakout/ESP-12F) | ESP-12F / ESP-12E castellated module → 0.1″ |
+| [`WROOM02`](../Boards/Breakout/WROOM02) | ESP-WROOM-02 module → 0.1″ |
 
 These are carriers only — no regulator, no USB, no auto-reset circuit. If you
 want those, use [`Boards/SirIoT/ESP8266`](../Boards/SirIoT/ESP8266) instead,

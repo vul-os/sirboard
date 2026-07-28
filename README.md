@@ -34,10 +34,10 @@ onto yourself, **modules** with the part already placed and supported, and
 
 | Directory | Contents |
 |---|---|
-| [`Breakout/`](Breakout) | **21 adapters** — QFN, TQFP, SOIC, SOT, USB, MicroSD, coin cells, ESP module carriers |
+| [`Boards/Breakout/`](Boards/Breakout) | **21 adapters** — QFN, TQFP, SOIC, SOT, USB, MicroSD, coin cells, ESP module carriers |
 | [`Boards/`](Boards) | **9 families** — ATTiny, ATMega328PB/32U4/1284P, ESP32/ESP8266, USB-UART, level shifting, port expansion, a programmer |
-| [`Sensors/`](Sensors) | **SirBlue** — 39 digital sensors on one 4-pin JST-SH connector, plus two earlier collections |
-| [`Modules/`](Modules) | EEPROM, FRAM, real-time clocks |
+| [`Boards/Sensors/`](Boards/Sensors) | **SirBlue** — 39 digital sensors on one 4-pin JST-SH connector, plus two earlier collections |
+| [`Boards/Modules/`](Boards/Modules) | EEPROM, FRAM, real-time clocks |
 | [`Fritzing/`](Fritzing) | 60 hand-drawn breadboard SVGs |
 
 ## Quick start
@@ -58,7 +58,7 @@ them and offer to convert on save.
 
 ## The sensor line
 
-Every [SirBlue](Sensors/SirBlue) board carries the same 4-pin 1.00 mm JST-SH
+Every [SirBlue](Boards/Sensors/SirBlue) board carries the same 4-pin 1.00 mm JST-SH
 connector — `GND · VCC · SDA · SCL` — and the same outline. One cable fits all
 39 parts, so swapping an accelerometer for a time-of-flight ranger is a
 connector move rather than a rewire. A

@@ -49,10 +49,11 @@ change worth discussing before anyone does the work.
 ## Repository layout
 
 ```
-Breakout/     SMD-to-THT adapters
-Boards/       development boards
-Sensors/      sensor lines
-Modules/      storage, timekeeping, reference
+Boards/
+  Breakout/   SMD-to-THT adapters
+  Sensors/    sensor lines
+  Modules/    storage, timekeeping, reference
+  Sir*/       development board families
 Fritzing/     breadboard SVG artwork
 docs/         documentation
 site/         the static landing page and docs viewer

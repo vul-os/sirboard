@@ -8,8 +8,8 @@ The catalogue answers that in three layers.
 
 | Layer | What it is | Where |
 |---|---|---|
-| **Adapters** | Bare SMD-to-THT breakouts — you solder the part | [`Breakout/`](../Breakout) |
-| **Modules** | A part already placed, with its support circuitry | [`Sensors/`](../Sensors), [`Modules/`](../Modules) |
+| **Adapters** | Bare SMD-to-THT breakouts — you solder the part | [`Boards/Breakout/`](../Boards/Breakout) |
+| **Modules** | A part already placed, with its support circuitry | [`Boards/Sensors/`](../Boards/Sensors), [`Boards/Modules/`](../Boards/Modules) |
 | **Boards** | A microcontroller, its regulator, USB and headers | [`Boards/`](../Boards) |
 
 Everything is designed around 0.1″ pitch, so any of it drops into the same
@@ -19,13 +19,14 @@ are swappable without rewiring.
 ## Repository layout
 
 ```
-Breakout/     21 SMD-to-THT adapter footprints — QFN, TQFP, SOIC, SOT,
+Boards/
+  Breakout/   21 SMD-to-THT adapter footprints — QFN, TQFP, SOIC, SOT,
               connectors, coin cells and module carriers
-Boards/       9 development board families — ATTiny, ATMega, ESP, USB-UART,
-              level shifting, port expansion, a programmer
-Sensors/      3 sensor lines — SirBlue (39 digital parts), plus the older
+  Sensors/    3 sensor lines — SirBlue (39 digital parts), plus the older
               AnalogueSensors and DigitalSensors collections
-Modules/      Storage, timekeeping and voltage reference boards
+  Modules/    Storage, timekeeping and voltage reference boards
+  Sir*/       9 development board families — ATTiny, ATMega, ESP, USB-UART,
+              level shifting, port expansion, a programmer
 Fritzing/     60 hand-drawn SVG breadboard graphics for Fritzing
 
 brand/        Logo mark and the generated icon set
