@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SirBoard — open hardware, routed in KiCad, breadboard-ready</title>
+<meta name="description" content="107 open-hardware PCB designs in one repository: SMD-to-THT breakout adapters, ATTiny/ATMega/ESP development boards, a 39-part sensor line on a common JST-SH footprint, and a Fritzing parts library. Black soldermask, ENIG gold, MIT OR Apache-2.0.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" href="../brand/sirboard-mark.svg">
+<link rel="preload" href="./assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/sirboard.css">
+<meta property="og:title" content="SirBoard — open hardware, routed in KiCad">
+<meta property="og:description" content="107 PCB designs in one repository. Breakout adapters, development boards, a 39-part sensor line, and a Fritzing parts library.">
+<meta property="og:type" content="website">
+<script>
+  (function () {
+    try {
+      var s = localStorage.getItem('sirboard-theme');
+      var t = s || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+  })();
+</script>
+</head>
+<body>
+
+<!-- ══ Top bar — a pin header soldered across the page ═══════════════════ -->
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="./index.html">
+      <span class="mark"><img src="../brand/sirboard-mark.svg" alt=""></span>
+      <span class="name">Sir<b>Board</b></span>
+    </a>
+    <span class="chip mono">107 designs · MIT/Apache-2.0</span>
+    <a class="chip vulos-badge" href="https://vulos.org" target="_blank" rel="noopener" title="SirBoard is part of the Vulos suite">
+      <img src="./assets/vulos-logo.png" alt="">Part of Vulos
+    </a>
+    <div class="spacer"></div>
+    <nav class="navlinks">
+      <a href="#families">Families</a>
+      <a href="#footprints">Footprints</a>
+      <a href="#sensors">Sensors</a>
+      <a href="#libraries">Libraries</a>
+      <a href="./docs.html">Docs</a>
+    </nav>
+    <button class="iconbtn theme-toggle" id="theme" type="button" aria-label="Toggle light and dark theme" title="Board view / drawing view">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <a class="iconbtn" href="https://github.com/vul-os/sirboard" target="_blank" rel="noopener" aria-label="SirBoard on GitHub" title="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.28 9.28 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+    </a>
+    <a class="btn btn-gold btn-sm" href="#get">Clone it</a>
+  </div>
+</header>
+
+<!-- ══ Hero ══════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill mono"><i class="pulse"></i>41 repositories folded into 1</span>
+      <h1>Every part,<br>on a <span class="gold">breadboard</span>.</h1>
+      <p class="lead">
+        SirBoard is an open hardware library: SMD-to-THT breakout adapters for the
+        packages that won't sit on 0.1&Prime; pitch, development boards for the ATTiny,
+        ATMega and ESP families, and a sensor line that all speaks the same
+        4-pin JST-SH connector. Routed in KiCad. Black soldermask, ENIG gold.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#families">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Browse the catalogue
+        </a>
+        <a class="btn btn-ghost" href="./docs.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Read the docs
+        </a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>107</b><span class="silk">PCB designs</span></div>
+        <div class="stat"><b>21</b><span class="silk">Adapter footprints</span></div>
+        <div class="stat"><b>39</b><span class="silk">Sensor breakouts</span></div>
+        <div class="stat"><b>322</b><span class="silk">Commits kept</span></div>
+      </div>
+    </div>
+
+    <div class="bench reveal">
+      <div class="bench-bar">
+        <span class="via"></span>
+        <span class="silk">ATTinyX16 &middot; Rev 2</span>
+        <span class="chip mono" style="margin-left:auto">Boards/SirTiny</span>
+      </div>
+      <div class="shot">
+        <img src="../Boards/SirTiny/ATTinyX16/ATTinyX16_Iso.jpg" alt="Isometric render of the SirTiny ATTinyX16 development board — black soldermask, gold-plated through holes, white silkscreen legend" width="1366" height="624">
+      </div>
+      <div class="bench-cap">
+        <span>ATTiny1616 / ATTiny3216</span>
+        <span class="r">2-layer &middot; ENIG &middot; 0.1&Prime; pitch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Families ══════════════════════════════════════════════════════════ -->
+<section class="section" id="families">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="refdes">U1</span><span class="silk silk-gold">The catalogue</span></div>
+      <h2 class="title">Four shelves, seventeen lines.</h2>
+      <p class="lead" style="margin-top:14px">
+        Each line used to be its own repository. They are now directories, with
+        every commit that ever touched them carried across intact.
+      </p>
+    </div>
+
+    <div class="families">
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#boards">
+        <div class="fam-top"><span class="refdes">J1</span><h3>SirTiny</h3></div>
+        <p>ATTiny development boards — the 85, and the modern 0/1-series in 12, 14, 16 and 17 pin variants.</p>
+        <div class="parts">
+          <span class="part">ATTiny85</span><span class="part">ATTinyX12</span><span class="part">ATTinyX14</span>
+          <span class="part">ATTinyX16</span><span class="part">ATTinyX17</span>
+        </div>
+      </a>
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#boards">
+        <div class="fam-top"><span class="refdes">J2</span><h3>SirUSB</h3></div>
+        <p>USB-to-UART converters across seven controllers, so you can pick the one your driver stack already likes.</p>
+        <div class="parts">
+          <span class="part">CH330N</span><span class="part">CH340E</span><span class="part">CH340G</span>
+          <span class="part">CP2102N</span><span class="part">CP2104</span><span class="part">FT230X</span>
+          <span class="part">FT231X</span>
+        </div>
+      </a>
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#boards">
+        <div class="fam-top"><span class="refdes">J3</span><h3>SirIoT</h3></div>
+        <p>Wireless and GNSS carriers — ESP32 and ESP8266, plus four SIMCom GPS/GSM modules.</p>
+        <div class="parts">
+          <span class="part">ESP32</span><span class="part">ESP8266</span><span class="part">SIM28ML</span>
+          <span class="part">SIM39EAU</span><span class="part">SIM68ML</span><span class="part">SIM868</span>
+        </div>
+      </a>
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#sensors">
+        <div class="fam-top"><span class="refdes">J4</span><h3>SirBlue</h3></div>
+        <p>The flagship. Thirty-nine digital sensors and peripherals, every one on the same 4-pin 1.00&nbsp;mm JST-SH footprint.</p>
+        <div class="parts">
+          <span class="part">BME280</span><span class="part">BNO055</span><span class="part">VL53L1X</span>
+          <span class="part">APDS-9960</span><span class="part">MAX3010X</span><span class="part more">+34</span>
+        </div>
+      </a>
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#boards">
+        <div class="fam-top"><span class="refdes">J5</span><h3>SirNano &middot; SirMicro</h3></div>
+        <p>ATMega328PB and ATMega32U4 boards. The Nano ships in 1.8&nbsp;V/4&nbsp;MHz, 3.3&nbsp;V/10&nbsp;MHz and 5&nbsp;V/20&nbsp;MHz builds.</p>
+        <div class="parts">
+          <span class="part">SirNanoV2</span><span class="part">SirNanoV3</span>
+          <span class="part">SirMicroV3</span><span class="part">SirMicroDual</span>
+        </div>
+      </a>
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#boards">
+        <div class="fam-top"><span class="refdes">J6</span><h3>SirMighty &middot; SirDuke</h3></div>
+        <p>An ATMega1284P board that drops straight onto MightyCore, and a USBASP programmer to flash the rest of the shelf.</p>
+        <div class="parts">
+          <span class="part">ATMega1284P</span><span class="part">USBASP</span>
+        </div>
+      </a>
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#modules">
+        <div class="fam-top"><span class="refdes">J7</span><h3>SirKeep &middot; SirTime</h3></div>
+        <p>Storage and timekeeping — I&sup2;C and SPI FRAM, EEPROM, and two real-time clocks.</p>
+        <div class="parts">
+          <span class="part">24LCXXX</span><span class="part">MB85RCXXX</span><span class="part">MB85RSXXX</span>
+          <span class="part">DS1307Z</span><span class="part">DS3231M</span>
+        </div>
+      </a>
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#boards">
+        <div class="fam-top"><span class="refdes">J8</span><h3>SirLevel &middot; SirExpand</h3></div>
+        <p>Bidirectional level shifting on the TXB0104/0108, and port expansion on the PCA9534 and TCA9548A.</p>
+        <div class="parts">
+          <span class="part">TXB0104</span><span class="part">TXB0108</span>
+          <span class="part">PCA9534</span><span class="part">TCA9548A</span>
+        </div>
+      </a>
+
+      <a class="panel panel-holes fam reveal" href="./docs.html#fritzing">
+        <div class="fam-top"><span class="refdes">J9</span><h3>Fritzing parts</h3></div>
+        <p>Sixty hand-drawn SVG breadboard graphics — passives, connectors, crystals, battery holders, SD and QFN packages.</p>
+        <div class="parts">
+          <span class="part">JST</span><span class="part">QFN</span><span class="part">MINIMELF</span>
+          <span class="part">SOD</span><span class="part more">+15</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ Footprints ════════════════════════════════════════════════════════ -->
+<section class="section" id="footprints">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="refdes">U2</span><span class="silk silk-gold">Breakout adapters</span></div>
+      <h2 class="title">The parts that won't fit a breadboard.</h2>
+      <p class="lead" style="margin-top:14px">
+        Twenty-one adapter footprints, most with two or more package variations per
+        pin count — so a QFN16 at 0.5&nbsp;mm and the same part at 0.65&nbsp;mm both
+        land on 0.1&Prime; headers.
+      </p>
+    </div>
+
+    <div class="fp-grid reveal">
+      <!-- SOIC8 -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="38" y="12" width="44" height="38" rx="3"/>
+          <g class="pad">
+            <rect x="20" y="16" width="16" height="5" rx="2"/><rect x="20" y="26" width="16" height="5" rx="2"/>
+            <rect x="20" y="36" width="16" height="5" rx="2"/><rect x="20" y="46" width="16" height="5" rx="2"/>
+            <rect x="84" y="16" width="16" height="5" rx="2"/><rect x="84" y="26" width="16" height="5" rx="2"/>
+            <rect x="84" y="36" width="16" height="5" rx="2"/><rect x="84" y="46" width="16" height="5" rx="2"/>
+          </g>
+        </svg>
+        <b>SOIC8</b><span class="silk">8 pin</span>
+      </div>
+
+      <!-- SOIC16 -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="38" y="6" width="44" height="50" rx="3"/>
+          <g class="pad">
+            <rect x="20" y="9" width="16" height="4" rx="2"/><rect x="20" y="17" width="16" height="4" rx="2"/>
+            <rect x="20" y="25" width="16" height="4" rx="2"/><rect x="20" y="33" width="16" height="4" rx="2"/>
+            <rect x="20" y="41" width="16" height="4" rx="2"/><rect x="20" y="49" width="16" height="4" rx="2"/>
+            <rect x="84" y="9" width="16" height="4" rx="2"/><rect x="84" y="17" width="16" height="4" rx="2"/>
+            <rect x="84" y="25" width="16" height="4" rx="2"/><rect x="84" y="33" width="16" height="4" rx="2"/>
+            <rect x="84" y="41" width="16" height="4" rx="2"/><rect x="84" y="49" width="16" height="4" rx="2"/>
+          </g>
+        </svg>
+        <b>SOIC16</b><span class="silk">16 pin</span>
+      </div>
+
+      <!-- QFN16 -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="40" y="11" width="40" height="40" rx="3"/>
+          <g class="pad">
+            <rect x="28" y="16" width="10" height="4" rx="2"/><rect x="28" y="24" width="10" height="4" rx="2"/>
+            <rect x="28" y="32" width="10" height="4" rx="2"/><rect x="28" y="40" width="10" height="4" rx="2"/>
+            <rect x="82" y="16" width="10" height="4" rx="2"/><rect x="82" y="24" width="10" height="4" rx="2"/>
+            <rect x="82" y="32" width="10" height="4" rx="2"/><rect x="82" y="40" width="10" height="4" rx="2"/>
+            <rect x="45" y="3" width="4" height="10" rx="2"/><rect x="53" y="3" width="4" height="10" rx="2"/>
+            <rect x="61" y="3" width="4" height="10" rx="2"/><rect x="69" y="3" width="4" height="10" rx="2"/>
+            <rect x="45" y="49" width="4" height="10" rx="2"/><rect x="53" y="49" width="4" height="10" rx="2"/>
+            <rect x="61" y="49" width="4" height="10" rx="2"/><rect x="69" y="49" width="4" height="10" rx="2"/>
+          </g>
+        </svg>
+        <b>QFN16</b><span class="silk">16 pin</span>
+      </div>
+
+      <!-- QFN20 -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="40" y="11" width="40" height="40" rx="3"/>
+          <g class="pad">
+            <rect x="28" y="14" width="10" height="3.5" rx="1.7"/><rect x="28" y="21" width="10" height="3.5" rx="1.7"/>
+            <rect x="28" y="28" width="10" height="3.5" rx="1.7"/><rect x="28" y="35" width="10" height="3.5" rx="1.7"/>
+            <rect x="28" y="42" width="10" height="3.5" rx="1.7"/>
+            <rect x="82" y="14" width="10" height="3.5" rx="1.7"/><rect x="82" y="21" width="10" height="3.5" rx="1.7"/>
+            <rect x="82" y="28" width="10" height="3.5" rx="1.7"/><rect x="82" y="35" width="10" height="3.5" rx="1.7"/>
+            <rect x="82" y="42" width="10" height="3.5" rx="1.7"/>
+            <rect x="43" y="3" width="3.5" height="10" rx="1.7"/><rect x="50" y="3" width="3.5" height="10" rx="1.7"/>
+            <rect x="57" y="3" width="3.5" height="10" rx="1.7"/><rect x="64" y="3" width="3.5" height="10" rx="1.7"/>
+            <rect x="71" y="3" width="3.5" height="10" rx="1.7"/>
+            <rect x="43" y="49" width="3.5" height="10" rx="1.7"/><rect x="50" y="49" width="3.5" height="10" rx="1.7"/>
+            <rect x="57" y="49" width="3.5" height="10" rx="1.7"/><rect x="64" y="49" width="3.5" height="10" rx="1.7"/>
+            <rect x="71" y="49" width="3.5" height="10" rx="1.7"/>
+          </g>
+        </svg>
+        <b>QFN20</b><span class="silk">20 pin</span>
+      </div>
+
+      <!-- TQFP32 -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="38" y="7" width="44" height="48" rx="3"/>
+          <g class="pad">
+            <rect x="26" y="11" width="11" height="3" rx="1.5"/><rect x="26" y="17" width="11" height="3" rx="1.5"/>
+            <rect x="26" y="23" width="11" height="3" rx="1.5"/><rect x="26" y="29" width="11" height="3" rx="1.5"/>
+            <rect x="26" y="35" width="11" height="3" rx="1.5"/><rect x="26" y="41" width="11" height="3" rx="1.5"/>
+            <rect x="26" y="47" width="11" height="3" rx="1.5"/>
+            <rect x="83" y="11" width="11" height="3" rx="1.5"/><rect x="83" y="17" width="11" height="3" rx="1.5"/>
+            <rect x="83" y="23" width="11" height="3" rx="1.5"/><rect x="83" y="29" width="11" height="3" rx="1.5"/>
+            <rect x="83" y="35" width="11" height="3" rx="1.5"/><rect x="83" y="41" width="11" height="3" rx="1.5"/>
+            <rect x="83" y="47" width="11" height="3" rx="1.5"/>
+            <rect x="42" y="0" width="3" height="9" rx="1.5"/><rect x="49" y="0" width="3" height="9" rx="1.5"/>
+            <rect x="56" y="0" width="3" height="9" rx="1.5"/><rect x="63" y="0" width="3" height="9" rx="1.5"/>
+            <rect x="70" y="0" width="3" height="9" rx="1.5"/>
+            <rect x="42" y="53" width="3" height="9" rx="1.5"/><rect x="49" y="53" width="3" height="9" rx="1.5"/>
+            <rect x="56" y="53" width="3" height="9" rx="1.5"/><rect x="63" y="53" width="3" height="9" rx="1.5"/>
+            <rect x="70" y="53" width="3" height="9" rx="1.5"/>
+          </g>
+        </svg>
+        <b>TQFP32</b><span class="silk">32 pin</span>
+      </div>
+
+      <!-- TQFP64 -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="36" y="5" width="48" height="52" rx="3"/>
+          <g class="pad">
+            <rect x="24" y="8" width="11" height="2.2" rx="1.1"/><rect x="24" y="13" width="11" height="2.2" rx="1.1"/>
+            <rect x="24" y="18" width="11" height="2.2" rx="1.1"/><rect x="24" y="23" width="11" height="2.2" rx="1.1"/>
+            <rect x="24" y="28" width="11" height="2.2" rx="1.1"/><rect x="24" y="33" width="11" height="2.2" rx="1.1"/>
+            <rect x="24" y="38" width="11" height="2.2" rx="1.1"/><rect x="24" y="43" width="11" height="2.2" rx="1.1"/>
+            <rect x="24" y="48" width="11" height="2.2" rx="1.1"/>
+            <rect x="85" y="8" width="11" height="2.2" rx="1.1"/><rect x="85" y="13" width="11" height="2.2" rx="1.1"/>
+            <rect x="85" y="18" width="11" height="2.2" rx="1.1"/><rect x="85" y="23" width="11" height="2.2" rx="1.1"/>
+            <rect x="85" y="28" width="11" height="2.2" rx="1.1"/><rect x="85" y="33" width="11" height="2.2" rx="1.1"/>
+            <rect x="85" y="38" width="11" height="2.2" rx="1.1"/><rect x="85" y="43" width="11" height="2.2" rx="1.1"/>
+            <rect x="85" y="48" width="11" height="2.2" rx="1.1"/>
+            <rect x="40" y="0" width="2.2" height="8" rx="1.1"/><rect x="45" y="0" width="2.2" height="8" rx="1.1"/>
+            <rect x="50" y="0" width="2.2" height="8" rx="1.1"/><rect x="55" y="0" width="2.2" height="8" rx="1.1"/>
+            <rect x="60" y="0" width="2.2" height="8" rx="1.1"/><rect x="65" y="0" width="2.2" height="8" rx="1.1"/>
+            <rect x="70" y="0" width="2.2" height="8" rx="1.1"/><rect x="75" y="0" width="2.2" height="8" rx="1.1"/>
+            <rect x="40" y="54" width="2.2" height="8" rx="1.1"/><rect x="45" y="54" width="2.2" height="8" rx="1.1"/>
+            <rect x="50" y="54" width="2.2" height="8" rx="1.1"/><rect x="55" y="54" width="2.2" height="8" rx="1.1"/>
+            <rect x="60" y="54" width="2.2" height="8" rx="1.1"/><rect x="65" y="54" width="2.2" height="8" rx="1.1"/>
+            <rect x="70" y="54" width="2.2" height="8" rx="1.1"/><rect x="75" y="54" width="2.2" height="8" rx="1.1"/>
+          </g>
+        </svg>
+        <b>TQFP64</b><span class="silk">64 pin</span>
+      </div>
+
+      <!-- SOT6 -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="44" y="18" width="32" height="26" rx="3"/>
+          <g class="pad">
+            <rect x="28" y="21" width="14" height="5" rx="2.5"/><rect x="28" y="29" width="14" height="5" rx="2.5"/>
+            <rect x="28" y="37" width="14" height="5" rx="2.5"/>
+            <rect x="78" y="21" width="14" height="5" rx="2.5"/><rect x="78" y="29" width="14" height="5" rx="2.5"/>
+            <rect x="78" y="37" width="14" height="5" rx="2.5"/>
+          </g>
+        </svg>
+        <b>SOT6</b><span class="silk">6 pin</span>
+      </div>
+
+      <!-- USB-C -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="34" y="20" width="52" height="22" rx="11"/>
+          <g class="pad">
+            <rect x="38" y="46" width="6" height="9" rx="3"/><rect x="48" y="46" width="6" height="9" rx="3"/>
+            <rect x="58" y="46" width="6" height="9" rx="3"/><rect x="68" y="46" width="6" height="9" rx="3"/>
+            <rect x="78" y="46" width="6" height="9" rx="3"/>
+            <rect x="30" y="12" width="10" height="5" rx="2.5"/><rect x="80" y="12" width="10" height="5" rx="2.5"/>
+          </g>
+        </svg>
+        <b>USB&nbsp;C</b><span class="silk">Connector</span>
+      </div>
+
+      <!-- MicroSD -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <path class="body" d="M34 14h44a3 3 0 0 1 3 3v28a3 3 0 0 1-3 3H34a3 3 0 0 1-3-3V22z"/>
+          <g class="pad">
+            <rect x="86" y="17" width="12" height="4" rx="2"/><rect x="86" y="24" width="12" height="4" rx="2"/>
+            <rect x="86" y="31" width="12" height="4" rx="2"/><rect x="86" y="38" width="12" height="4" rx="2"/>
+            <rect x="20" y="24" width="8" height="4" rx="2"/><rect x="20" y="31" width="8" height="4" rx="2"/>
+          </g>
+        </svg>
+        <b>MicroSD</b><span class="silk">Card slot</span>
+      </div>
+
+      <!-- CR2032 -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <circle class="body" cx="60" cy="31" r="21"/>
+          <g class="pad">
+            <rect x="18" y="27" width="18" height="8" rx="4"/><rect x="84" y="27" width="18" height="8" rx="4"/>
+          </g>
+        </svg>
+        <b>CR2032</b><span class="silk">Coin cell</span>
+      </div>
+
+      <!-- ESP-12F -->
+      <div class="panel fp">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <rect class="body" x="36" y="8" width="48" height="46" rx="2"/>
+          <g class="pad">
+            <rect x="24" y="12" width="11" height="3.4" rx="1.7"/><rect x="24" y="20" width="11" height="3.4" rx="1.7"/>
+            <rect x="24" y="28" width="11" height="3.4" rx="1.7"/><rect x="24" y="36" width="11" height="3.4" rx="1.7"/>
+            <rect x="24" y="44" width="11" height="3.4" rx="1.7"/>
+            <rect x="85" y="12" width="11" height="3.4" rx="1.7"/><rect x="85" y="20" width="11" height="3.4" rx="1.7"/>
+            <rect x="85" y="28" width="11" height="3.4" rx="1.7"/><rect x="85" y="36" width="11" height="3.4" rx="1.7"/>
+            <rect x="85" y="44" width="11" height="3.4" rx="1.7"/>
+            <rect x="42" y="50" width="3.4" height="9" rx="1.7"/><rect x="50" y="50" width="3.4" height="9" rx="1.7"/>
+            <rect x="58" y="50" width="3.4" height="9" rx="1.7"/><rect x="66" y="50" width="3.4" height="9" rx="1.7"/>
+            <rect x="74" y="50" width="3.4" height="9" rx="1.7"/>
+          </g>
+        </svg>
+        <b>ESP-12F</b><span class="silk">Module</span>
+      </div>
+
+      <!-- and the rest -->
+      <div class="panel fp" style="justify-content:center">
+        <svg viewBox="0 0 120 62" aria-hidden="true">
+          <g class="pad" opacity=".5">
+            <circle cx="34" cy="20" r="4"/><circle cx="60" cy="20" r="4"/><circle cx="86" cy="20" r="4"/>
+            <circle cx="34" cy="42" r="4"/><circle cx="60" cy="42" r="4"/><circle cx="86" cy="42" r="4"/>
+          </g>
+        </svg>
+        <b>+10 more</b><span class="silk">SOIC20/24/28 · TQFP44/48 · MiniUSB · WROOM02</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Sensors ═══════════════════════════════════════════════════════════ -->
+<section class="section" id="sensors">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="refdes">U3</span><span class="silk silk-gold">SirBlue</span></div>
+      <h2 class="title">One connector. Thirty-nine sensors.</h2>
+      <p class="lead" style="margin-top:14px">
+        Every SirBlue board carries the same 4-pin 1.00&nbsp;mm JST-SH connector and the
+        same breadboard-friendly outline, so swapping an accelerometer for a
+        time-of-flight ranger is a cable move, not a rewire.
+      </p>
+    </div>
+
+    <div class="sheet-wrap reveal">
+      <table class="sheet">
+        <thead>
+          <tr><th>Part</th><th>Function</th><th>Bus</th><th>Driver library</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BME280</td><td>Humidity, pressure, temperature</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_BME280_Library" target="_blank" rel="noopener">Adafruit_BME280_Library</a></td></tr>
+          <tr><td>BME680</td><td>Gas, humidity, pressure, temperature</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_BME680" target="_blank" rel="noopener">Adafruit_BME680</a></td></tr>
+          <tr><td>BMP280</td><td>Barometric pressure</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_BMP280_Library" target="_blank" rel="noopener">Adafruit_BMP280_Library</a></td></tr>
+          <tr><td>BNO055</td><td>9-DOF absolute orientation</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_BNO055" target="_blank" rel="noopener">Adafruit_BNO055</a></td></tr>
+          <tr><td>ADXL345</td><td>3-axis accelerometer, ±16 g</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_ADXL345" target="_blank" rel="noopener">Adafruit_ADXL345</a></td></tr>
+          <tr><td>ADXL375</td><td>3-axis accelerometer, ±200 g</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_ADXL375" target="_blank" rel="noopener">Adafruit_ADXL375</a></td></tr>
+          <tr><td>LSM303</td><td>Accelerometer + magnetometer</td><td class="up">I²C</td><td><a href="https://github.com/pololu/lsm303-arduino" target="_blank" rel="noopener">pololu/lsm303-arduino</a></td></tr>
+          <tr><td>LSM6DS33</td><td>Accelerometer + gyroscope</td><td class="up">I²C</td><td><a href="https://github.com/pololu/lsm6-arduino" target="_blank" rel="noopener">pololu/lsm6-arduino</a></td></tr>
+          <tr><td>LIS3MDL</td><td>3-axis magnetometer</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_LIS3MDL" target="_blank" rel="noopener">Adafruit_LIS3MDL</a></td></tr>
+          <tr><td>LPS22HB</td><td>Barometric pressure</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_LPS2X" target="_blank" rel="noopener">Adafruit_LPS2X</a></td></tr>
+          <tr><td>HTS221</td><td>Humidity and temperature</td><td class="up">I²C</td><td><a href="https://github.com/stm32duino/HTS221" target="_blank" rel="noopener">stm32duino/HTS221</a></td></tr>
+          <tr><td>APDS-9960</td><td>Gesture, proximity, RGB light</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_APDS9960" target="_blank" rel="noopener">Adafruit_APDS9960</a></td></tr>
+          <tr><td>VL53L0X</td><td>Time-of-flight ranger, 2 m</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_VL53L0X" target="_blank" rel="noopener">Adafruit_VL53L0X</a></td></tr>
+          <tr><td>VL53L1X</td><td>Time-of-flight ranger, 4 m</td><td class="up">I²C</td><td><a href="https://github.com/pololu/vl53l1x-arduino" target="_blank" rel="noopener">pololu/vl53l1x-arduino</a></td></tr>
+          <tr><td>MAX3010X</td><td>Pulse oximetry, heart rate</td><td class="up">I²C</td><td><a href="https://github.com/sparkfun/SparkFun_MAX3010x_Sensor_Library" target="_blank" rel="noopener">SparkFun_MAX3010x</a></td></tr>
+          <tr><td>CCS811</td><td>eCO₂ and TVOC air quality</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_CCS811" target="_blank" rel="noopener">Adafruit_CCS811</a></td></tr>
+          <tr><td>SHT3XD</td><td>Humidity and temperature</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_SHT31" target="_blank" rel="noopener">Adafruit_SHT31</a></td></tr>
+          <tr><td>MCP9808</td><td>±0.25 °C digital thermometer</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_MCP9808_Library" target="_blank" rel="noopener">Adafruit_MCP9808_Library</a></td></tr>
+          <tr><td>ADS1X15</td><td>16-bit ADC, 4 channel</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_ADS1X15" target="_blank" rel="noopener">Adafruit_ADS1X15</a></td></tr>
+          <tr><td>MCP4725</td><td>12-bit DAC, 1 channel</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_MCP4725" target="_blank" rel="noopener">Adafruit_MCP4725</a></td></tr>
+          <tr><td>MCP4728</td><td>12-bit DAC, 4 channel</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_MCP4728" target="_blank" rel="noopener">Adafruit_MCP4728</a></td></tr>
+          <tr><td>MB85RCXXX</td><td>I²C FRAM, unlimited writes</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/Adafruit_FRAM_I2C" target="_blank" rel="noopener">Adafruit_FRAM_I2C</a></td></tr>
+          <tr><td>MB85RSXXX</td><td>SPI FRAM</td><td class="up">SPI</td><td><a href="https://github.com/adafruit/Adafruit_FRAM_SPI" target="_blank" rel="noopener">Adafruit_FRAM_SPI</a></td></tr>
+          <tr><td>24LCXXX</td><td>I²C EEPROM</td><td class="up">I²C</td><td><a href="https://github.com/blemasle/arduino-e24" target="_blank" rel="noopener">blemasle/arduino-e24</a></td></tr>
+          <tr><td>DS3231M</td><td>Real-time clock, TCXO</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/RTClib" target="_blank" rel="noopener">adafruit/RTClib</a></td></tr>
+          <tr><td>DS1307Z</td><td>Real-time clock</td><td class="up">I²C</td><td><a href="https://github.com/adafruit/RTClib" target="_blank" rel="noopener">adafruit/RTClib</a></td></tr>
+          <tr><td>TCA9548</td><td>8-channel I²C multiplexer</td><td class="up">I²C</td><td><a href="https://github.com/RobTillaart/TCA9548" target="_blank" rel="noopener">RobTillaart/TCA9548</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="silk" style="margin-top:14px">
+      Full 39-part list, plus the Bosch IMUs and the remaining light sensors, in the
+      <a href="./docs.html#sensors" style="color:var(--enig)">sensor reference</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ══ Libraries policy ══════════════════════════════════════════════════ -->
+<section class="section" id="libraries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="refdes">U4</span><span class="silk silk-gold">Firmware</span></div>
+      <h2 class="title">We don't ship driver libraries.</h2>
+      <p class="lead" style="margin-top:14px">
+        Every part on these boards is a standard part with a maintained driver
+        already in the wild. SirBoard points at those libraries rather than
+        forking them — a fork that sits still is a fork that rots, and ours had
+        drifted up to 384 commits behind upstream before we retired them.
+      </p>
+    </div>
+
+    <div class="families reveal">
+      <div class="panel panel-holes fam">
+        <div class="fam-top"><span class="refdes">R1</span><h3>Sensors &amp; peripherals</h3></div>
+        <p>Adafruit, Pololu, SparkFun and Rob Tillaart between them cover the whole SirBlue line. Install from the Arduino Library Manager by name.</p>
+        <div class="parts"><span class="part">Adafruit_BusIO</span><span class="part">Adafruit_Sensor</span></div>
+      </div>
+      <div class="panel panel-holes fam">
+        <div class="fam-top"><span class="refdes">R2</span><h3>Board support</h3></div>
+        <p>The microcontroller boards run on the established third-party cores rather than a SirBoard variant.</p>
+        <div class="parts">
+          <span class="part">megaTinyCore</span><span class="part">ATTinyCore</span>
+          <span class="part">MightyCore</span><span class="part">MiniCore</span>
+        </div>
+      </div>
+      <div class="panel panel-holes fam">
+        <div class="fam-top"><span class="refdes">R3</span><h3>Radio &amp; GNSS</h3></div>
+        <p>SirIoT carriers are wired to the module's own reference pinout, so the usual stacks work unmodified.</p>
+        <div class="parts"><span class="part">TinyGSM</span><span class="part">TinyGPSPlus</span><span class="part">ESP32 core</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Get it ════════════════════════════════════════════════════════════ -->
+<section class="section" id="get">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="refdes">U5</span><span class="silk silk-gold">Open it</span></div>
+      <h2 class="title">Clone once. Every design is there.</h2>
+    </div>
+    <div class="panel panel-holes reveal" style="padding:24px 26px">
+      <pre class="mono" style="margin:0;overflow-x:auto;font-size:13.5px;line-height:1.9;color:var(--silk-2)"><span style="color:var(--enig)">git</span> clone https://github.com/vul-os/sirboard.git
+<span style="color:var(--enig)">cd</span> BreakoutBoards
+
+<span style="color:var(--silk-3)"># open any design in KiCad — the project files sit next to the board</span>
+kicad Boards/SirTiny/ATTinyX16/ATTinyX16.pro</pre>
+    </div>
+    <p class="lead" style="margin-top:20px">
+      Designs are MIT OR Apache-2.0. Fabricate them, modify them, sell the
+      boards — commercially or otherwise, with no obligation to publish your
+      changes.
+    </p>
+  </div>
+</section>
+
+<!-- ══ Footer ════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="./index.html">
+          <span class="mark"><img src="../brand/sirboard-mark.svg" alt=""></span>
+          <span class="name">Sir<b>Board</b></span>
+        </a>
+        <p class="lead" style="font-size:14px;margin-top:14px;max-width:40ch">
+          Open hardware for people who would rather prototype than reflow.
+          Routed in KiCad, released under MIT OR Apache-2.0.
+        </p>
+      </div>
+      <div>
+        <h4 class="silk">Hardware</h4>
+        <ul>
+          <li><a href="#families">Board families</a></li>
+          <li><a href="#footprints">Breakout adapters</a></li>
+          <li><a href="#sensors">Sensor line</a></li>
+          <li><a href="./docs.html#fritzing">Fritzing parts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="silk">Docs</h4>
+        <ul>
+          <li><a href="./docs.html#overview">Overview</a></li>
+          <li><a href="./docs.html#getting-started">Getting started</a></li>
+          <li><a href="./docs.html#libraries">Driver libraries</a></li>
+          <li><a href="./docs.html#manufacturing">Manufacturing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="silk">Project</h4>
+        <ul>
+          <li><a href="https://github.com/vul-os/sirboard" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://github.com/vul-os/sirboard/issues" target="_blank" rel="noopener">Issues</a></li>
+          <li><a href="./docs.html#contributing">Contributing</a></li>
+          <li><a href="../LICENSE-MIT">MIT OR Apache-2.0</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <a class="vulos-foot" href="https://vulos.org" target="_blank" rel="noopener">
+        <img src="./assets/vulos-logo.png" alt="">Part of Vulos — open by design
+      </a>
+      <span style="flex:1"></span>
+      <span>Black soldermask · ENIG · 0.1&Prime; pitch</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+
+  /* theme — dark is the finished board, light is the fab drawing */
+  document.getElementById('theme').addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('sirboard-theme', next); } catch (e) {}
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', next === 'light' ? '#f2efe7' : '#08090b');
+  });
+
+  /* staggered reveal on scroll */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e, i) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var sibs = [].slice.call(el.parentElement.children).filter(function (c) { return c.classList.contains('reveal'); });
+        el.style.transitionDelay = Math.min(sibs.indexOf(el), 6) * 70 + 'ms';
+        el.classList.add('in');
+        io.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+/* ============================================================================
+   SirBoard — "Fab Drawing" design system
+   ----------------------------------------------------------------------------
+   The identity is taken from the hardware itself, not invented for the web:
+   matte black soldermask, ENIG gold plating, white silkscreen legend.
+
+     dark  = the finished board   — black mask, gold pads, white legend
+     light = the fabrication drawing — drafting paper, ink linework, gold pads
+
+   Type is two files doing four jobs: Archivo variable (wght 100–900,
+   wdth 62–125) gives both the display face and the condensed silkscreen
+   legend; IBM Plex Mono carries every part number, pitch and pin count.
+   Both are self-hosted — the site makes no third-party request.
+   ========================================================================= */
+
+/* ── Faces ───────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url(./fonts/archivo-var.woff2) format('woff2-variations');
+}
+@font-face {
+  font-family: 'Plex Mono'; font-style: normal; font-display: swap; font-weight: 400;
+  src: url(./fonts/plex-mono-400.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Plex Mono'; font-style: normal; font-display: swap; font-weight: 500;
+  src: url(./fonts/plex-mono-500.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Plex Mono'; font-style: normal; font-display: swap; font-weight: 600;
+  src: url(./fonts/plex-mono-600.woff2) format('woff2');
+}
+
+/* ── Tokens — dark: the finished board ───────────────────────────────────── */
+:root {
+  --mask:    #08090b;   /* soldermask, matte black */
+  --mask-1:  #0d0f13;
+  --mask-2:  #13161b;
+  --mask-3:  #1a1e25;
+  --mask-4:  #222831;
+
+  --edge:    #242932;
+  --edge-2:  #333a46;
+  --edge-3:  #454e5e;
+
+  --silk:    #edebe4;   /* silkscreen legend */
+  --silk-2:  #9aa1ab;
+  --silk-3:  #666d79;
+
+  --enig:      #d9a94b; /* ENIG gold — the primary accent */
+  --enig-hi:   #f4cb70;
+  --enig-dim:  rgba(217, 169, 75, .12);
+  --enig-glow: rgba(217, 169, 75, .22);
+  --on-enig:   #0a0b0d;
+
+  --copper:  #b87333;   /* bare copper — traces */
+  --flux:    #46c9b9;   /* probe teal — live / interactive */
+  --resist:  #e0553f;   /* the one red on the board */
+
+  --drill:   #000000;
+  --grid:    rgba(217, 169, 75, .055);
+  --glass:   rgba(10, 11, 14, .74);
+  --shadow:  rgba(0, 0, 0, .6);
+  --shadow-d: rgba(0, 0, 0, .82);
+  --sheen:   rgba(255, 255, 255, .022);
+
+  --r-sm: 3px; --r-md: 6px; --r-lg: 10px; --r-xl: 16px;
+  --max: 1240px;
+
+  --display: 'Archivo', 'Helvetica Neue', Helvetica, sans-serif;
+  --mono: 'Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --ease: cubic-bezier(.2, .9, .3, 1);
+
+  color-scheme: dark;
+}
+
+/* ── Tokens — light: the fabrication drawing ─────────────────────────────── */
+:root[data-theme="light"] {
+  --mask:    #f2efe7;   /* drafting paper */
+  --mask-1:  #ffffff;
+  --mask-2:  #faf8f2;
+  --mask-3:  #f0ece2;
+  --mask-4:  #e5e0d3;
+
+  --edge:    #d8d2c4;
+  --edge-2:  #b9b2a1;
+  --edge-3:  #918a78;
+
+  --silk:    #14161a;   /* ink */
+  --silk-2:  #4e535c;
+  --silk-3:  #7c828d;
+
+  --enig:      #9d6c14;
+  --enig-hi:   #7d5409;
+  --enig-dim:  rgba(157, 108, 20, .10);
+  --enig-glow: rgba(157, 108, 20, .16);
+  --on-enig:   #fffdf7;
+
+  --copper:  #8d5525;
+  --flux:    #0c7a6d;
+  --resist:  #bc3520;
+
+  --drill:   #f2efe7;
+  --grid:    rgba(20, 22, 26, .055);
+  --glass:   rgba(242, 239, 231, .8);
+  --shadow:  rgba(46, 40, 26, .13);
+  --shadow-d: rgba(46, 40, 26, .24);
+  --sheen:   rgba(0, 0, 0, .012);
+
+  color-scheme: light;
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--mask);
+  color: var(--silk);
+  font-family: var(--display);
+  font-variation-settings: 'wdth' 100;
+  font-size: 16.5px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+::selection { background: var(--enig-glow); color: var(--silk); }
+:focus-visible { outline: 2px solid var(--enig); outline-offset: 3px; border-radius: 2px; }
+
+/* Atmosphere — copper routing grid on a soldermask sheen. The fine grid is
+   0.1in (the pitch everything on these boards is designed around). */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background:
+    radial-gradient(1100px 620px at 82% -12%, var(--enig-glow), transparent 60%),
+    radial-gradient(760px 480px at -6% 6%, color-mix(in srgb, var(--flux) 10%, transparent), transparent 58%),
+    linear-gradient(118deg, var(--sheen) 0%, transparent 34%, transparent 66%, var(--sheen) 100%),
+    var(--mask);
+}
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 96px 96px, 96px 96px, 12px 12px, 12px 12px;
+  mask-image: radial-gradient(ellipse 130% 74% at 50% 0%, #000 22%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 130% 74% at 50% 0%, #000 22%, transparent 78%);
+}
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(18px, 4vw, 40px); }
+.mono { font-family: var(--mono); }
+
+/* ── Silkscreen legend: the signature type treatment ─────────────────────── */
+/* Condensed, uppercase, wide-tracked — exactly how a legend is set on a board */
+.silk {
+  font-family: var(--display);
+  font-variation-settings: 'wdth' 68;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 11.5px;
+  line-height: 1;
+  color: var(--silk-2);
+}
+.silk-gold { color: var(--enig); }
+
+/* Reference designator — the U1 / J2 / R7 tag beside every part on a board */
+.refdes {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 30px; height: 20px; padding: 0 7px;
+  font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .06em;
+  color: var(--enig); background: var(--enig-dim);
+  border: 1px solid color-mix(in srgb, var(--enig) 34%, transparent);
+  border-radius: var(--r-sm);
+}
+
+/* A via: plated hole, drawn as an annular gold ring */
+.via {
+  display: inline-block; width: 11px; height: 11px; flex: none; border-radius: 50%;
+  background: var(--drill);
+  box-shadow: 0 0 0 2.5px var(--enig), 0 0 9px var(--enig-glow);
+}
+
+/* ── Type scale ──────────────────────────────────────────────────────────── */
+h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -.02em; }
+h1 {
+  font-size: clamp(40px, 7.4vw, 88px); line-height: .96;
+  font-variation-settings: 'wdth' 86; font-weight: 700; letter-spacing: -.035em;
+}
+h2.title {
+  font-size: clamp(27px, 4vw, 44px); line-height: 1.06;
+  font-variation-settings: 'wdth' 88; letter-spacing: -.028em;
+}
+h3 { font-size: 19px; font-variation-settings: 'wdth' 92; }
+p { margin: 0; }
+.lead { color: var(--silk-2); font-size: clamp(15.5px, 1.5vw, 18px); max-width: 64ch; }
+.dim { color: var(--silk-3); }
+
+/* ── Section scaffolding ─────────────────────────────────────────────────── */
+.section { padding: clamp(60px, 8vw, 116px) 0; position: relative; }
+.section-head { margin-bottom: clamp(28px, 4vw, 52px); }
+.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.eyebrow::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, var(--edge), transparent); }
+
+/* ── Buttons — shaped like gold pads ─────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 12px 20px; border-radius: var(--r-md);
+  font-family: var(--display); font-variation-settings: 'wdth' 92;
+  font-size: 14.5px; font-weight: 600; letter-spacing: -.005em;
+  border: 1px solid transparent; cursor: pointer; white-space: nowrap;
+  transition: transform .18s var(--ease), box-shadow .22s, background .2s, border-color .2s, color .2s;
+}
+.btn svg { width: 16px; height: 16px; flex: none; }
+.btn-gold {
+  background: linear-gradient(158deg, var(--enig-hi), var(--enig));
+  color: var(--on-enig);
+  box-shadow: 0 5px 20px -8px var(--enig-glow), inset 0 1px 0 rgba(255,255,255,.32);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 30px -10px var(--enig-glow), inset 0 1px 0 rgba(255,255,255,.4); }
+.btn-ghost { background: var(--mask-2); border-color: var(--edge-2); color: var(--silk); }
+.btn-ghost:hover { transform: translateY(-2px); border-color: var(--enig); color: var(--enig); }
+.btn-sm { padding: 8px 14px; font-size: 13px; }
+
+/* ── Top bar — a pin header across the top of the page ───────────────────── */
+.topbar {
+  position: sticky; top: 0; z-index: 80;
+  background: var(--glass);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border-bottom: 1px solid var(--edge);
+}
+/* the row of gold pads that reads as a soldered header */
+.topbar::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: repeating-linear-gradient(90deg,
+    var(--enig) 0 7px, transparent 7px 21px);
+  opacity: .5;
+}
+.bar { display: flex; align-items: center; gap: 14px; height: 62px; }
+.brand { display: flex; align-items: center; gap: 11px; }
+.brand .mark { width: 32px; height: 32px; flex: none; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px -3px var(--shadow); }
+.brand .name {
+  font-variation-settings: 'wdth' 84; font-weight: 700; font-size: 19px; letter-spacing: -.02em;
+}
+.brand .name b { color: var(--enig); font-weight: 700; }
+.chip {
+  display: inline-flex; align-items: center; gap: 7px; height: 25px; padding: 0 10px;
+  border-radius: 999px; background: var(--mask-2); border: 1px solid var(--edge);
+  font-family: var(--mono); font-size: 11px; color: var(--silk-2); white-space: nowrap;
+}
+.spacer { flex: 1; }
+.navlinks { display: flex; gap: 2px; }
+.navlinks a {
+  padding: 7px 12px; border-radius: var(--r-md); font-size: 14px; font-weight: 500;
+  color: var(--silk-2); transition: color .16s, background .16s;
+  font-variation-settings: 'wdth' 94;
+}
+.navlinks a:hover { color: var(--silk); background: var(--mask-2); }
+.iconbtn {
+  width: 34px; height: 34px; flex: none; display: grid; place-items: center;
+  border-radius: var(--r-md); border: 1px solid transparent; background: transparent;
+  color: var(--silk-2); cursor: pointer; transition: all .16s;
+}
+.iconbtn:hover { background: var(--mask-2); color: var(--enig); border-color: var(--edge); }
+.iconbtn svg { width: 17px; height: 17px; }
+.theme-toggle .moon { display: none; }
+:root[data-theme="light"] .theme-toggle .moon { display: block; }
+:root[data-theme="light"] .theme-toggle .sun { display: none; }
+@media (max-width: 1000px) { .navlinks { display: none; } }
+@media (max-width: 640px) { .topbar .chip { display: none; } }
+
+/* ── Panel — a board coupon, with plated mounting holes at the corners ───── */
+.panel {
+  position: relative;
+  background:
+    linear-gradient(150deg, var(--sheen), transparent 42%),
+    var(--mask-1);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  transition: border-color .22s, transform .22s var(--ease), box-shadow .22s;
+}
+.panel-holes::before, .panel-holes::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+}
+.panel-holes::before {
+  background:
+    radial-gradient(circle 5.5px at 15px 15px, var(--drill) 0 2.4px, var(--enig) 2.6px 4.4px, transparent 4.6px),
+    radial-gradient(circle 5.5px at calc(100% - 15px) 15px, var(--drill) 0 2.4px, var(--enig) 2.6px 4.4px, transparent 4.6px);
+  opacity: .62;
+}
+.panel-holes::after {
+  background:
+    radial-gradient(circle 5.5px at 15px calc(100% - 15px), var(--drill) 0 2.4px, var(--enig) 2.6px 4.4px, transparent 4.6px),
+    radial-gradient(circle 5.5px at calc(100% - 15px) calc(100% - 15px), var(--drill) 0 2.4px, var(--enig) 2.6px 4.4px, transparent 4.6px);
+  opacity: .62;
+}
+a.panel:hover, .panel.hoverable:hover { border-color: var(--enig); transform: translateY(-3px); box-shadow: 0 18px 40px -22px var(--shadow-d); }
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
+.hero { padding: clamp(46px, 7vw, 92px) 0 clamp(40px, 6vw, 76px); position: relative; }
+.hero-grid { display: grid; grid-template-columns: 1.06fr .94fr; gap: clamp(28px, 4vw, 60px); align-items: center; }
+@media (max-width: 940px) { .hero-grid { grid-template-columns: 1fr; } }
+.hero h1 { margin: 20px 0 0; }
+.hero h1 .gold { color: var(--enig); }
+.hero .lead { margin-top: 22px; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+/* live pill */
+.pill {
+  display: inline-flex; align-items: center; gap: 9px; height: 28px; padding: 0 13px;
+  border-radius: 999px; background: var(--enig-dim);
+  border: 1px solid color-mix(in srgb, var(--enig) 30%, transparent);
+  font-family: var(--mono); font-size: 11.5px; color: var(--enig);
+}
+.pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--enig); box-shadow: 0 0 0 0 var(--enig-glow); animation: pulse 2.4s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--enig-glow); } 70% { box-shadow: 0 0 0 9px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+
+/* Stat strip — set like a datasheet's absolute-maximum table */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 38px; background: var(--edge); border: 1px solid var(--edge); border-radius: var(--r-lg); overflow: hidden; }
+@media (max-width: 620px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.stat { background: var(--mask-1); padding: 15px 16px; }
+.stat b { display: block; font-family: var(--mono); font-size: 25px; font-weight: 500; color: var(--enig); letter-spacing: -.02em; line-height: 1.15; }
+.stat span { display: block; margin-top: 3px; }
+
+/* ── The board render, on a bench ────────────────────────────────────────── */
+.bench {
+  position: relative; border-radius: var(--r-xl); overflow: hidden;
+  border: 1px solid var(--edge-2);
+  background:
+    radial-gradient(120% 90% at 50% 0%, var(--mask-3), var(--mask-1) 70%);
+  box-shadow: 0 40px 80px -40px var(--shadow-d);
+}
+/* the render sits in a viewport that stays dark in both themes, so KiCad's
+   own grey backdrop reads as a 3D view rather than a stray light rectangle */
+.bench .shot { background: #14141b; position: relative; }
+.bench .shot::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(120% 88% at 50% 6%, transparent 38%, rgba(8,9,11,.55) 100%);
+}
+.bench img { width: 100%; height: auto; display: block; filter: contrast(1.05) saturate(1.06); }
+.bench-bar {
+  display: flex; align-items: center; gap: 10px; padding: 9px 13px;
+  border-bottom: 1px solid var(--edge); background: var(--mask-2);
+}
+.bench-cap {
+  display: flex; align-items: center; gap: 10px; padding: 9px 13px;
+  border-top: 1px solid var(--edge); background: var(--mask-2);
+  font-family: var(--mono); font-size: 11px; color: var(--silk-3);
+}
+.bench-cap .r { margin-left: auto; }
+
+/* ── Family cards ────────────────────────────────────────────────────────── */
+.families { display: grid; grid-template-columns: repeat(auto-fill, minmax(288px, 1fr)); gap: 16px; }
+.fam { padding: 20px 20px 18px; display: flex; flex-direction: column; gap: 12px; }
+.fam-top { display: flex; align-items: center; gap: 10px; }
+.fam h3 { font-size: 18px; font-variation-settings: 'wdth' 88; font-weight: 700; }
+.fam p { color: var(--silk-2); font-size: 14.2px; line-height: 1.55; flex: 1; }
+.parts { display: flex; flex-wrap: wrap; gap: 5px; }
+.part {
+  font-family: var(--mono); font-size: 10.5px; padding: 3px 7px; border-radius: var(--r-sm);
+  background: var(--mask-3); border: 1px solid var(--edge); color: var(--silk-2);
+}
+.part.more { background: transparent; border-style: dashed; color: var(--silk-3); }
+
+/* ── Footprint grid — real pad geometry, drawn in SVG ────────────────────── */
+.fp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 12px; }
+.fp {
+  padding: 14px 12px 12px; text-align: center; display: flex; flex-direction: column;
+  align-items: center; gap: 9px; cursor: default;
+}
+.fp svg { width: 100%; height: 62px; }
+.fp .pad { fill: var(--enig); }
+.fp .body { fill: var(--mask-4); stroke: var(--edge-3); stroke-width: 1; }
+.fp b { font-family: var(--mono); font-size: 12.5px; font-weight: 600; letter-spacing: .02em; }
+.fp:hover .pad { fill: var(--enig-hi); }
+
+/* ── Datasheet table ─────────────────────────────────────────────────────── */
+.sheet-wrap { overflow-x: auto; border: 1px solid var(--edge); border-radius: var(--r-lg); background: var(--mask-1); }
+table.sheet { width: 100%; border-collapse: collapse; font-size: 13.6px; min-width: 620px; }
+table.sheet th {
+  text-align: left; padding: 11px 15px; background: var(--mask-2);
+  border-bottom: 1px solid var(--edge);
+  font-family: var(--display); font-variation-settings: 'wdth' 70;
+  font-size: 10.5px; font-weight: 600; letter-spacing: .19em; text-transform: uppercase; color: var(--silk-3);
+  white-space: nowrap;
+}
+table.sheet td { padding: 11px 15px; border-bottom: 1px solid var(--edge); vertical-align: top; color: var(--silk-2); }
+table.sheet tr:last-child td { border-bottom: 0; }
+table.sheet tr:hover td { background: var(--mask-2); }
+table.sheet td:first-child { color: var(--silk); font-family: var(--mono); font-size: 12.5px; white-space: nowrap; }
+table.sheet a { color: var(--enig); border-bottom: 1px solid transparent; }
+table.sheet a:hover { border-bottom-color: var(--enig); }
+td .up { font-family: var(--mono); font-size: 12px; }
+
+/* ── Trace spine — copper routing between sections ───────────────────────── */
+.spine { position: absolute; left: 50%; transform: translateX(-50%); top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: visible; }
+.spine path { fill: none; stroke: var(--copper); stroke-width: 1.6; opacity: .3; stroke-dasharray: 5 7; animation: flow 22s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -240; } }
+
+/* ── Reveal ──────────────────────────────────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.site-footer { border-top: 1px solid var(--edge); background: var(--mask-1); margin-top: 20px; position: relative; }
+.site-footer::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 2px;
+  background: repeating-linear-gradient(90deg, var(--enig) 0 7px, transparent 7px 21px); opacity: .4;
+}
+.foot-grid { display: grid; grid-template-columns: 1.8fr repeat(3, 1fr); gap: 34px; padding: 52px 0 34px; }
+@media (max-width: 820px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .foot-grid { grid-template-columns: 1fr; } }
+.foot-grid h4 { margin: 0 0 13px; }
+.foot-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+.foot-grid a { color: var(--silk-2); font-size: 14px; transition: color .15s; }
+.foot-grid a:hover { color: var(--enig); }
+.foot-bar {
+  border-top: 1px solid var(--edge); display: flex; flex-wrap: wrap; align-items: center;
+  gap: 10px 20px; padding: 15px 0; font-family: var(--mono); font-size: 11.5px; color: var(--silk-3);
+}
+.foot-bar a:hover { color: var(--enig); }
+
+/* ── Motion off ──────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ── Vulos suite badge ───────────────────────────────────────────────────── */
+.vulos-badge { transition: border-color .16s, color .16s; }
+.vulos-badge:hover { border-color: var(--enig); color: var(--silk); }
+.vulos-badge img { width: 15px; height: 15px; border-radius: 4px; flex: none; }
+@media (max-width: 900px) { .vulos-badge { display: none; } }
+.vulos-foot { display: inline-flex; align-items: center; gap: 8px; color: var(--silk-2); transition: color .15s; }
+.vulos-foot img { width: 16px; height: 16px; border-radius: 4px; }
+.vulos-foot:hover { color: var(--enig); }
