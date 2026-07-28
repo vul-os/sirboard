@@ -1,22 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="SirBoard">
   <title>SirBoard</title>
 
-  <!-- soldermask: the matte black the boards actually ship in -->
+  <!-- soldermask: the matte black the boards ship in -->
   <rect width="128" height="128" rx="28" fill="#0d0d11"/>
 
-  <!-- gold legs, breaking the package out to the edge of the board -->
-  <g fill="#e0b355">
-    <rect x="8"  y="40"   width="34" height="9" rx="4.5"/>
-    <rect x="8"  y="59.5" width="34" height="9" rx="4.5"/>
-    <rect x="8"  y="79"   width="34" height="9" rx="4.5"/>
-    <rect x="86" y="40"   width="34" height="9" rx="4.5"/>
-    <rect x="86" y="59.5" width="34" height="9" rx="4.5"/>
-    <rect x="86" y="79"   width="34" height="9" rx="4.5"/>
+  <!-- The SirBoard cog, traced from the silkscreen legend already printed on
+       every board in this repository. Keyhole cut with fill-rule evenodd. -->
+  <g fill="#e0b355" fill-rule="evenodd">
+    <path d="M 53.23 24.96 L 54.26 12.92 L 73.74 12.92 L 74.77 24.96 L 76.52 25.48 L 86.31 30.20 L 87.81 31.23 L 97.86 24.53 L 110.01 39.77 L 101.24 48.08 L 101.92 49.77 L 104.34 60.37 L 104.46 62.18 L 115.97 65.87 L 111.63 84.87 L 99.66 83.19 L 98.77 84.77 L 91.99 93.27 L 90.65 94.50 L 94.94 105.79 L 77.38 114.25 L 71.23 103.85 L 69.44 104.13 L 58.56 104.13 L 56.77 103.85 L 50.62 114.25 L 33.06 105.79 L 37.35 94.50 L 36.01 93.27 L 29.23 84.77 L 28.34 83.19 L 16.37 84.87 L 12.03 65.87 L 23.54 62.18 L 23.66 60.37 L 26.08 49.77 L 26.76 48.08 L 17.99 39.77 L 30.14 24.53 L 40.19 31.23 L 41.69 30.20 L 51.48 25.48 Z M 59.00 69.67 A 15.5 15.5 0 1 1 69.00 69.67 L 82.50 118.0 L 45.50 118.0 Z"/>
   </g>
-
-  <!-- the package body -->
-  <rect x="38" y="30" width="52" height="68" rx="9" fill="#0d0d11" stroke="#e0b355" stroke-width="9"/>
-
-  <!-- pin-1 marker -->
-  <circle cx="52.5" cy="44.5" r="5.5" fill="#e0b355"/>
 </svg>
