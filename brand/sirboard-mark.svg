@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="SirBoard">
+  <title>SirBoard</title>
+
+  <!-- soldermask: the matte black the boards actually ship in -->
+  <rect width="128" height="128" rx="28" fill="#0d0d11"/>
+  <rect x="1.5" y="1.5" width="125" height="125" rx="26.5" fill="none" stroke="#2a2a33" stroke-width="3"/>
+
+  <!-- fan-out traces: SMD pad in the middle, THT pads on the outside.
+       Drawn under the pads so the copper reads as continuous. -->
+  <g stroke="#d9a94b" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M52 46H34"/>
+    <path d="M52 64H30"/>
+    <path d="M52 82H34"/>
+    <path d="M76 46H94"/>
+    <path d="M76 64H98"/>
+    <path d="M76 82H94"/>
+  </g>
+
+  <!-- the SMD package -->
+  <rect x="49" y="43" width="30" height="42" rx="5" fill="#1a1a20" stroke="#d9a94b" stroke-width="5"/>
+  <circle cx="57" cy="51" r="3.2" fill="#d9a94b"/>
+
+  <!-- plated through-holes: ENIG gold annular rings -->
+  <g fill="none" stroke="#e8bd5e" stroke-width="7">
+    <circle cx="28" cy="46" r="8"/>
+    <circle cx="24" cy="64" r="8"/>
+    <circle cx="28" cy="82" r="8"/>
+    <circle cx="100" cy="46" r="8"/>
+    <circle cx="104" cy="64" r="8"/>
+    <circle cx="100" cy="82" r="8"/>
+  </g>
+</svg>
