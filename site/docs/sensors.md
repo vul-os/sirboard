@@ -98,7 +98,7 @@ Many of these have fixed or two-option I²C addresses, so a second identical
 sensor collides. Two ways out:
 
 1. **TCA9548A multiplexer** — [`TCA9548`](../Boards/Sensors/SirBlue/TCA9548) in this
-   line, or [`Boards/SirExpand/TCA9548A`](../Boards/SirExpand/TCA9548A).
+   line, or [`Boards/Interface/SirExpand/TCA9548A`](../Boards/Interface/SirExpand/TCA9548A).
    Eight downstream channels, each electrically isolated from the others until
    selected.
 2. **Address straps** — where the part supports it, the board brings the

@@ -69,7 +69,7 @@ Both are sized for RTC backup duty — pair either with a `DS3231M` from
 | [`WROOM02`](../Boards/Breakout/WROOM02) | ESP-WROOM-02 module → 0.1″ |
 
 These are carriers only — no regulator, no USB, no auto-reset circuit. If you
-want those, use [`Boards/SirIoT/ESP8266`](../Boards/SirIoT/ESP8266) instead,
+want those, use [`Boards/Microcontrollers/SirIoT/ESP8266`](../Boards/Microcontrollers/SirIoT/ESP8266) instead,
 which is a complete board.
 
 ## Picking the right one

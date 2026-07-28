@@ -24,7 +24,7 @@ forks were not carrying real work:
 Not one functional change between them. Meanwhile they rotted: `Sir_TinyGSM`
 fell 384 commits behind upstream, `RTClib` 204, `Sir_DallasTemperature` 163.
 A stale driver shipped under our name is worse than no driver at all, so the
-forks were archived and this table took their place.
+forks were retired and this table took their place.
 
 The same reasoning retired five empty library stubs (`Sir_CCS811`,
 `Sir_FXOS8700`, `Sir_MCP4728`, `Sir_MCP9808`, `Sir_MMA845X`) that never got

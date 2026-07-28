@@ -61,10 +61,10 @@ GUI:
 kicad-cli pcb export gerbers \
   --layers F.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,B.SilkS,Edge.Cuts \
   --output gerbers/ \
-  Boards/SirTiny/ATTinyX16/ATTinyX16.kicad_pcb
+  Boards/Microcontrollers/SirTiny/ATTinyX16/ATTinyX16.kicad_pcb
 
 kicad-cli pcb export drill --output gerbers/ \
-  Boards/SirTiny/ATTinyX16/ATTinyX16.kicad_pcb
+  Boards/Microcontrollers/SirTiny/ATTinyX16/ATTinyX16.kicad_pcb
 ```
 
 `kicad-cli` needs the board in KiCad 6+ format. These sources are KiCad 5
@@ -87,7 +87,7 @@ fiddliest thing on the board — do it first, while there is nothing nearby to
 knock.
 
 **Level shifters.** The TXB0104 and TXB0108 on
-[`Boards/SirLevel`](../Boards/SirLevel) drive both directions actively. They
+[`Boards/Interface/SirLevel`](../Boards/Interface/SirLevel) drive both directions actively. They
 cannot sink much current and are **not suitable for open-drain buses** — do not
 use them for I²C.
 

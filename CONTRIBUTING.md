@@ -50,11 +50,12 @@ change worth discussing before anyone does the work.
 
 ```
 Boards/
-  Breakout/   SMD-to-THT adapters
-  Sensors/    sensor lines
-  Modules/    storage, timekeeping, reference
-  Sir*/       development board families
-Fritzing/     breadboard SVG artwork
+  Breakout/           SMD-to-THT adapters
+  Microcontrollers/   boards with a programmable core
+  Interface/          USB bridges, level shifters, expanders, programmers
+  Sensors/            sensor lines
+  Modules/            storage, timekeeping, reference
+Fritzing/             breadboard SVG artwork
 docs/         documentation
 site/         the static landing page and docs viewer
 brand/        logo mark and generated icons
@@ -62,7 +63,7 @@ scripts/      maintenance helpers
 ```
 
 One board per directory, named after the board. Group related boards under a
-family directory (`Boards/SirTiny/ATTinyX16`).
+family directory (`Boards/Microcontrollers/SirTiny/ATTinyX16`).
 
 ## Driver libraries
 

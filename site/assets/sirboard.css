@@ -444,3 +444,17 @@ td .up { font-family: var(--mono); font-size: 12px; }
 .vulos-foot { display: inline-flex; align-items: center; gap: 8px; color: var(--silk-2); transition: color .15s; }
 .vulos-foot img { width: 16px; height: 16px; border-radius: 4px; }
 .vulos-foot:hover { color: var(--enig); }
+
+/* ── Open source hardware strip ──────────────────────────────────────────── */
+.oshw {
+  display: flex; align-items: center; gap: 20px; margin-top: 26px;
+  padding: 20px 24px; border-radius: var(--r-lg);
+  background: var(--mask-1); border: 1px solid var(--edge);
+  transition: border-color .2s, transform .2s var(--ease);
+}
+.oshw:hover { border-color: var(--enig); transform: translateY(-2px); }
+.oshw img { width: 62px; height: auto; flex: none; }
+:root[data-theme="light"] .oshw img { filter: invert(1) brightness(.22); }
+.oshw span { color: var(--silk-2); font-size: 14.5px; line-height: 1.6; }
+.oshw b { color: var(--silk); font-weight: 600; }
+@media (max-width: 560px) { .oshw { flex-direction: column; align-items: flex-start; gap: 14px; } }

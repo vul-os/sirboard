@@ -20,14 +20,13 @@ are swappable without rewiring.
 
 ```
 Boards/
-  Breakout/   21 SMD-to-THT adapter footprints — QFN, TQFP, SOIC, SOT,
-              connectors, coin cells and module carriers
-  Sensors/    3 sensor lines — SirBlue (39 digital parts), plus the older
-              AnalogueSensors and DigitalSensors collections
-  Modules/    Storage, timekeeping and voltage reference boards
-  Sir*/       9 development board families — ATTiny, ATMega, ESP, USB-UART,
-              level shifting, port expansion, a programmer
-Fritzing/     60 hand-drawn SVG breadboard graphics for Fritzing
+  Breakout/           21 SMD-to-THT adapter footprints — QFN, TQFP, SOIC,
+                      SOT, connectors, coin cells and module carriers
+  Microcontrollers/   SirTiny, SirNano, SirMicro, SirMighty, SirIoT
+  Interface/          SirUSB, SirLevel, SirExpand, SirDuke
+  Sensors/            SirBlue (39 parts), AnalogueSensors, DigitalSensors
+  Modules/            SirKeep, SirTime, SirReference
+Fritzing/             60 hand-drawn SVG breadboard graphics for Fritzing
 
 brand/        Logo mark and the generated icon set
 docs/         These documents
@@ -47,23 +46,17 @@ ATTinyX16.pdf           plotted schematic, for reading without KiCad
 ATTinyX16_{Front,Back,Iso}.jpg    3D renders
 ```
 
-## One repository, not forty-one
+## One repository
 
-SirBoard used to be 41 separate repositories — one per product line, plus a
-handful of forked driver libraries. That split cost more than it bought:
-attention concentrated on a single repository while the other thirty sat at
-zero stars, and the same part (BME280, 24LCXXX, DS3231M) drifted between
-several of them independently.
+Every product line lives here, in one tree, with its history intact. Each line's
+commits record their path inside the repository, so
+`git log -- Boards/Microcontrollers/SirTiny` returns SirTiny's own commits rather
+than a single squashed merge, and `git blame` still names the person who drew
+the trace.
 
-In 2026 the seventeen hardware repositories were folded into this one. Each
-was rewritten so that every commit records its path inside the monorepo, then
-merged — so `git log -- Boards/SirTiny` returns SirTiny's seventeen commits,
-not a single merge, and `git blame` still names the person who drew the trace.
-No commits were dropped: the 276 imported commits are the exact sum of the
-seventeen source histories.
-
-The source repositories remain archived rather than deleted, so their URLs,
-stars and forks stay alive.
+Keeping the lines together also keeps them honest: the same part (BME280,
+24LCXXX, DS3231M) appears in more than one line, and in one tree that
+duplication is visible rather than silently drifting apart.
 
 ## What is deliberately *not* here
 

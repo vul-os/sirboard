@@ -50,8 +50,3 @@ want a part to keep working after you edit it:
   off the grid, and a part whose pins do not land on 0.1″ is unusable in a
   breadboard sketch.
 
-## Related
-
-`Fritzing-Library`, a separate repository, was created as the home for finished
-`.fzpz` bundles built from this artwork. It never got past a licence file and
-was archived rather than folded in — there was nothing to fold.

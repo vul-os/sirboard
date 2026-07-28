@@ -19,8 +19,14 @@
 </p>
 
 <p align="center">
-  <img src="Boards/SirTiny/ATTinyX16/ATTinyX16_Iso.jpg" width="47%" alt="SirTiny ATTinyX16 development board">
-  <img src="Boards/SirIoT/ESP32/ESP32_Iso.jpg" width="47%" alt="SirIoT ESP32 board">
+  <a href="https://www.oshwa.org/definition/">
+    <img src="brand/open-source-hardware.svg" width="76" alt="Open Source Hardware">
+  </a>
+</p>
+
+<p align="center">
+  <img src="Boards/Microcontrollers/SirTiny/ATTinyX16/ATTinyX16_Iso.jpg" width="47%" alt="SirTiny ATTinyX16 development board">
+  <img src="Boards/Microcontrollers/SirIoT/ESP32/ESP32_Iso.jpg" width="47%" alt="SirIoT ESP32 board">
 </p>
 
 ---
@@ -35,7 +41,8 @@ onto yourself, **modules** with the part already placed and supported, and
 | Directory | Contents |
 |---|---|
 | [`Boards/Breakout/`](Boards/Breakout) | **21 adapters** — QFN, TQFP, SOIC, SOT, USB, MicroSD, coin cells, ESP module carriers |
-| [`Boards/`](Boards) | **9 families** — ATTiny, ATMega328PB/32U4/1284P, ESP32/ESP8266, USB-UART, level shifting, port expansion, a programmer |
+| [`Boards/Microcontrollers/`](Boards/Microcontrollers) | ATTiny, ATMega328PB/32U4/1284P, ESP32/ESP8266 and SIMCom GNSS carriers |
+| [`Boards/Interface/`](Boards/Interface) | USB-to-UART bridges, level shifters, port expanders, a USBASP programmer |
 | [`Boards/Sensors/`](Boards/Sensors) | **SirBlue** — 39 digital sensors on one 4-pin JST-SH connector, plus two earlier collections |
 | [`Boards/Modules/`](Boards/Modules) | EEPROM, FRAM, real-time clocks |
 | [`Fritzing/`](Fritzing) | 60 hand-drawn breadboard SVGs |
@@ -47,10 +54,10 @@ git clone git@github.com:vul-os/sirboard.git
 cd sirboard
 
 # every design ships a plotted PDF and renders — no tools needed to read one
-open Boards/SirTiny/ATTinyX16/ATTinyX16.pdf
+open Boards/Microcontrollers/SirTiny/ATTinyX16/ATTinyX16.pdf
 
 # or open the project itself
-kicad Boards/SirTiny/ATTinyX16/ATTinyX16.pro
+kicad Boards/Microcontrollers/SirTiny/ATTinyX16/ATTinyX16.pro
 ```
 
 These are **KiCad 5** files (board format `20171130`). KiCad 6 through 9 open
@@ -62,7 +69,7 @@ Every [SirBlue](Boards/Sensors/SirBlue) board carries the same 4-pin 1.00 mm JST
 connector — `GND · VCC · SDA · SCL` — and the same outline. One cable fits all
 39 parts, so swapping an accelerometer for a time-of-flight ranger is a
 connector move rather than a rewire. A
-[TCA9548A](Boards/SirExpand/TCA9548A) multiplexer handles the address
+[TCA9548A](Boards/Interface/SirExpand/TCA9548A) multiplexer handles the address
 collisions when you want eight of the same part.
 
 ## We don't ship driver libraries
@@ -72,7 +79,7 @@ wild, and [`docs/LIBRARIES.md`](docs/LIBRARIES.md) names the one to install for
 each — Adafruit, Pololu, SparkFun, MCUdude's cores, TinyGSM, RTClib.
 
 SirBoard used to fork them. Those forks accumulated no functional changes and
-drifted up to 384 commits behind upstream, so they were archived. A stale
+drifted up to 384 commits behind upstream, so they were retired. A stale
 driver shipped under our name is worse than no driver at all.
 
 ## Documentation
@@ -89,17 +96,11 @@ driver shipped under our name is worse than no driver at all.
 | [Driver libraries](docs/LIBRARIES.md) | Part → upstream library, verified |
 | [Manufacturing](docs/MANUFACTURING.md) | Stack-up, gerber export, assembly notes |
 
-## One repository, not forty-one
+## One repository
 
-SirBoard was 41 separate repositories until 2026 — one per product line, plus
-forked driver libraries. Seventeen hardware repositories were folded into this
-one, each rewritten so every commit records its path in the monorepo before
-being merged. `git log -- Boards/SirTiny` returns SirTiny's own history, and
-`git blame` still names whoever drew the trace. All 276 imported commits are
-accounted for: the exact sum of the seventeen source histories.
-
-The source repositories are archived rather than deleted, so their URLs, stars
-and forks stay alive.
+Every product line lives in this repository, with its full history intact —
+`git log -- Boards/Microcontrollers/SirTiny` returns SirTiny's own commits, and
+`git blame` still names whoever drew the trace.
 
 ## Contributing
 

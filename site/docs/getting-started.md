@@ -7,7 +7,7 @@ renders (`_Front`, `_Back`, and on many boards `_Iso`). If you only want to see
 what a board is and how it is wired, that is enough — no tools required.
 
 ```
-Boards/SirTiny/ATTinyX16/
+Boards/Microcontrollers/SirTiny/ATTinyX16/
 ├── ATTinyX16.pdf              ← the schematic, readable anywhere
 ├── ATTinyX16_Front.jpg
 ├── ATTinyX16_Back.jpg
@@ -19,7 +19,7 @@ Boards/SirTiny/ATTinyX16/
 ```bash
 git clone https://github.com/vul-os/sirboard.git
 cd BreakoutBoards
-kicad Boards/SirTiny/ATTinyX16/ATTinyX16.pro
+kicad Boards/Microcontrollers/SirTiny/ATTinyX16/ATTinyX16.pro
 ```
 
 **These are KiCad 5 files.** The board format is `20171130` and the schematics
@@ -45,11 +45,11 @@ Projects that also reference footprints by library name carry a
 | You want to… | Look in | Start with |
 |---|---|---|
 | Solder an SMD part onto something breadboardable | [`Boards/Breakout/`](../Boards/Breakout) | Match the package: `QFN16`, `TQFP32`, `SOIC8`… |
-| Prototype on a small microcontroller | [`Boards/SirTiny`](../Boards/SirTiny) | `ATTinyX16` |
-| Talk to a board over USB | [`Boards/SirUSB`](../Boards/SirUSB) | `CH340G` (cheapest) or `FT231V2` (best driver support) |
+| Prototype on a small microcontroller | [`Boards/Microcontrollers/SirTiny`](../Boards/Microcontrollers/SirTiny) | `ATTinyX16` |
+| Talk to a board over USB | [`Boards/Interface/SirUSB`](../Boards/Interface/SirUSB) | `CH340G` (cheapest) or `FT231V2` (best driver support) |
 | Read a sensor | [`Boards/Sensors/SirBlue`](../Boards/Sensors/SirBlue) | Any — they share one connector |
-| Add WiFi or GPS | [`Boards/SirIoT`](../Boards/SirIoT) | `ESP32` or `SIM68ML` |
-| Shift 5 V to 3.3 V | [`Boards/SirLevel`](../Boards/SirLevel) | `TXB0104` |
+| Add WiFi or GPS | [`Boards/Microcontrollers/SirIoT`](../Boards/Microcontrollers/SirIoT) | `ESP32` or `SIM68ML` |
+| Shift 5 V to 3.3 V | [`Boards/Interface/SirLevel`](../Boards/Interface/SirLevel) | `TXB0104` |
 | Store something | [`Boards/Modules/SirKeep`](../Boards/Modules/SirKeep) | `MB85RCXXX` (FRAM) |
 | Keep time | [`Boards/Modules/SirTime`](../Boards/Modules/SirTime) | `DS3231M` |
 
@@ -65,7 +65,7 @@ Every SirBlue board uses the same 4-pin 1.00 mm JST-SH connector, pinned:
 ```
 
 Because the pinout is common across all 39 parts, one cable works with every
-sensor in the line, and a TCA9548A from [`SirExpand`](../Boards/SirExpand) lets
+sensor in the line, and a TCA9548A from [`SirExpand`](../Boards/Interface/SirExpand) lets
 you hang eight parts with the same I²C address off one bus.
 
 ## Installing a driver
