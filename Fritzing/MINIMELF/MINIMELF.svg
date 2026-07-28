@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="3.5095444mm"
+   height="1.5131255mm"
+   viewBox="0 0 3.5095444 1.5131255"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="IMRAN MINI MELF.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="89.6"
+     inkscape:cx="5.6877876"
+     inkscape:cy="3.5561385"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-31.990185,-37.962074)">
+    <rect
+       style="fill:#999999;fill-rule:evenodd;stroke-width:0.26458335"
+       id="rect815"
+       width="2.9425814"
+       height="1.5084451"
+       x="32.273666"
+       y="37.963295"
+       rx="0.30000001"
+       ry="0.30000001" />
+    <rect
+       style="fill:#666666;fill-rule:evenodd;stroke-width:0.26458332"
+       id="rect819"
+       width="0.28348213"
+       height="1.5166491"
+       x="31.990185"
+       y="37.963295"
+       rx="0.10000006"
+       ry="0.1" />
+    <rect
+       style="fill:#666666;fill-rule:evenodd;stroke-width:0.26458332"
+       id="rect819-0"
+       width="0.28348213"
+       height="1.5119048"
+       x="35.216259"
+       y="37.963295"
+       rx="0.10000006"
+       ry="0.1" />
+    <rect
+       style="fill:#333333;fill-rule:evenodd;stroke-width:0.26458332"
+       id="rect836"
+       width="0.38978794"
+       height="1.5126214"
+       x="32.750351"
+       y="37.962074" />
+  </g>
+</svg>

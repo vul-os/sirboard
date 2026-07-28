@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5mm"
+   height="3.1921279mm"
+   viewBox="0 0 5 3.192128"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="IMRAN 3 PIN JST FINAL TOP VIEW.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="44.8"
+     inkscape:cx="8.2881357"
+     inkscape:cy="5.1598441"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-35.529762,-26.351099)">
+    <rect
+       id="rect10"
+       width="5"
+       height="2.9000001"
+       x="35.529762"
+       y="26.558035"
+       style="fill:#b3b3b3;stroke-width:0.26458332" />
+    <rect
+       style="fill:#333333;stroke-width:0.26458332"
+       id="rect12"
+       width="0.15355283"
+       height="0.082682289"
+       x="36.940723"
+       y="29.458899" />
+    <rect
+       style="fill:#1a1a1a;stroke-width:0.26458332"
+       id="rect12-6"
+       width="0.15355283"
+       height="0.082682289"
+       x="38.974686"
+       y="29.459764" />
+    <rect
+       style="fill:#1a1a1a;stroke-width:0.26458332"
+       id="rect12-3"
+       width="0.15355283"
+       height="0.082682289"
+       x="37.950283"
+       y="29.460545" />
+    <rect
+       style="fill:#999999;stroke-width:0.75082463"
+       id="rect39"
+       width="5"
+       height="2.522023"
+       x="35.529762"
+       y="26.558035" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.26458332"
+       id="rect31"
+       width="0.31301153"
+       height="0.44294086"
+       x="35.563171"
+       y="28.60162" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.25204888"
+       id="rect33"
+       width="0.55515254"
+       height="0.32157359"
+       x="35.571102"
+       y="29.105919" />
+    <rect
+       style="fill:#ececec;stroke-width:0.26458332"
+       id="rect35"
+       width="0.0531529"
+       height="0.37797621"
+       x="36.987701"
+       y="29.080923" />
+    <rect
+       style="fill:#ececec;stroke-width:0.26458332"
+       id="rect35-8"
+       width="0.0531529"
+       height="0.37797621"
+       x="38.002575"
+       y="29.080078" />
+    <rect
+       style="fill:#ececec;stroke-width:0.26458332"
+       id="rect35-6"
+       width="0.0531529"
+       height="0.37797621"
+       x="39.023754"
+       y="29.0797" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.26458332"
+       id="rect31-2"
+       width="0.31301153"
+       height="0.44294086"
+       x="40.194603"
+       y="28.61054" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.25040692"
+       id="rect33-0"
+       width="0.55515254"
+       height="0.31739748"
+       x="39.950317"
+       y="29.106678" />
+    <rect
+       style="fill:#ececec;stroke-width:0.39343879"
+       id="rect88"
+       width="0.44884673"
+       height="1.4351283"
+       x="35.559288"
+       y="27.101589" />
+    <rect
+       style="fill:#ececec;stroke-width:0.39343879"
+       id="rect88-6"
+       width="0.44884673"
+       height="1.4351283"
+       x="40.035145"
+       y="27.119305" />
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.25259855"
+       id="rect35-0-1"
+       width="0.088588171"
+       height="0.20670575"
+       x="40.263321"
+       y="26.354052" />
+    <rect
+       style="fill:#e6e6e6;stroke-width:0.25259855"
+       id="rect35-0-1-7"
+       width="0.088588171"
+       height="0.20670575"
+       x="35.721703"
+       y="26.351099" />
+  </g>
+</svg>
