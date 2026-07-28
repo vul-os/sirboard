@@ -3,30 +3,20 @@
 
   <!-- soldermask: the matte black the boards actually ship in -->
   <rect width="128" height="128" rx="28" fill="#0d0d11"/>
-  <rect x="1.5" y="1.5" width="125" height="125" rx="26.5" fill="none" stroke="#2a2a33" stroke-width="3"/>
 
-  <!-- fan-out traces: SMD pad in the middle, THT pads on the outside.
-       Drawn under the pads so the copper reads as continuous. -->
-  <g stroke="#d9a94b" stroke-width="6" stroke-linecap="round" fill="none">
-    <path d="M52 46H34"/>
-    <path d="M52 64H30"/>
-    <path d="M52 82H34"/>
-    <path d="M76 46H94"/>
-    <path d="M76 64H98"/>
-    <path d="M76 82H94"/>
+  <!-- gold legs, breaking the package out to the edge of the board -->
+  <g fill="#e0b355">
+    <rect x="8"  y="40"   width="34" height="9" rx="4.5"/>
+    <rect x="8"  y="59.5" width="34" height="9" rx="4.5"/>
+    <rect x="8"  y="79"   width="34" height="9" rx="4.5"/>
+    <rect x="86" y="40"   width="34" height="9" rx="4.5"/>
+    <rect x="86" y="59.5" width="34" height="9" rx="4.5"/>
+    <rect x="86" y="79"   width="34" height="9" rx="4.5"/>
   </g>
 
-  <!-- the SMD package -->
-  <rect x="49" y="43" width="30" height="42" rx="5" fill="#1a1a20" stroke="#d9a94b" stroke-width="5"/>
-  <circle cx="57" cy="51" r="3.2" fill="#d9a94b"/>
+  <!-- the package body -->
+  <rect x="38" y="30" width="52" height="68" rx="9" fill="#0d0d11" stroke="#e0b355" stroke-width="9"/>
 
-  <!-- plated through-holes: ENIG gold annular rings -->
-  <g fill="none" stroke="#e8bd5e" stroke-width="7">
-    <circle cx="28" cy="46" r="8"/>
-    <circle cx="24" cy="64" r="8"/>
-    <circle cx="28" cy="82" r="8"/>
-    <circle cx="100" cy="46" r="8"/>
-    <circle cx="104" cy="64" r="8"/>
-    <circle cx="100" cy="82" r="8"/>
-  </g>
+  <!-- pin-1 marker -->
+  <circle cx="52.5" cy="44.5" r="5.5" fill="#e0b355"/>
 </svg>
