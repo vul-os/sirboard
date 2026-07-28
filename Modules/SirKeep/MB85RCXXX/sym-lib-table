@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name MB85RCXXX-rescue)(type Legacy)(uri ${KIPRJMOD}/MB85RCXXX-rescue.lib)(options "")(descr ""))
+)
