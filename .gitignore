@@ -44,3 +44,12 @@ gerbers/
 .DS_Store
 Thumbs.db
 *.swp
+
+# ─── Python test gates (tests/, run by `python -m pytest`) ──────────────────
+# pytest self-ignores .pytest_cache/ by writing its own .gitignore into it, so
+# that one never showed up here — but nothing did the same for the bytecode
+# cache: a routine `python -m pytest` run leaves tests/__pycache__/*.pyc
+# untracked and, without this rule, NOT ignored either.
+__pycache__/
+*.pyc
+.pytest_cache/
