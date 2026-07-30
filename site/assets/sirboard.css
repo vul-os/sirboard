@@ -169,7 +169,7 @@ body::after {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .2em;
-  font-size: 11.5px;
+  font-size: 12px;
   line-height: 1;
   color: var(--silk-2);
 }
@@ -185,7 +185,7 @@ p.silk { font-size: 12.5px; letter-spacing: .13em; line-height: 1.5; }
 .refdes {
   display: inline-flex; align-items: center; justify-content: center;
   min-width: 30px; height: 20px; padding: 0 7px;
-  font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .06em;
+  font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: .06em;
   color: var(--enig-ink); background: var(--enig-dim);
   border: 1px solid color-mix(in srgb, var(--enig) 34%, transparent);
   border-radius: var(--r-sm);
@@ -264,7 +264,7 @@ p { margin: 0; }
 .chip {
   display: inline-flex; align-items: center; gap: 7px; height: 25px; padding: 0 10px;
   border-radius: 999px; background: var(--mask-2); border: 1px solid var(--edge);
-  font-family: var(--mono); font-size: 11px; color: var(--silk-2); white-space: nowrap;
+  font-family: var(--mono); font-size: 12px; color: var(--silk-2); white-space: nowrap;
 }
 .spacer { flex: 1; }
 .navlinks { display: flex; gap: 2px; }
@@ -338,7 +338,7 @@ a.panel:hover, .panel.hoverable:hover { border-color: var(--enig); transform: tr
   display: inline-flex; align-items: center; gap: 9px; height: 28px; padding: 0 13px;
   border-radius: 999px; background: var(--enig-dim);
   border: 1px solid color-mix(in srgb, var(--enig) 30%, transparent);
-  font-family: var(--mono); font-size: 11.5px; color: var(--enig-ink);
+  font-family: var(--mono); font-size: 12px; color: var(--enig-ink);
 }
 .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--enig); box-shadow: 0 0 0 0 var(--enig-glow); animation: pulse 2.4s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--enig-glow); } 70% { box-shadow: 0 0 0 9px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
@@ -373,7 +373,7 @@ a.panel:hover, .panel.hoverable:hover { border-color: var(--enig); transform: tr
 .bench-cap {
   display: flex; align-items: center; gap: 10px; padding: 9px 13px;
   border-top: 1px solid var(--edge); background: var(--mask-2);
-  font-family: var(--mono); font-size: 11px; color: var(--silk-3);
+  font-family: var(--mono); font-size: 12px; color: var(--silk-3);
 }
 .bench-cap .r { margin-left: auto; }
 
@@ -385,7 +385,7 @@ a.panel:hover, .panel.hoverable:hover { border-color: var(--enig); transform: tr
 .fam p { color: var(--silk-2); font-size: 14.2px; line-height: 1.55; flex: 1; }
 .parts { display: flex; flex-wrap: wrap; gap: 5px; }
 .part {
-  font-family: var(--mono); font-size: 10.5px; padding: 3px 7px; border-radius: var(--r-sm);
+  font-family: var(--mono); font-size: 12px; padding: 3px 7px; border-radius: var(--r-sm);
   background: var(--mask-3); border: 1px solid var(--edge); color: var(--silk-2);
 }
 .part.more { background: transparent; border-style: dashed; color: var(--silk-3); }
@@ -409,7 +409,7 @@ table.sheet th {
   text-align: left; padding: 11px 15px; background: var(--mask-2);
   border-bottom: 1px solid var(--edge);
   font-family: var(--display); font-variation-settings: 'wdth' 70;
-  font-size: 10.5px; font-weight: 600; letter-spacing: .19em; text-transform: uppercase; color: var(--silk-3);
+  font-size: 12px; font-weight: 600; letter-spacing: .19em; text-transform: uppercase; color: var(--silk-3);
   white-space: nowrap;
 }
 table.sheet td { padding: 11px 15px; border-bottom: 1px solid var(--edge); vertical-align: top; color: var(--silk-2); }
@@ -444,7 +444,7 @@ td .up { font-family: var(--mono); font-size: 12px; }
 .foot-grid a:hover { color: var(--enig); }
 .foot-bar {
   border-top: 1px solid var(--edge); display: flex; flex-wrap: wrap; align-items: center;
-  gap: 10px 20px; padding: 15px 0; font-family: var(--mono); font-size: 11.5px; color: var(--silk-3);
+  gap: 10px 20px; padding: 15px 0; font-family: var(--mono); font-size: 12px; color: var(--silk-3);
 }
 .foot-bar a:hover { color: var(--enig); }
 
