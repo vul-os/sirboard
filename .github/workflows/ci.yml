@@ -54,22 +54,22 @@ jobs:
       - name: Run the gates
         run: python -m pytest -v
 
-      # scripts/sync-docs.sh regenerates site/docs/ from docs/. If running it
-      # changes a tracked file, the committed site is stale and vulos.org is
-      # serving documentation this repo has already corrected.
+      # scripts/sync-docs.sh regenerates site/docs/ from docs/. If it reports
+      # drift, the committed site is stale and vulos.org is serving
+      # documentation this repo has already corrected.
       #
       # This is a SEPARATE check from the in-suite sync gate on purpose: this one
       # proves the script is what produces the committed state, not merely that
       # the two trees happen to match today.
+      #
+      # `--check` is read-only (it used to not exist: this step ran the script
+      # for real, which always wrote, and relied on the later
+      # "did CI modify the working tree" step to notice — correct only because
+      # a CI checkout is thrown away either way, and blind to the script's own
+      # silent zero-coverage hole, since an empty docs/ produced a "clean" diff
+      # too by wiping and never repopulating the mirror in the same run).
       - name: site/ is what sync-docs.sh produces
-        run: |
-          ./scripts/sync-docs.sh
-          if ! git diff --quiet; then
-            echo "::error::scripts/sync-docs.sh changed tracked files — run it and commit the result" >&2
-            git --no-pager diff --stat >&2
-            exit 1
-          fi
-          echo "site/ is in step with docs/"
+        run: ./scripts/sync-docs.sh --check
 
       # A gate that mutates the repo is a gate that cannot be trusted twice.
       - name: The gates did not modify the working tree
