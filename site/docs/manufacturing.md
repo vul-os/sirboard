@@ -14,8 +14,31 @@ most of them inside a free-tier panel.
 | Soldermask | Black |
 | Silkscreen | White |
 | Surface finish | ENIG |
-| Minimum trace / space | 6 mil |
+| Minimum trace / space | **5 mil (0.127 mm)** — see below |
 | Minimum drill | 0.3 mm |
+
+### The 5 mil figure is not decoration — quote it to the fab
+
+Most of the catalogue is routed at 8 mil (0.2 mm) and would build happily on the
+cheapest 6 mil process. **Seven designs go below 6 mil** — five at 5 mil and two
+at 5.9 mil — and they are the fine-pitch parts where there is no room to do
+otherwise: escaping a 0.5 mm-pitch TQFP means threading a trace between two pads.
+
+| Design | Narrowest trace |
+|---|---|
+| [`Boards/Breakout/TQFP48`](../Boards/Breakout/TQFP48) | 0.127 mm (5 mil) |
+| [`Boards/Breakout/TQFP44`](../Boards/Breakout/TQFP44) | 0.127 mm (5 mil) |
+| [`Boards/Breakout/SOIC24`](../Boards/Breakout/SOIC24) | 0.127 mm (5 mil) |
+| [`Boards/Sensors/SirBlue/VL53L0X`](../Boards/Sensors/SirBlue/VL53L0X) | 0.127 mm (5 mil) |
+| [`Boards/Sensors/SirBlue/VL53L1X`](../Boards/Sensors/SirBlue/VL53L1X) | 0.127 mm (5 mil) |
+| [`Boards/Breakout/TQFP64`](../Boards/Breakout/TQFP64) | 0.15 mm (5.9 mil) |
+| [`Boards/Microcontrollers/SirIoT/ESP32`](../Boards/Microcontrollers/SirIoT/ESP32) | 0.15 mm (5.9 mil) |
+
+Order those seven on a 5 mil (or 4/4) process. This table used to read "6 mil"
+for the whole catalogue, which would have had you order the TQFP44/48 breakouts
+on a process that cannot build them. `tests/test_repo_integrity.py` now derives
+the narrowest trace in every board straight from the `.kicad_pcb` files and
+fails if this table and the copper disagree.
 
 ### Why ENIG rather than HASL
 

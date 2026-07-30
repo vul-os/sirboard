@@ -118,7 +118,10 @@ layout on the common connector.
 Kept because the boards were fabricated and people have them. Prefer SirBlue
 for anything new.
 
-`ADLX337` here is analogue despite the collection's name.
+**`ADLX337` is not a board.** The directory holds only two firmware examples and
+no design — no `.kicad_pcb`, no schematic. It is also an analogue part despite
+the collection's name. It is not one of the 12 designs counted above, and the
+examples are described in [Driver libraries](LIBRARIES.md#the-only-code-in-the-repository).
 
 ---
 

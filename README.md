@@ -43,8 +43,8 @@ onto yourself, **modules** with the part already placed and supported, and
 | [`Boards/Breakout/`](Boards/Breakout) | **21 adapters** — QFN, TQFP, SOIC, SOT, USB, MicroSD, coin cells, ESP module carriers |
 | [`Boards/Microcontrollers/`](Boards/Microcontrollers) | ATTiny, ATMega328PB/32U4/1284P, ESP32/ESP8266 and SIMCom GNSS carriers |
 | [`Boards/Interface/`](Boards/Interface) | USB-to-UART bridges, level shifters, port expanders, a USBASP programmer |
-| [`Boards/Sensors/`](Boards/Sensors) | **SirBlue** — 39 digital sensors on one 4-pin JST-SH connector, plus two earlier collections |
-| [`Boards/Modules/`](Boards/Modules) | EEPROM, FRAM, real-time clocks |
+| [`Boards/Sensors/`](Boards/Sensors) | **SirBlue** — 39 digital sensors on one 4-pin JST-SH connector, plus two earlier collections (DigitalSensors 12, AnalogueSensors 2) |
+| [`Boards/Modules/`](Boards/Modules) | EEPROM, FRAM, real-time clocks — 5 designs |
 | [`Fritzing/`](Fritzing) | 60 hand-drawn breadboard SVGs |
 
 ## Quick start
@@ -53,7 +53,7 @@ onto yourself, **modules** with the part already placed and supported, and
 git clone git@github.com:vul-os/sirboard.git
 cd sirboard
 
-# every design ships a plotted PDF and renders — no tools needed to read one
+# most designs ship a plotted PDF and renders — no tools needed to read one
 open Boards/Microcontrollers/SirTiny/ATTinyX16/ATTinyX16.pdf
 
 # or open the project itself
@@ -62,6 +62,38 @@ kicad Boards/Microcontrollers/SirTiny/ATTinyX16/ATTinyX16.pro
 
 These are **KiCad 5** files (board format `20171130`). KiCad 6 through 9 open
 them and offer to convert on save.
+
+## What state is this in?
+
+Hardware repositories rot by ambiguity, so here it is plainly.
+
+**Can you get these made? Yes.** Every one of the 107 designs is fully routed
+2-layer copper with a board outline, and plots to gerbers from source with
+`kicad-cli` or File → Plot. Nothing here needs a blind via, a buried via,
+controlled impedance or a non-standard stack-up, and every outline fits inside a
+100 × 100 mm panel. Seven of the fine-pitch breakouts need a 5 mil process
+rather than 6 mil — they are named in
+[Manufacturing](docs/MANUFACTURING.md#the-5-mil-figure-is-not-decoration--quote-it-to-the-fab).
+
+**What is *not* claimed.** No DRC or ERC report is committed for any board, and
+no fabrication or bring-up log exists in this repository. The `_Front`/`_Back`/
+`_Iso` images are KiCad 3D-viewer renders, not photographs of assembled boards —
+so do not read them as proof that a given design was built and worked. Treat
+every design as prototype-grade: **run DRC yourself and read the schematic
+before you spend money on a panel.** The catalogue has shipped at least one
+unconnected trace in the past (commit `28e6714`, on the TQFP48 breakout), which
+is exactly the class of defect a DRC run catches and a render does not.
+
+**Is it maintained?** The designs are stable rather than actively developed. Two
+directories under `Boards/` hold a README and no design —
+[`Sensors/SirRed`](Boards/Sensors/SirRed) (an analogue line on a 3-pin JST-SH)
+and [`Modules/SirReference`](Boards/Modules/SirReference) (voltage references) —
+and they are stated intent, not work in progress; neither is counted in the 107.
+What *is* maintained is the repository's honesty:
+[CI](.github/workflows/ci.yml) gates the counts, coverage tables and fab
+figures in these docs against the actual `.kicad_pcb` files on every push, so a
+claim here cannot quietly drift away from the copper. Fixes to existing designs
+are the most welcome kind of change.
 
 ## The sensor line
 

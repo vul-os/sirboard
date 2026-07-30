@@ -15,7 +15,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=C:/Users/elisha3/Desktop/GitHub/SirBlue/LIS3MDL/
+PlotDirectoryName=gerbers/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=

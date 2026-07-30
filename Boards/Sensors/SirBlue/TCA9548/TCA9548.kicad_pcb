@@ -113,7 +113,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "C:/Users/elisha3/Desktop/GitHub/Gerbers/SirMicro/"))
+      (outputdirectory "gerbers/"))
   )
 
   (net 0 "")
@@ -1452,7 +1452,7 @@
       (net 3 SCL))
     (pad MP smd roundrect (at -2.8 1.875 270) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875 270) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -1842,7 +1842,7 @@
       (net 1 GND))
     (pad MP smd roundrect (at -2.8 1.875 180) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875 180) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -1890,7 +1890,7 @@
       (net 1 GND))
     (pad MP smd roundrect (at -2.8 1.875 180) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875 180) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -1938,7 +1938,7 @@
       (net 1 GND))
     (pad MP smd roundrect (at -2.8 1.875 180) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875 180) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -1986,7 +1986,7 @@
       (net 1 GND))
     (pad MP smd roundrect (at -2.8 1.875 180) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875 180) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -2034,7 +2034,7 @@
       (net 17 SCL3))
     (pad MP smd roundrect (at -2.8 1.875) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -2082,7 +2082,7 @@
       (net 15 SCL2))
     (pad MP smd roundrect (at -2.8 1.875) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -2130,7 +2130,7 @@
       (net 9 SCL1))
     (pad MP smd roundrect (at -2.8 1.875) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -2178,7 +2178,7 @@
       (net 11 SCL0))
     (pad MP smd roundrect (at -2.8 1.875) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
     (pad MP smd roundrect (at 2.8 1.875) (size 1.2 1.8) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.208333))
-    (model "C:/Users/elisha3/Desktop/Kicad Files/3DModels/WB06-BB041-T0X-N_rev1.0.IGS"
+    (model "${KIPRJMOD}/WB06-BB041-T0X-N_rev1.0.IGS"
       (offset (xyz -3.75 -1.3 0.1))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))

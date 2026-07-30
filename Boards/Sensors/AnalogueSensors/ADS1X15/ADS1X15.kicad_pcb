@@ -117,7 +117,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "C:/Users/elisha3/Desktop/GitHub/Gerbers/SirMicro/"))
+      (outputdirectory "gerbers/"))
   )
 
   (net 0 "")

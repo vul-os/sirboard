@@ -15,7 +15,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=C:/Users/elisha3/Desktop/GitHub/SirBlue/TCA9534/
+PlotDirectoryName=gerbers/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=

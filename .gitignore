@@ -17,6 +17,14 @@ _autosave-*
 fp-info-cache
 *.kicad_prl
 
+# KiCad writes the footprint cache to a randomised temp name FIRST and only
+# renames it to fp-info-cache on success. An interrupted scan therefore leaves
+# a file that `fp-info-cache` above does not match: fp-B625.tmp was tracked in
+# CH330N/ for years at 2.5 MB, holding a dump of one developer's local
+# footprint libraries. Ignore the temp name too.
+fp-*.tmp
+*.tmp
+
 # ─── NOT ignored, deliberately ──────────────────────────────────────────────
 # *-cache.lib          project-local symbol cache — REQUIRED to open a
 #                      schematic on a machine without the original libraries.

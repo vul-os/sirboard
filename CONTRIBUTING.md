@@ -17,9 +17,14 @@ A design directory holds exactly these files:
 <Name>_Front.jpg        renders
 <Name>_Back.jpg
 <Name>_Iso.jpg          where the board is tall enough to be worth it
-fp-lib-table            only if the project references footprint libraries
 sym-lib-table           only if the project references symbol libraries
+                        (nine projects do)
 ```
+
+No project carries an `fp-lib-table`. The footprints are embedded in each
+`.kicad_pcb`, so boards read and plot without one — see
+[Getting started](docs/GETTING-STARTED.md#footprints-and-the-missing-fp-lib-table).
+Adding the real table would be a welcome change; inventing one would not.
 
 ## What not to commit
 

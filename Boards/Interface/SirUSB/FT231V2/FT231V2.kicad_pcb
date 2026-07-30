@@ -103,7 +103,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "C:/Users/elisha3/Desktop/GitHub/Gerbers/FT230X/"))
+      (outputdirectory "gerbers/"))
   )
 
   (net 0 "")

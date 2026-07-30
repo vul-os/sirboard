@@ -24,8 +24,10 @@ Boards/
                       SOT, connectors, coin cells and module carriers
   Microcontrollers/   SirTiny, SirNano, SirMicro, SirMighty, SirIoT
   Interface/          SirUSB, SirLevel, SirExpand, SirDuke
-  Sensors/            SirBlue (39 parts), AnalogueSensors, DigitalSensors
-  Modules/            SirKeep, SirTime, SirReference
+  Sensors/            SirBlue (39 parts), DigitalSensors (12),
+                      AnalogueSensors (2), SirRed (placeholder, no designs)
+  Modules/            SirKeep (3), SirTime (2),
+                      SirReference (placeholder, no designs)
 Fritzing/             60 hand-drawn SVG breadboard graphics for Fritzing
 
 brand/        Logo mark and the generated icon set
@@ -34,17 +36,24 @@ site/         The static landing page and docs viewer
 scripts/      Repository maintenance helpers
 ```
 
-Every design directory holds the same five files:
+Every design directory holds the same four source files, plus the derived
+artefacts that let you read the design without installing anything:
 
 ```
-ATTinyX16.pro           KiCad project
-ATTinyX16.sch           schematic
-ATTinyX16-cache.lib     project-local symbol cache — needed to open the
-                        schematic without SirBoard's own libraries installed
-ATTinyX16.kicad_pcb     board layout
-ATTinyX16.pdf           plotted schematic, for reading without KiCad
-ATTinyX16_{Front,Back,Iso}.jpg    3D renders
+ATTinyX16.pro           KiCad project          ─┐
+ATTinyX16.sch           schematic               │ all 107 designs
+ATTinyX16-cache.lib     project-local symbol    │ have these four
+                        cache — needed to open  │
+                        the schematic without   │
+                        SirBoard's libraries   ─┘
+ATTinyX16.pdf           plotted schematic      ─┐ 100 of 107 / 104 of 107;
+ATTinyX16_{Front,Back,Iso}.jpg    3D renders   ─┘ gaps listed in
+                                                  GETTING-STARTED.md
 ```
+
+The seven designs without a plotted PDF and the three without renders are
+named in [Getting started → Coverage](GETTING-STARTED.md#coverage), and that
+list is enforced by the test suite rather than left to rot.
 
 ## One repository
 

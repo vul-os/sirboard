@@ -1,0 +1,8 @@
+# Everything the gates in tests/ need, and nothing else.
+#
+# SirBoard is KiCad sources, Fritzing artwork, docs and a static site. There is
+# no build step and no runtime, so there is nothing to install in order to *use*
+# this repository — only to check it. KiCad itself is deliberately NOT required:
+# every gate reads the .kicad_pcb s-expressions as text, so CI needs no GUI
+# toolchain and no headless X server.
+pytest>=7.4

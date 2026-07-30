@@ -101,7 +101,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "C:/Users/elisha3/Desktop/Kicad Files/KiCAD Designs/USBASP/"))
+      (outputdirectory "gerbers/"))
   )
 
   (net 0 "")

@@ -78,6 +78,30 @@ for the part number.
 The analogue parts (`ADLX337`, `ADXL32X`) need no driver at all: they output a
 voltage per axis, so `analogRead()` and a scale factor is the whole interface.
 
+### The only code in the repository
+
+`ADLX337` is the exception to "SirBoard ships no code". Two short worked examples
+of the scale-factor arithmetic live under
+`Boards/Sensors/DigitalSensors/ADLX337/firmware/`:
+
+- [`Boards/Sensors/DigitalSensors/ADLX337/firmware/arduino/adlx337/adlx337.ino`](../Boards/Sensors/DigitalSensors/ADLX337/firmware/arduino/adlx337/adlx337.ino)
+- [`Boards/Sensors/DigitalSensors/ADLX337/firmware/micropython/adlx337.py`](../Boards/Sensors/DigitalSensors/ADLX337/firmware/micropython/adlx337.py)
+
+Two things about that directory are worth stating plainly, because neither is
+obvious from its name:
+
+1. **There is no ADLX337 board.** The directory contains the firmware and
+   nothing else — no `.kicad_pcb`, no schematic. It is not one of the 107
+   designs, and it is not one of the 12 counted in
+   [Sensors → DigitalSensors](SENSORS.md#digitalsensors). The examples target the
+   part on a breadboard or on the [`ADXL32X`](../Boards/Sensors/AnalogueSensors/ADXL32X)
+   analogue-accelerometer board.
+2. **These are examples, not a driver** — nothing imports them, they are not
+   versioned and they are not released. That distinction is the whole reason the
+   ten library forks were retired. They are also the entire inventory of source
+   code in this repository, and `tests/test_repo_integrity.py` asserts that, so
+   a driver cannot creep back in unannounced.
+
 ## Storage and timekeeping
 
 | Part | Board | Library | Source |

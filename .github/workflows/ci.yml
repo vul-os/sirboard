@@ -1,0 +1,83 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gates:
+    name: gates (python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # FULL history, not a shallow clone. Two gates need it:
+          #   * tests/conftest.py refuses to run against a partial file set,
+          #   * test_the_commit_the_readme_cites_as_a_real_defect_exists resolves
+          #     the commit hash README.md cites as a shipped board defect.
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      # Printed, not asserted — this is the context you want when a count gate
+      # fails, and it also makes an empty checkout obvious at a glance.
+      - name: Show what is being gated
+        run: |
+          echo "tracked files:  $(git ls-files | wc -l)"
+          echo "board layouts:  $(git ls-files '*.kicad_pcb' | wc -l)"
+          echo "schematics:     $(git ls-files '*.sch' | wc -l)"
+          echo "plotted PDFs:   $(git ls-files 'Boards/*.pdf' | wc -l)"
+          echo "renders:        $(git ls-files 'Boards/*.jpg' | wc -l)"
+          echo "Fritzing SVGs:  $(git ls-files 'Fritzing/*.svg' | wc -l)"
+          echo "markdown:       $(git ls-files '*.md' | wc -l)"
+
+      - name: Run the gates
+        run: python -m pytest -v
+
+      # scripts/sync-docs.sh regenerates site/docs/ from docs/. If running it
+      # changes a tracked file, the committed site is stale and vulos.org is
+      # serving documentation this repo has already corrected.
+      #
+      # This is a SEPARATE check from the in-suite sync gate on purpose: this one
+      # proves the script is what produces the committed state, not merely that
+      # the two trees happen to match today.
+      - name: site/ is what sync-docs.sh produces
+        run: |
+          ./scripts/sync-docs.sh
+          if ! git diff --quiet; then
+            echo "::error::scripts/sync-docs.sh changed tracked files — run it and commit the result" >&2
+            git --no-pager diff --stat >&2
+            exit 1
+          fi
+          echo "site/ is in step with docs/"
+
+      # A gate that mutates the repo is a gate that cannot be trusted twice.
+      - name: The gates did not modify the working tree
+        run: |
+          changed=$(git status --porcelain)
+          if [ -n "$changed" ]; then
+            echo "::error::running CI modified the repository:" >&2
+            printf '%s\n' "$changed" >&2
+            exit 1
+          fi
+          echo "working tree clean"
