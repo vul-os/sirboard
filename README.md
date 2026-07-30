@@ -10,6 +10,16 @@
   Routed in KiCad. Black soldermask, ENIG gold, 0.1&Prime; pitch.
 </p>
 
+## Brand
+
+The mark in [`brand/`](brand/) is the source of truth. Every icon this repo
+ships — favicon, PWA and app icons, the mark in the README and on the site — is
+rendered from `brand/logo.svg` rather than redrawn, so there is one approved
+drawing and no second copy to drift.
+
+Copy it outward, never edit a derived copy, and never edit `brand/` to match
+something downstream.
+
 <p align="center">
   <a href="https://vulos.org/projects/sirboard"><b>vulos.org/projects/sirboard</b></a>
   ·
