@@ -474,7 +474,7 @@ def test_markdown_relative_links_resolve(tracked):
       * `docs/*.md`, `README.md`, `CONTRIBUTING.md` — plain files, read on disk
         and on GitHub. A link resolves relative to the document.
       * `site/docs/*.md` — generated copies fetched by `site/docs.html`, which
-        rewrites every relative link to `<repo>/blob/master/<path>` after
+        rewrites every relative link to `<repo>/blob/main/<path>` after
         stripping leading `../` (see `rewriteLink` in docs.html). So a link
         there resolves relative to the REPO ROOT, `../` and all.
 
