@@ -53,3 +53,9 @@ Thumbs.db
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# ─── site/ render gate (scripts/check-site.mjs, run by `node`) ──────────────
+# The gate needs playwright. It is not vendored here: the suite installs it
+# once and each repo links it in for the duration of a run, so the link (or a
+# real install) must never be committed.
+scripts/node_modules/

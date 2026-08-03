@@ -1,0 +1,13 @@
+{
+  "name": "sirboard-site-checks",
+  "private": true,
+  "type": "module",
+  "description": "Browser-backed render gate for site/. Run: node scripts/check-render.mjs [--selftest]",
+  "dependencies": {
+    "playwright": "^1.48.0"
+  },
+  "scripts": {
+    "check": "node check-render.mjs",
+    "check:selftest": "node check-render.mjs --selftest"
+  }
+}

@@ -2,29 +2,77 @@
    SirBoard — documentation viewer
    Sits on top of sirboard.css and uses only its tokens, so the docs inherit
    the board/drawing theme switch for free.
+
+   Layout note: docs is a reading application, not a landing page, so this
+   shell deliberately does NOT wear .wrap. A centred 1240px column leaves the
+   sidebar floating in from the window edge with dead space beside it. The
+   tracks are explicit and packed to the left, and only re-centre once the
+   viewport is wide enough that a left-packed shell would look marooned.
    ========================================================================= */
 
+:root {
+  /* .topbar is sticky at top:0 and 62px tall plus its 1px rule. Everything
+     that pins below it measures from this one number. */
+  --docs-header: 63px;
+}
+
+/* ── Shell ───────────────────────────────────────────────────────────────── */
 .docs-shell {
   display: grid;
-  grid-template-columns: 232px minmax(0, 1fr) 190px;
-  gap: clamp(20px, 3vw, 44px);
+  grid-template-columns: 252px minmax(0, 830px) 208px;
+  justify-content: start;
+  gap: clamp(24px, 2.6vw, 44px);
   align-items: start;
-  padding: 30px 0 60px;
+  padding: 26px clamp(18px, 3vw, 44px) 78px;
 }
-@media (max-width: 1120px) { .docs-shell { grid-template-columns: 220px minmax(0, 1fr); } .outline { display: none; } }
-/* minmax(0, 1fr), not a bare 1fr: without it, a wide code block or table in
-   the markdown body sets this single track's min-content size, which grows
-   the grid (and the page) past the viewport instead of letting the pre's
-   own overflow-x:auto scrollbar engage. */
-@media (max-width: 880px)  { .docs-shell { grid-template-columns: minmax(0, 1fr); gap: 14px; } }
+/* The middle track is minmax(0, 830px), never 1fr. A flexible middle track
+   keeps the PROSE measured (max-width lives on .markdown) while the TRACK
+   itself grows to the window, which flings the on-this-page rail far away
+   from the text it indexes. With a capped max the rail stays beside the
+   prose and the leftover width is simply left unused on the right.
+   minmax's 0 min still lets the track shrink below 830px when the viewport
+   is narrow, so no width needs its own breakpoint. */
+@media (min-width: 1900px) { .docs-shell { justify-content: center; } }
 
-/* ── Sidebar ─────────────────────────────────────────────────────────────── */
-.docs-nav { position: sticky; top: 86px; max-height: calc(100vh - 108px); overflow-y: auto; padding-right: 6px; }
+@media (max-width: 1180px) {
+  .docs-shell { grid-template-columns: 244px minmax(0, 830px); }
+  .outline { display: none; }
+}
+@media (max-width: 880px) {
+  .docs-shell { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 16px; }
+}
+
+/* ── Sidebar column ──────────────────────────────────────────────────────── */
+/* position:sticky goes on the COLUMN, with a real height, not on the <aside>
+   inside it. A sticky element whose parent is auto-height is exactly as tall
+   as its parent and therefore has no room to slide: it pins for one screen
+   and then scrolls away with the page. Giving the column a viewport-tall
+   height is what actually keeps the nav in place. */
+.docs-side {
+  position: sticky;
+  top: var(--docs-header);
+  height: calc(100vh - var(--docs-header));
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding-top: 4px;
+}
+
+.docs-nav {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 8px 28px 0;
+  display: flex;
+  flex-direction: column;
+}
 .docs-nav::-webkit-scrollbar { width: 7px; }
 .docs-nav::-webkit-scrollbar-thumb { background: var(--edge-2); border-radius: 4px; }
+.docs-nav::-webkit-scrollbar-track { background: transparent; }
 
 .docs-search {
-  display: flex; align-items: center; gap: 8px; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px; margin-bottom: 16px; flex: none;
   padding: 0 10px; height: 34px; border-radius: var(--r-md);
   background: var(--mask-1); border: 1px solid var(--edge);
 }
@@ -36,9 +84,11 @@
 }
 .docs-search input::placeholder { color: var(--silk-3); }
 .docs-search kbd {
-  font-family: var(--mono); font-size: 12px; color: var(--silk-3);
+  font-family: var(--mono); font-size: 12px; color: var(--silk-3); flex: none;
   border: 1px solid var(--edge); border-radius: 3px; padding: 1px 5px;
 }
+/* the / hint is meaningless without a keyboard */
+@media (hover: none) { .docs-search kbd { display: none; } }
 
 .nav-group { margin-bottom: 20px; }
 .nav-group .label {
@@ -53,6 +103,13 @@
   border-left: 2px solid transparent;
   transition: background .15s, color .15s, border-color .15s;
 }
+/* The filter sets a.hidden. `.docs-nav a{display:flex}` is an AUTHOR rule of
+   higher specificity than the UA's `[hidden]{display:none}`, so without this
+   line the sidebar filter marks links hidden and they stay on screen —
+   which is exactly what it did before. Same story for the outline and for
+   .no-hits, so each one states it. */
+.docs-nav a[hidden] { display: none; }
+.nav-group[hidden] { display: none; }
 .docs-nav a svg { width: 15px; height: 15px; flex: none; opacity: .7; }
 .docs-nav a:hover { background: var(--mask-2); color: var(--silk); }
 .docs-nav a.active {
@@ -61,22 +118,54 @@
 }
 .docs-nav a.active svg { opacity: 1; }
 .no-hits { padding: 10px; font-size: 13px; color: var(--silk-3); }
+.no-hits[hidden] { display: none; }
 
-/* mobile disclosure */
+/* ── Mobile disclosure ───────────────────────────────────────────────────── */
 .nav-toggle {
   display: none; align-items: center; gap: 9px; width: 100%;
-  padding: 10px 13px; margin-bottom: 10px;
+  padding: 11px 13px;
   background: var(--mask-1); border: 1px solid var(--edge); border-radius: var(--r-md);
-  color: var(--silk); font-family: var(--display); font-size: 14px; font-weight: 600; cursor: pointer;
+  color: var(--silk); font-family: var(--display); font-size: 14px; font-weight: 600;
+  cursor: pointer; text-align: left;
 }
-.nav-toggle svg { width: 16px; height: 16px; }
-.nav-toggle .cur { margin-left: auto; font-weight: 400; font-size: 13px; color: var(--silk-3); }
+.nav-toggle svg.burger { width: 16px; height: 16px; flex: none; }
+.nav-toggle .cur {
+  margin-left: auto; font-weight: 400; font-size: 13px; color: var(--silk-3);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.nav-toggle .caret { width: 14px; height: 14px; flex: none; color: var(--silk-3); transition: transform .18s var(--ease); }
+.nav-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
+
+/* Every rule below re-states .docs-shell so it outranks the component rules
+   above it. A media query adds NO specificity of its own: bare `.docs-nav`
+   inside @media ties with bare `.docs-nav` outside it, and a tie at equal
+   depth is settled by source order alone — a fragile thing to depend on. */
+@media (min-width: 881px) {
+  /* the collapsed class is a mobile state; it must never survive up here */
+  .docs-shell .docs-nav.collapsed { display: flex; }
+}
 @media (max-width: 880px) {
-  .nav-toggle { display: flex; }
-  .docs-nav { position: static; max-height: none; padding: 12px; margin-bottom: 12px;
-              background: var(--mask-1); border: 1px solid var(--edge); border-radius: var(--r-lg); }
-  .docs-nav.collapsed { display: none; }
+  .docs-shell .docs-side {
+    position: relative;         /* containing block for the dropdown */
+    top: auto; height: auto; display: block; padding-top: 0;
+    z-index: 60;
+  }
+  .docs-shell .nav-toggle { display: flex; }
+  /* Opens OVER the content rather than pushing a screenful of links above
+     the prose the reader came for. */
+  .docs-shell .docs-nav {
+    position: absolute; top: calc(100% + 7px); left: 0; right: 0; z-index: 60;
+    max-height: min(68vh, 460px); padding: 12px;
+    background: var(--mask-1); border: 1px solid var(--edge-2);
+    border-radius: var(--r-lg); box-shadow: 0 20px 44px -14px var(--shadow-d);
+  }
+  .docs-shell .docs-nav.collapsed { display: none; }
+  .docs-shell .nav-group:last-child { margin-bottom: 0; }
 }
+
+/* ── Main column ─────────────────────────────────────────────────────────── */
+.docs-main { min-width: 0; }
+@media (max-width: 880px) { .docs-main { margin-top: 18px; } }
 
 /* ── Breadcrumb ──────────────────────────────────────────────────────────── */
 .crumb {
@@ -94,6 +183,7 @@
 /* ── Markdown body ───────────────────────────────────────────────────────── */
 .markdown { font-size: 16px; line-height: 1.72; color: var(--silk-2); max-width: 76ch; }
 .markdown > *:first-child { margin-top: 0; }
+.markdown h1, .markdown h2, .markdown h3, .markdown h4 { scroll-margin-top: calc(var(--docs-header) + 22px); }
 
 .markdown h1 {
   font-size: clamp(30px, 4vw, 42px); line-height: 1.08; color: var(--silk);
@@ -123,45 +213,170 @@
 }
 .markdown blockquote p:last-child { margin-bottom: 0; }
 
-/* heading anchors */
+/* Heading anchors trail the text. Hanging them in the left margin on a
+   negative margin put them past the left edge of the viewport at 430px and
+   below — a genuine page overflow on every heading, invisible because the
+   anchor sits at opacity 0 until hovered. */
 .markdown .anchor {
-  float: left; margin-left: -.85em; padding-right: .3em;
+  margin-left: .38em; padding: 0 .1em;
   color: var(--silk-3); border: 0; opacity: 0; font-weight: 400;
+  font-size: .8em; vertical-align: .06em;
   transition: opacity .15s;
 }
 .markdown h2:hover .anchor, .markdown h3:hover .anchor, .markdown h4:hover .anchor { opacity: 1; }
+.markdown .anchor:focus-visible { opacity: 1; }
+/* A hover-only affordance does not exist on a touch screen. */
+@media (hover: none) { .markdown .anchor { opacity: .32; } }
 
-/* code */
+/* ── Code ────────────────────────────────────────────────────────────────── */
 .markdown code {
   font-family: var(--mono); font-size: .875em;
   background: var(--mask-2); border: 1px solid var(--edge);
   padding: 1px 5px; border-radius: var(--r-sm); color: var(--enig-ink);
 }
-.markdown pre {
-  position: relative; margin: 0 0 18px; padding: 15px 17px; overflow-x: auto;
-  background: var(--mask-1); border: 1px solid var(--edge); border-radius: var(--r-lg);
-}
-.markdown pre code {
-  background: none; border: 0; padding: 0; color: var(--silk-2);
-  font-size: 13px; line-height: 1.75;
-}
-.markdown pre::-webkit-scrollbar { height: 8px; }
-.markdown pre::-webkit-scrollbar-thumb { background: var(--edge-2); border-radius: 4px; }
 
+/* Each fenced block is a small instrument panel: a legend strip naming the
+   grammar, then the listing. */
+.codeblock {
+  margin: 0 0 20px;
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  background: var(--mask-1);
+}
+.code-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 8px 6px 12px;
+  background: var(--mask-2);
+  border-bottom: 1px solid var(--edge);
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+}
+/* a gold pad, the same motif as the pin header across the top bar */
+.code-head .pad {
+  width: 7px; height: 7px; flex: none; border-radius: 2px;
+  background: var(--enig); opacity: .8;
+}
+.code-head .lang {
+  font-family: var(--mono); font-size: 12px; font-weight: 500;
+  letter-spacing: .13em; text-transform: uppercase; color: var(--silk-3);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
 .copybtn {
-  position: absolute; top: 9px; right: 9px;
+  margin-left: auto; flex: none;
   display: inline-flex; align-items: center; gap: 5px;
-  padding: 4px 8px; border-radius: var(--r-sm);
+  padding: 4px 9px; border-radius: var(--r-sm);
   background: var(--mask-3); border: 1px solid var(--edge);
   color: var(--silk-3); font-family: var(--mono); font-size: 12px;
-  cursor: pointer; opacity: 0; transition: opacity .16s, color .16s, border-color .16s;
+  cursor: pointer; transition: color .16s, border-color .16s, background .16s;
 }
-.markdown pre:hover .copybtn { opacity: 1; }
+/* Deliberately NOT revealed on hover. A copy button that only appears under
+   a pointer does not exist on a phone, which is where copying a command out
+   of the docs is hardest to do by hand. */
 .copybtn:hover { color: var(--enig); border-color: var(--enig); }
 .copybtn.done { color: var(--flux); border-color: var(--flux); }
 .copybtn svg { width: 12px; height: 12px; }
 
-/* tables — the datasheet treatment */
+.markdown pre {
+  position: relative; margin: 0; padding: 14px 16px; overflow-x: auto;
+  background: var(--mask-1); border: 0;
+  border-radius: 0 0 var(--r-lg) var(--r-lg);
+}
+.markdown pre code {
+  background: none; border: 0; padding: 0; color: var(--code-fg);
+  font-size: 13px; line-height: 1.75; display: block; min-width: 0;
+}
+.markdown pre::-webkit-scrollbar { height: 8px; }
+.markdown pre::-webkit-scrollbar-thumb { background: var(--edge-2); border-radius: 4px; }
+
+/* ── Syntax tokens ───────────────────────────────────────────────────────── */
+/* Every colour below was measured with the WCAG relative-luminance formula
+   against the block background it actually sits on — #0d0f13 in the board
+   theme, #ffffff in the drawing theme — and clears 4.5:1 in both. The gate
+   re-measures the RENDERED colours rather than trusting this comment.
+   The classes are the ones highlight.js really emits for the grammars this
+   page registers, read back out of hljs.highlight(...).value, not copied
+   from a generic theme: hljs-punctuation (json/http) and hljs-title /
+   hljs-params (go) are routinely missing from those and leave JSON braces
+   and Go signatures reading flat. */
+:root {
+  --code-fg:    #c3c9d3;   /* 12.4:1 on #0d0f13 */
+  --tok-dim:    #8b93a1;   /*  6.2:1 */
+  --tok-key:    #d9a94b;   /*  8.9:1  ENIG gold */
+  --tok-name:   #edebe4;   /* 16.1:1  silkscreen white */
+  --tok-str:    #6fd8c9;   /* 11.3:1  probe teal */
+  --tok-num:    #d98d4a;   /*  7.2:1  copper */
+  --tok-attr:   #f08a72;   /*  7.8:1 */
+  --tok-punct:  #9aa1ab;   /*  7.4:1 */
+  --tok-bad:    #f4796a;   /*  6.7:1  resist red, lightened for the dark ground */
+}
+:root[data-theme="light"] {
+  --code-fg:    #2b2f36;   /* 12.9:1 on #ffffff */
+  --tok-dim:    #5c626c;   /*  6.1:1 */
+  --tok-key:    #7d5409;   /*  6.7:1 */
+  --tok-name:   #14161a;   /* 18.1:1 */
+  --tok-str:    #0c6b60;   /*  6.1:1 */
+  --tok-num:    #8d5525;   /*  6.1:1 */
+  --tok-attr:   #a63118;   /*  6.8:1 */
+  --tok-punct:  #4e535c;   /*  7.7:1 */
+  --tok-bad:    #96261a;   /*  8.3:1 */
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-doctag        { color: var(--tok-dim); font-style: italic; }
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-bullet,
+.hljs-meta,
+.hljs-meta .hljs-keyword { color: var(--tok-key); }
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.function_,
+.hljs-name,
+.hljs-tag,
+.hljs-built_in,
+.hljs-class        { color: var(--tok-name); font-weight: 600; }
+
+.hljs-string,
+.hljs-char,
+.hljs-regexp,
+.hljs-addition,
+.hljs-link,
+.hljs-meta .hljs-string { color: var(--tok-str); font-weight: 400; }
+
+.hljs-number,
+.hljs-literal,
+.hljs-type,
+.hljs-symbol       { color: var(--tok-num); }
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-property,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-selector-pseudo { color: var(--tok-attr); }
+
+.hljs-punctuation,
+.hljs-operator,
+.hljs-subst        { color: var(--tok-punct); }
+
+.hljs-deletion     { color: var(--tok-bad); }
+.hljs-emphasis     { font-style: italic; }
+.hljs-strong       { font-weight: 700; }
+
+/* hljs-function is a CONTAINER around a whole Go declaration — colouring it
+   would flatten everything inside back to one hue. It only resets, so the
+   title and the types inside can carry the colour instead; hljs-params is
+   pinned to the body colour for the same reason. */
+.hljs-function     { color: inherit; font-weight: 400; }
+.hljs-params       { color: var(--code-fg); font-weight: 400; }
+
+/* ── Tables — the datasheet treatment ────────────────────────────────────── */
 .md-table-wrap { overflow-x: auto; margin: 0 0 20px; border: 1px solid var(--edge); border-radius: var(--r-lg); }
 .markdown table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .markdown th {
@@ -175,15 +390,32 @@
 .markdown tbody tr:hover td { background: var(--mask-2); }
 .markdown td code { white-space: nowrap; }
 
-.markdown img { border-radius: var(--r-lg); border: 1px solid var(--edge); margin: 6px 0 18px; }
+.markdown img { border-radius: var(--r-lg); border: 1px solid var(--edge); margin: 6px 0 18px; height: auto; }
 
 /* ── Outline ─────────────────────────────────────────────────────────────── */
-.outline { position: sticky; top: 86px; max-height: calc(100vh - 108px); overflow-y: auto; }
+/* Same sticky construction as the sidebar: the COLUMN pins and is viewport
+   tall, the list inside it is what scrolls. */
+.outline {
+  position: sticky;
+  top: var(--docs-header);
+  height: calc(100vh - var(--docs-header));
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding-top: 6px;
+}
+/* display:flex above is an author rule and would beat the UA's
+   [hidden]{display:none}, so the outline would paint on every chapter with
+   two headings or fewer. State it. */
+.outline[hidden] { display: none; }
 .outline .label {
-  font-family: var(--display); font-variation-settings: 'wdth' 68;
+  font-family: var(--display); font-variation-settings: 'wdth' 68; flex: none;
   font-weight: 600; text-transform: uppercase; letter-spacing: .2em;
   font-size: 12px; color: var(--silk-3); margin-bottom: 10px;
 }
+#outlineList { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-bottom: 24px; }
+#outlineList::-webkit-scrollbar { width: 7px; }
+#outlineList::-webkit-scrollbar-thumb { background: var(--edge-2); border-radius: 4px; }
 .outline a {
   display: block; padding: 4px 0 4px 11px; font-size: 12.8px; color: var(--silk-3);
   border-left: 1px solid var(--edge); transition: color .15s, border-color .15s;
@@ -195,14 +427,18 @@
 /* ── Pager ───────────────────────────────────────────────────────────────── */
 .docs-pager { display: flex; gap: 12px; margin-top: 46px; padding-top: 22px; border-top: 1px solid var(--edge); }
 .docs-pager a {
-  flex: 1; padding: 13px 16px; border-radius: var(--r-lg);
+  flex: 1; min-width: 0; padding: 13px 16px; border-radius: var(--r-lg);
   background: var(--mask-1); border: 1px solid var(--edge);
   transition: border-color .18s, transform .18s var(--ease);
 }
 .docs-pager a:hover { border-color: var(--enig); transform: translateY(-2px); }
-.docs-pager .next { text-align: right; }
+.docs-pager .next { text-align: right; margin-left: auto; }
 .docs-pager .dir { display: block; font-family: var(--mono); font-size: 12px; color: var(--silk-3); }
 .docs-pager .ttl { display: block; margin-top: 3px; font-weight: 600; color: var(--silk); font-size: 14.5px; }
+@media (max-width: 560px) {
+  .docs-main .docs-pager { flex-direction: column; }
+  .docs-main .docs-pager .next { margin-left: 0; }
+}
 
 /* ── Loading / error ─────────────────────────────────────────────────────── */
 .skel i { display: block; height: 13px; border-radius: 4px; background: var(--mask-2); margin-bottom: 13px; animation: sk 1.5s ease-in-out infinite; }
@@ -211,3 +447,8 @@
 @keyframes sk { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
 .docs-error { padding: 16px 18px; border-radius: var(--r-lg); background: var(--mask-1); border: 1px solid var(--resist); color: var(--silk-2); }
 .docs-error a { color: var(--enig-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .skel i { animation: none; }
+  .docs-pager a:hover { transform: none; }
+}

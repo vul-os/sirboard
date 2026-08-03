@@ -40,6 +40,7 @@
   })();
 </script>
 <script src="./assets/vendor/marked.umd.js"></script>
+<script src="./assets/vendor/highlight.min.js"></script>
 </head>
 <body>
 
@@ -68,13 +69,14 @@
   </div>
 </header>
 
-<div class="wrap docs-shell">
+<div class="docs-shell">
 
-  <div>
+  <div class="docs-side">
     <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="docsNav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg class="burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       Documentation
       <span class="cur" id="navCur"></span>
+      <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
     </button>
 
     <aside class="docs-nav collapsed" id="docsNav">
@@ -112,16 +114,6 @@
   </aside>
 </div>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="foot-bar">
-      <a class="vulos-foot" href="https://vulos.org" target="_blank" rel="noopener"><img src="./assets/vulos-logo.png" alt="" width="18" height="18"><span>Part of <strong>Vulos</strong> — open, self-hostable software</span></a>
-      <span style="flex:1"></span>
-      <a href="https://github.com/vul-os/sirboard" target="_blank" rel="noopener">GitHub</a>
-      
-    </div>
-  </div>
-</footer>
 
 <script>
 (function () {
@@ -224,14 +216,19 @@
   function decorate(slug) {
     var used = {}, items = [];
     [].slice.call(content.querySelectorAll('h2, h3, h4')).forEach(function (h) {
-      var id = slugify(h.textContent);
+      var text = h.textContent.trim();
+      var id = slugify(text);
       if (used[id]) { used[id]++; id += '-' + used[id]; } else { used[id] = 1; }
       h.id = id;
+      /* Appended, not inserted first. A leading anchor hung in the left margin
+         on a negative margin, and at 430px and below that margin put it three
+         pixels off the left edge of the viewport — a real horizontal overflow
+         on every heading of every chapter. */
       var a = document.createElement('a');
       a.className = 'anchor'; a.href = '#' + slug + ':' + id;
       a.setAttribute('aria-label', 'Link to this section'); a.textContent = '#';
-      h.insertBefore(a, h.firstChild);
-      if (h.tagName !== 'H4') items.push({ id: id, text: h.textContent.replace(/^#/, '').trim(), level: h.tagName === 'H3' ? 3 : 2 });
+      h.appendChild(a);
+      if (h.tagName !== 'H4') items.push({ id: id, text: text, level: h.tagName === 'H3' ? 3 : 2 });
     });
 
     if (items.length > 2) {
@@ -255,19 +252,66 @@
       t.parentNode.insertBefore(w, t); w.appendChild(t);
     });
 
-    content.querySelectorAll('pre > code').forEach(function (code) {
-      var btn = document.createElement('button');
-      btn.type = 'button'; btn.className = 'copybtn';
-      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>copy</span>';
-      btn.addEventListener('click', function () {
-        if (!navigator.clipboard) return;
-        navigator.clipboard.writeText(code.textContent).then(function () {
-          btn.classList.add('done'); btn.querySelector('span').textContent = 'copied';
-          setTimeout(function () { btn.classList.remove('done'); btn.querySelector('span').textContent = 'copy'; }, 1500);
-        }, function () {});
-      });
-      code.parentElement.appendChild(btn);
+    content.querySelectorAll('pre > code').forEach(dressCodeBlock);
+  }
+
+  /* ── Fenced code ──────────────────────────────────────────────────────────
+     highlight.min.js is built with a fixed grammar set. Fence names that are
+     really another grammar under a different spelling are mapped onto it;
+     anything else is left as plain text on purpose — a wrong grammar paints
+     confident nonsense, which is worse than no colour at all. */
+  var HLJS_ALIAS = {
+    sh: 'bash', zsh: 'bash', shell: 'bash', console: 'bash', 'shell-session': 'bash',
+    yml: 'yaml', toml: 'ini', conf: 'ini', cfg: 'ini', properties: 'ini',
+    jsonc: 'json', json5: 'json',
+    js: 'javascript', mjs: 'javascript', cjs: 'javascript', node: 'javascript',
+    html: 'xml', htm: 'xml', svg: 'xml', rss: 'xml',
+    golang: 'go', docker: 'dockerfile', patch: 'diff',
+    text: 'plaintext', txt: 'plaintext', none: 'plaintext'
+  };
+
+  function dressCodeBlock(code) {
+    var pre = code.parentElement;
+    if (!pre || pre.tagName !== 'PRE') return;
+    if (pre.parentElement && pre.parentElement.classList.contains('codeblock')) return;
+
+    var m = (code.className || '').match(/language-([\w+#.-]+)/i);
+    var fence = m ? m[1].toLowerCase() : '';
+    var grammar = HLJS_ALIAS[fence] || fence;
+
+    if (window.hljs && grammar && grammar !== 'plaintext' && hljs.getLanguage(grammar)) {
+      try {
+        code.innerHTML = hljs.highlight(code.textContent, { language: grammar, ignoreIllegals: true }).value;
+        code.classList.add('hljs');
+      } catch (e) { /* leave the escaped source alone */ }
+    }
+
+    var block = document.createElement('div');
+    block.className = 'codeblock';
+    var head = document.createElement('div');
+    head.className = 'code-head';
+    head.innerHTML = '<span class="pad" aria-hidden="true"></span>' +
+                     '<span class="lang">' + (fence || 'text') + '</span>';
+
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'copybtn';
+    btn.setAttribute('aria-label', 'Copy this block to the clipboard');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>copy</span>';
+    btn.addEventListener('click', function () {
+      var text = code.textContent;
+      var done = function () {
+        btn.classList.add('done'); btn.querySelector('span').textContent = 'copied';
+        setTimeout(function () { btn.classList.remove('done'); btn.querySelector('span').textContent = 'copy'; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () {});
+      }
     });
+    head.appendChild(btn);
+
+    pre.parentNode.insertBefore(block, pre);
+    block.appendChild(head);
+    block.appendChild(pre);
   }
 
   function buildPager(i) {
@@ -359,17 +403,25 @@
     }
   });
 
-  /* mobile nav */
+  /* mobile nav — a disclosure that opens OVER the page, never a screenful of
+     links pushed above the prose */
   var nav = document.getElementById('docsNav'), toggle = document.getElementById('navToggle');
+  function closeNav() {
+    if (window.innerWidth > 880) return;
+    nav.classList.add('collapsed'); toggle.setAttribute('aria-expanded', 'false');
+  }
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('collapsed') === false;
     toggle.setAttribute('aria-expanded', String(open));
   });
-  navList.addEventListener('click', function (e) {
-    if (e.target.closest('a') && window.innerWidth <= 880) {
-      nav.classList.add('collapsed'); toggle.setAttribute('aria-expanded', 'false');
-    }
+  navList.addEventListener('click', function (e) { if (e.target.closest('a')) closeNav(); });
+  document.addEventListener('click', function (e) {
+    if (window.innerWidth > 880) return;
+    if (nav.classList.contains('collapsed')) return;
+    if (e.target.closest('#docsNav') || e.target.closest('#navToggle')) return;
+    closeNav();
   });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeNav(); });
   function syncNav() { if (window.innerWidth > 880) nav.classList.remove('collapsed'); }
   window.addEventListener('resize', syncNav);
   syncNav();

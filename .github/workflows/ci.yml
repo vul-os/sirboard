@@ -81,3 +81,43 @@ jobs:
             exit 1
           fi
           echo "working tree clean"
+
+  # ── site/ render gate ──────────────────────────────────────────────────────
+  # Separate job: it needs node and a real browser, and none of the python
+  # gates above depend on it. A check that only ever runs on someone's laptop
+  # is a check that stops running, so this is wired in rather than documented.
+  site-render:
+    name: site render gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # playwright is NOT vendored into the repo — installed here, linked in
+      # locally. scripts/package.json declares the version.
+      - name: Install playwright
+        working-directory: scripts
+        run: |
+          npm install --no-package-lock --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      # Run FIRST. The self-test breaks each invariant on purpose and demands
+      # the check notices; if it does not, the clean run below means nothing.
+      - name: The checks can fail
+        run: node scripts/check-render.mjs --selftest
+
+      - name: index.html and docs.html render clean
+        run: node scripts/check-render.mjs
+
+      - name: The gate did not modify the working tree
+        run: |
+          changed=$(git status --porcelain)
+          if [ -n "$changed" ]; then
+            echo "::error::running the site gate modified the repository:" >&2
+            printf '%s\n' "$changed" >&2
+            exit 1
+          fi
+          echo "working tree clean"

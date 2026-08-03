@@ -649,14 +649,41 @@ def test_site_is_self_contained():
     assert not broken, "site/ references missing local files:\n  " + "\n  ".join(broken)
 
 
+# <link> relations that name a document rather than fetch a subresource. A
+# canonical URL is metadata for a crawler; the browser never requests it, so it
+# is not a network call at load. Without this list the gate failed on the
+# rel="canonical" line that every page in the suite carries — a false FAILURE,
+# which is the same kind of broken as a false pass: it trains you to ignore
+# the gate, and then the day it catches a real CDN <script> you ignore that too.
+_NON_FETCHING_LINK_RELS = {
+    "canonical", "alternate", "author", "license", "help",
+    "search", "bookmark", "me", "prev", "next", "up",
+}
+
+
 def test_site_does_not_fetch_anything_over_the_network_at_load():
     """No default network calls: the page must render with the network unplugged."""
     offenders = []
+    checked = 0
     for name in ("index.html", "docs.html"):
         page = REPO / "site" / name
         text = page.read_text(encoding="utf-8")
-        for m in re.finditer(r'<(?:script|link)\b[^>]*?(?:src|href)="(https?://[^"]+)"', text):
-            offenders.append(f"{name} -> {m.group(1)}")
+        for m in re.finditer(r'<(script|link)\b([^>]*?)(?:src|href)="(https?://[^"]+)"', text):
+            tag, attrs, url = m.group(1), m.group(2), m.group(3)
+            checked += 1
+            if tag == "link":
+                rel = re.search(r'\brel="([^"]*)"', attrs)
+                rels = set((rel.group(1) if rel else "").lower().split())
+                if rels & _NON_FETCHING_LINK_RELS:
+                    continue
+            offenders.append(f"{name} -> {url}")
+    # Coverage: the pages do carry absolute <link> URLs (the canonicals), so a
+    # run that matched nothing means the pattern has stopped working, not that
+    # the pages got cleaner.
+    assert checked >= 2, (
+        f"only {checked} absolute script/link URL(s) matched across index.html "
+        "and docs.html — the pattern is not matching, so this gate proves nothing"
+    )
     assert not offenders, (
         "site/ loads a remote script or stylesheet; fonts and JS must be "
         "vendored under site/assets/:\n  " + "\n  ".join(offenders)
