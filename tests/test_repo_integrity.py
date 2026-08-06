@@ -476,7 +476,11 @@ def test_markdown_relative_links_resolve(tracked):
       * `site/docs/*.md` — generated copies fetched by `site/docs.html`, which
         rewrites every relative link to `<repo>/blob/main/<path>` after
         stripping leading `../` (see `rewriteLink` in docs.html). So a link
-        there resolves relative to the REPO ROOT, `../` and all.
+        there resolves relative to the REPO ROOT, `../` and all — except a
+        link to a sibling `*.md`, which `rewriteLink`'s `byFile` lookup
+        matches case-insensitively (`byFile[m[1].toLowerCase()]`) because the
+        mirror in `site/docs/` is lowercase-slugged while the canonical link
+        text in `docs/*.md` keeps the on-disk `UPPERCASE-KEBAB.md` name.
 
     Modelling the second rule rather than skipping it is the point: the copies
     are what vulos.org actually serves, and a link that 404s for a visitor is a
@@ -497,10 +501,11 @@ def test_markdown_relative_links_resolve(tracked):
                 continue
             checked += 1
             if published:
-                # docs.html: a sibling *.md becomes an in-page anchor; anything
-                # else is repo-root-relative once the ../ prefix is stripped.
+                # docs.html: a sibling *.md becomes an in-page anchor via a
+                # case-insensitive byFile lookup; anything else is
+                # repo-root-relative once the ../ prefix is stripped.
                 stripped = re.sub(r"^(?:\.\./)+", "", path)
-                ok = (site_docs / Path(stripped).name).exists() if stripped.endswith(".md") \
+                ok = (site_docs / Path(stripped).name.lower()).exists() if stripped.endswith(".md") \
                     else (REPO / stripped).exists()
             else:
                 ok = (md.parent / path).exists()
