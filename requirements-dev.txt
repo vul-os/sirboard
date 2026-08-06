@@ -5,4 +5,4 @@
 # this repository — only to check it. KiCad itself is deliberately NOT required:
 # every gate reads the .kicad_pcb s-expressions as text, so CI needs no GUI
 # toolchain and no headless X server.
-pytest>=7.4
+pytest==8.4.2
